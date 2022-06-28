@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <title>플레이콘</title>
+    <!--스타일 공통-->
+    <link rel="stylesheet" href="./common/css/common.css">
+
+    <!--js 공통-->
+    <script type="text/javascript" src="./common/js/jquery.min.js"></script>
+    <script type="text/javascript" src="./common/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="./common/js/jquery.ui.touch-punch.min.js"></script>
+    <script type="text/javascript" src="https://kit.fontawesome.com/a9123cc962.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./common/js/swiper.min.js"></script>
+    <script type="text/javascript" src="./common/js/common.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <div id="content">
+            <header id="header" class="header">
+                <div class="header_top">
+                    <div class="header_top_inner">
+                        <h1 class="logo">
+                            <a href="">
+                                <span class="blind">시민과학콘</span>
+                                <img src="./images/common/logo.svg" alt="플레이콘">
+                            </a>
+                        </h1>
+                        <div class="header_util">
+                            <a href="" class="btn_mypage"><span class="blind">마이페이지</span></a>
+
+                            <!--로그아웃 상태-->
+                            <button type="button" class="btn_sign ty_logout">
+                                <i class="btn_sign_ico"></i>
+                                <span class="btn_sign_txt">로그인</span>
+                            </button>
+                            <!--// 로그아웃 상태-->
+                            <!-- 로그인 상태-->
+                            <!--
+                            <button type="button" class="btn_sign ty_login">
+                                <i class="btn_sign_ico"></i>
+                                <span class="btn_sign_txt">로그아웃</span>
+                            </button>
+                            -->
+                            <!--// 로그인 상태-->
+
+                            <!-- 햄버거버튼 삭제
+                            <button type="button" class="btn_lm">
+                                <span class="blind">전체메뉴</span>
+                                <div class="bar_box">
+                                    <span class="bar top"></span>
+                                    <span class="bar mid"></span>
+                                    <span class="bar bot"></span>
+                                </div>
+                            </button>
+                            -->
+                        </div>
+                    </div>
+                </div>
+                <div class="nav_area">
+                    <nav id="nav" class="nav">
+                        <ul class="nav_list">
+                            <li class="on"><a href=""><span>지구사랑탐사대</span></a></li>
+                            <li><a href=""><span>우동수비대</span></a></li>
+                            <li><a href=""><span>플라스틱다이어트</span></a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+            <div id="container" class="sub_m ">
+                <div class="menu_dep2 ">
+                    <ul class="menu_dep2_list">
+                        <li class="menu_dep2_item">
+                            <a href="" class="menu_dep2_link on">탐사기록</a>
+                        </li>
+                        <li class="menu_dep2_item">
+                            <a href="" class="menu_dep2_link">탐사방법</a>
+                        </li>
+                        <li class="menu_dep2_item">
+                            <a href="" class="menu_dep2_link">탐사지도</a>
+                        </li>
+                        <li class="menu_dep2_item">
+                            <a href="" class="menu_dep2_link">탐사력</a>
+                        </li>
+                        <li class="menu_dep2_item">
+                            <a href="" class="menu_dep2_link">소개/가입</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="sub_wrap">
+                    <div class="sub_inner">
+                        <div class="list_top_sec al_center">
+                            <label class="check_box sc_check no_drag cursor_pointer ">
+                                <input type="checkbox"><span class="custom_check"></span>&nbsp; 궁금해요
+                            </label>
+                            <div class="btn_box">
+                                <a href="" class="btn_write"><span>탐사기록 쓰기</span></a>
+                            </div>
+                        </div>
+                        <div class="list_top_sec ty_select">
+                            <div class="select_box">
+                                <select name="" id="" class="select_ty1">
+                                    <option value="">지구사랑탐사대 10기</option>
+                                    <option value="">지구사랑탐사대 9기</option>
+                                    <option value="">지구사랑탐사대 8기</option>
+                                    <option value="">지구사랑탐사대 7기</option>
+                                </select>
+                            </div>
+                            <div class="select_box">
+                                <select name="" id="" class="select_ty1">
+                                    <option value="">시민과학풀씨_전기차</option>
+                                    <option value="">시민과학풀씨_전기차</option>
+                                    <option value="">시민과학풀씨_전기차</option>
+                                    <option value="">시민과학풀씨_전기차</option>
+                                </select>
+                            </div>
+                        </div>
+                        <ul class="pp_gallery">
+                            <li class="pp_gallery_item">
+                                <a href="" class="pp_gallery_item_link">
+                                    <div class="sc_thumb ty_sq">
+                                        <div class="sc_thumb_img">
+                                            <img src="https://picsum.photos/900/900" alt="">
+                                        </div>
+                                        <!--질문 일 경우 -->
+                                        <img src="./images/ico/ico_q.svg" alt="" class="ico_q">
+                                        <!--// 질문 일 경우 -->
+                                    </div>
+                                    <div class="txt_box">
+                                        <strong class="tit ellipsis2">[질문글] 이게 뭔가요?  이게 뭔가요? 이게 뭔가요? 이게 뭔가요? 이게 뭔가요? 이게 뭔가요? 이게 뭔가요?</strong>
+                                    </div>
+                                    <div class="writer_set">
+                                        <div class="writer_set_thumb">
+                                            <img src="./images/common/sample.jpg" alt="">
+                                        </div>
+                                        <div class="writer_set_txt">
+                                            <div class="writer_set_info">
+                                                <span class="name">오로치마루 기자</span>
+                                                <span class="level lv4" >
+                                                    <span class="level_arrow"></span>
+                                                    레벨 <b>4</b>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="list_item_info">
+                                        <span class="date">
+                                            2022.03.10
+                                        </span>
+                                        <div class="sc_thumb_info">
+                                            <span class="sc_thumb_info_item ct_like">224</span>
+                                            <span class="sc_thumb_info_item ct_co">552</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="pp_gallery_item">
+                                <a href="" class="pp_gallery_item_link">
+                                    <div class="sc_thumb ty_sq">
+                                        <div class="sc_thumb_img">
+                                            <img src="https://picsum.photos/900/900" alt="">
+                                        </div>
+                                        <!--질문 일 경우 -->
+                                        <img src="./images/ico/ico_q.svg" alt="" class="ico_q">
+                                        <!--// 질문 일 경우 -->
+                                    </div>
+                                    <div class="txt_box">
+                                        <strong class="tit ellipsis2">[질문글] 이게 뭔가요?  이게 뭔가요? 이게 뭔가요? 이게 뭔가요? 이게 뭔가요? 이게 뭔가요? 이게 뭔가요?</strong>
+                                    </div>
+                                    <div class="writer_set">
+                                        <div class="writer_set_thumb">
+                                            <img src="./images/common/sample.jpg" alt="">
+                                        </div>
+                                        <div class="writer_set_txt">
+                                            <div class="writer_set_info">
+                                                <span class="name">오로치마루 기자</span>
+                                                <span class="level lv4" >
+                                                    <span class="level_arrow"></span>
+                                                    레벨 <b>4</b>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="list_item_info">
+                                        <span class="date">
+                                            2022.03.10
+                                        </span>
+                                        <div class="sc_thumb_info">
+                                            <span class="sc_thumb_info_item ct_like">224</span>
+                                            <span class="sc_thumb_info_item ct_co">552</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="pp_gallery_item">
+                                <a href="" class="pp_gallery_item_link">
+                                    <div class="sc_thumb ty_sq">
+                                        <div class="sc_thumb_img">
+                                            <img src="https://picsum.photos/900/900" alt="">
+                                        </div>
+                                        <!--질문 일 경우 -->
+                                        <img src="./images/ico/ico_q.svg" alt="" class="ico_q">
+                                        <!--// 질문 일 경우 -->
+                                    </div>
+                                    <div class="txt_box">
+                                        <strong class="tit ellipsis2">[질문글] 이게 뭔가요?  이게 뭔가요? 이게 뭔가요? 이게 뭔가요? 이게 뭔가요? 이게 뭔가요? 이게 뭔가요?</strong>
+                                    </div>
+                                    <div class="writer_set">
+                                        <div class="writer_set_thumb">
+                                            <img src="./images/common/sample.jpg" alt="">
+                                        </div>
+                                        <div class="writer_set_txt">
+                                            <div class="writer_set_info">
+                                                <span class="name">오로치마루 기자</span>
+                                                <span class="level lv4" >
+                                                    <span class="level_arrow"></span>
+                                                    레벨 <b>4</b>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="list_item_info">
+                                        <span class="date">
+                                            2022.03.10
+                                        </span>
+                                        <div class="sc_thumb_info">
+                                            <span class="sc_thumb_info_item ct_like">224</span>
+                                            <span class="sc_thumb_info_item ct_co">552</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="pp_gallery_item">
+                                <a href="" class="pp_gallery_item_link">
+                                    <div class="sc_thumb ty_sq">
+                                        <div class="sc_thumb_img">
+                                            <img src="https://picsum.photos/900/900" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="txt_box">
+                                        <strong class="tit ellipsis2">[질문글] 이게 뭔가요?  이게 뭔가요? 이게 뭔가요? 이게 뭔가요? 이게 뭔가요? 이게 뭔가요? 이게 뭔가요?</strong>
+                                    </div>
+                                    <div class="writer_set">
+                                        <div class="writer_set_thumb">
+                                            <img src="./images/common/sample.jpg" alt="">
+                                        </div>
+                                        <div class="writer_set_txt">
+                                            <div class="writer_set_info">
+                                                <span class="name">오로치마루 기자</span>
+                                                <span class="level lv4" >
+                                                    <span class="level_arrow"></span>
+                                                    레벨 <b>4</b>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="list_item_info">
+                                        <span class="date">
+                                            2022.03.10
+                                        </span>
+                                        <div class="sc_thumb_info">
+                                            <span class="sc_thumb_info_item ct_like">224</span>
+                                            <span class="sc_thumb_info_item ct_co">552</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="pp_gallery_item">
+                                <a href="" class="pp_gallery_item_link">
+                                    <div class="sc_thumb ty_sq">
+                                        <div class="sc_thumb_img">
+                                            <img src="https://picsum.photos/900/900" alt="">
+                                        </div>
+                                        <!--질문 일 경우 -->
+                                        <img src="./images/ico/ico_q.svg" alt="" class="ico_q">
+                                        <!--// 질문 일 경우 -->
+                                    </div>
+                                    <div class="txt_box">
+                                        <strong class="tit ellipsis2">[질문글] 이게 뭔가요?  이게 뭔가요? 이게 뭔가요? 이게 뭔가요? 이게 뭔가요? 이게 뭔가요? 이게 뭔가요?</strong>
+                                    </div>
+                                    <div class="writer_set">
+                                        <div class="writer_set_thumb">
+                                            <img src="./images/common/sample.jpg" alt="">
+                                        </div>
+                                        <div class="writer_set_txt">
+                                            <div class="writer_set_info">
+                                                <span class="name">오로치마루 기자</span>
+                                                <span class="level lv4" >
+                                                    <span class="level_arrow"></span>
+                                                    레벨 <b>4</b>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="list_item_info">
+                                        <span class="date">
+                                            2022.03.10
+                                        </span>
+                                        <div class="sc_thumb_info">
+                                            <span class="sc_thumb_info_item ct_like">224</span>
+                                            <span class="sc_thumb_info_item ct_co">552</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="pp_gallery_item">
+                                <a href="" class="pp_gallery_item_link">
+                                    <div class="sc_thumb ty_sq">
+                                        <div class="sc_thumb_img">
+                                            <img src="https://picsum.photos/900/900" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="txt_box">
+                                        <strong class="tit ellipsis2">[질문글] 이게 뭔가요?  이게 뭔가요? 이게 뭔가요? 이게 뭔가요? 이게 뭔가요? 이게 뭔가요? 이게 뭔가요?</strong>
+                                    </div>
+                                    <div class="writer_set">
+                                        <div class="writer_set_thumb">
+                                            <img src="./images/common/sample.jpg" alt="">
+                                        </div>
+                                        <div class="writer_set_txt">
+                                            <div class="writer_set_info">
+                                                <span class="name">오로치마루 기자</span>
+                                                <span class="level lv4" >
+                                                    <span class="level_arrow"></span>
+                                                    레벨 <b>4</b>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="list_item_info">
+                                        <span class="date">
+                                            2022.03.10
+                                        </span>
+                                        <div class="sc_thumb_info">
+                                            <span class="sc_thumb_info_item ct_like">224</span>
+                                            <span class="sc_thumb_info_item ct_co">552</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="pp_gallery_item">
+                                <a href="" class="pp_gallery_item_link">
+                                    <div class="sc_thumb ty_sq">
+                                        <div class="sc_thumb_img">
+                                            <img src="https://picsum.photos/900/900" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="txt_box">
+                                        <strong class="tit ellipsis2">[질문글] 이게 뭔가요?  이게 뭔가요? 이게 뭔가요? 이게 뭔가요? 이게 뭔가요? 이게 뭔가요? 이게 뭔가요?</strong>
+                                    </div>
+                                    <div class="writer_set">
+                                        <div class="writer_set_thumb">
+                                            <img src="./images/common/sample.jpg" alt="">
+                                        </div>
+                                        <div class="writer_set_txt">
+                                            <div class="writer_set_info">
+                                                <span class="name">오로치마루 기자</span>
+                                                <span class="level lv4" >
+                                                    <span class="level_arrow"></span>
+                                                    레벨 <b>4</b>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="list_item_info">
+                                        <span class="date">
+                                            2022.03.10
+                                        </span>
+                                        <div class="sc_thumb_info">
+                                            <span class="sc_thumb_info_item ct_like">224</span>
+                                            <span class="sc_thumb_info_item ct_co">552</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <footer id="footer" class="footer">
+                <ul class="footer_menu">
+                    <li><a href="">회사소개</a></li>
+                    <li><a href="">광고안내</a></li>
+                    <li><a href="">개인정보취급방침</a></li>
+                </ul>
+                <div class="footer_policy">
+                    <h2 class="footer_policy_tit">
+                        <button type="button" class="btn_policy">㈜동아사이언스 키즈 플랫폼 <i></i></button>
+                    </h2>
+                    <div class="txt_box">
+                        ㈜동아사이언스 팝콘플래닛, 시민과학콘 | 대표 : 장경애 <br>
+                        개인정보관리책임자 : <span>김수희 (privacy@dongascience.com) |</span> <span>청소년보호책임자 : 조기견</span> <br><br>
+                        서울시 용산구 청파로 109, 7층 (04370) | 문의 : 02-6749-2000 ｜팩스 : 02-3148-0789  사업자등록번호 : 101-81-62201 (사업자정보확인) | 통신판매업신고번호 : 제2013-서울용산-01101호 | 온라인 결제를 위한 PG사의 구매안전서비스(가입사실 확인)
+                    </div>
+                </div>
+                <p class="copy">Copyright © Dongascience. All right reserved.</p>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>

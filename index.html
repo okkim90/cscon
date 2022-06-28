@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <title>플레이콘</title>
+    <!--스타일 공통-->
+    <link rel="stylesheet" href="./common/css/common.css">
+
+    <!--js 공통-->
+    <script type="text/javascript" src="./common/js/jquery.min.js"></script>
+    <script type="text/javascript" src="./common/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="./common/js/jquery.ui.touch-punch.min.js"></script>
+    <script type="text/javascript" src="https://kit.fontawesome.com/a9123cc962.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./common/js/swiper.min.js"></script>
+    <script type="text/javascript" src="./common/js/common.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <div id="content" class="main">
+            <header id="header" class="header">
+                <div class="header_top">
+                    <div class="header_top_inner">
+                        <h1 class="logo">
+                            <a href="">
+                                <span class="blind">시민과학콘</span>
+                                <img src="./images/common/logo.svg" alt="플레이콘">
+                            </a>
+                        </h1>
+                        <div class="header_util">
+                            <a href="" class="btn_mypage"><span class="blind">마이페이지</span></a>
+
+                            <!--로그아웃 상태-->
+                            <button type="button" class="btn_sign ty_logout">
+                                <i class="btn_sign_ico"></i>
+                                <span class="btn_sign_txt">로그인</span>
+                            </button>
+                            <!--// 로그아웃 상태-->
+                            <!-- 로그인 상태-->
+                            <!--
+                            <button type="button" class="btn_sign ty_login">
+                                <i class="btn_sign_ico"></i>
+                                <span class="btn_sign_txt">로그아웃</span>
+                            </button>
+                            -->
+                            <!--// 로그인 상태-->
+
+                            <!-- 햄버거버튼 삭제
+                            <button type="button" class="btn_lm">
+                                <span class="blind">전체메뉴</span>
+                                <div class="bar_box">
+                                    <span class="bar top"></span>
+                                    <span class="bar mid"></span>
+                                    <span class="bar bot"></span>
+                                </div>
+                            </button>
+                            -->
+                        </div>
+                    </div>
+                </div>
+                <div class="nav_area">
+                    <nav id="nav" class="nav">
+                        <ul class="nav_list">
+                            <li><a href=""><span>지구사랑탐사대</span></a></li>
+                            <li><a href=""><span>우동수비대</span></a></li>
+                            <li><a href=""><span>플라스틱다이어트</span></a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+            <div id="container" class="">
+                <div class="mv_area">
+                    <div class="mv_wrap">
+                        <div class="mv">
+                            <div class="swiper-wrapper mv_list">
+                                <div class="swiper-slide mv_item mv_item1">
+                                    <a href="" class="mv_item_link">
+                                        <img src="./images/main/mv01.jpg" alt="" class="">
+                                    </a>
+                                </div>
+                                <div class="swiper-slide mv_item mv_item2">
+                                    <a href="" class="mv_item_link">
+                                        <img src="./images/main/mv02.jpg" alt="" class="">
+                                    </a>
+                                </div>
+                                <div class="swiper-slide mv_item mv_item3">
+                                    <a href="" class="mv_item_link">
+                                        <img src="./images/main/mv03.jpg" alt="" class="">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="mv_pagination"></div>
+                            <div class="mv_btn_area">
+                                <button class="mv_btn mv_prev"><img src="./images/main/mv_prev.png" alt=""></button>
+                                <button class="mv_btn mv_next"><img src="./images/main/mv_next.png" alt=""></button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="main_cont_wrap">
+                    <div class="main_sec main_service">
+                        <div class="inner">
+                            <ul class="main_service_list">
+                                <li class="main_service_item">
+                                    <div class="main_service_cont">
+                                        <a href="" class="main_service_link">
+                                            <strong class="tit"><span>지구사랑탐사대</span></strong>
+                                            <p class="desc">지구사랑탐사대는 해마다 전국에서 약 3400명 이상 참여하는 시민참여과학 프로젝트 입니다.</p>
+                                            <div class="img_box">
+                                                <img src="./images/main/main_service1.png" alt="">
+                                            </div>
+                                        </a>
+                                        <ul class="main_service_detail">
+                                            <li class="main_service_detail_item">
+                                                <a href="" class="main_service_detail_link">
+                                                    <p class="txt">
+                                                        <b>신청</b><br>하기
+                                                    </p>
+                                                </a>
+                                            </li>
+                                            <li class="main_service_detail_item">
+                                                <a href="" class="main_service_detail_link">
+                                                    <p class="txt">
+                                                        탐사<br><b>기록</b>
+                                                    </p>
+                                                </a>
+                                            </li>
+                                            <li class="main_service_detail_item">
+                                                <a href="" class="main_service_detail_link">
+                                                    <p class="txt">
+                                                        탐사<br><b>방법</b>
+                                                    </p>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="main_service_item">
+                                    <div class="main_service_cont">
+                                        <a href="" class="main_service_link">
+                                            <strong class="tit"><span>우동수비대</span></strong>
+                                            <p class="desc">동물이 행목한 동물원을 찾아서! 수의사와 함께 하는 시민과학프로젝트 '우동수비대'에 참여하세요.</p>
+                                            <div class="img_box">
+                                                <img src="./images/main/main_service2.png" alt="">
+                                            </div>
+                                        </a>
+                                        <ul class="main_service_detail">
+                                            <li class="main_service_detail_item">
+                                                <a href="" class="main_service_detail_link">
+                                                    <p class="txt">
+                                                        <b>신청</b><br>하기
+                                                    </p>
+                                                </a>
+                                            </li>
+                                            <li class="main_service_detail_item">
+                                                <a href="" class="main_service_detail_link">
+                                                    <p class="txt">
+                                                        관찰<br><b>기록</b>
+                                                    </p>
+                                                </a>
+                                            </li>
+                                            <li class="main_service_detail_item">
+                                                <a href="" class="main_service_detail_link">
+                                                    <p class="txt">
+                                                        활동<br><b>결과</b>
+                                                    </p>
+                                                </a>
+                                            </li>
+                                            <li class="main_service_detail_item">
+                                                <a href="" class="main_service_detail_link">
+                                                    <p class="txt">
+                                                        <b>DBTI</b>
+                                                    </p>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="main_service_item">
+                                    <div class="main_service_cont">
+                                        <a href="" class="main_service_link">
+                                            <strong class="tit"><span>플라스틱 다이어트</span></strong>
+                                            <p class="desc">고통받는 바다거북을 살리기 위해 플라스틱 다이어트 함께해요!</p>
+                                            <div class="img_box">
+                                                <img src="./images/main/main_service3.png" alt="">
+                                            </div>
+                                        </a>
+                                        <ul class="main_service_detail">
+                                            <li class="main_service_detail_item">
+                                                <a href="" class="main_service_detail_link">
+                                                    <p class="txt">
+                                                        <b>서명</b><br>하기
+                                                    </p>
+                                                </a>
+                                            </li>
+                                            <li class="main_service_detail_item">
+                                                <a href="" class="main_service_detail_link">
+                                                    <p class="txt">
+                                                        <b>줍깅</b><br>탐사
+                                                    </p>
+                                                </a>
+                                            </li>
+                                            <li class="main_service_detail_item">
+                                                <a href="" class="main_service_detail_link">
+                                                    <p class="txt">
+                                                        <b>따분행</b>
+                                                    </p>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="main_sec main_benefit">
+                        <div class="inner">
+                            <h2 class="main_sec_tit ff_godo fc_key">특별한 혜택과 경험</h2>
+                            <div class="main_benefit_cont">
+                                <ul class="main_benefit_list">
+                                    <li class="main_benefit_item">
+                                        <div class="img_box">
+                                            <img src="./images/main/main_benefit1.png" alt="">
+                                        </div>
+                                        <div class="txt_box">
+                                            <strong class="tit">현장교육</strong>
+                                            <p class="desc">전국에서 진행되는 탐사 종별 현장교육 무료  참여</p>
+                                        </div>
+                                    </li>
+                                    <li class="main_benefit_item">
+                                        <div class="img_box">
+                                            <img src="./images/main/main_benefit2.png" alt="">
+                                        </div>
+                                        <div class="txt_box">
+                                            <strong class="tit">여름 캠프</strong>
+                                            <p class="desc">온 가족이 함께하는 여름 캠프 참여</p>
+                                        </div>
+                                    </li>
+                                    <li class="main_benefit_item">
+                                        <div class="img_box">
+                                            <img src="./images/main/main_benefit3.png" alt="">
+                                        </div>
+                                        <div class="txt_box">
+                                            <strong class="tit">인증서 발급</strong>
+                                            <p class="desc">어린이 과학동아, 이화여자대학교 자연사 박물관 발급 (수료대원 기준)</p>
+                                        </div>
+                                    </li>
+                                    <li class="main_benefit_item">
+                                        <div class="img_box">
+                                            <img src="./images/main/main_benefit4.png" alt="">
+                                        </div>
+                                        <div class="txt_box">
+                                            <strong class="tit">연구자의 특별 강연</strong>
+                                            <p class="desc">생태 연구자의 특별 강연 우선 선발</p>
+                                        </div>
+                                    </li>
+                                    <li class="main_benefit_item">
+                                        <div class="img_box">
+                                            <img src="./images/main/main_benefit5.png" alt="">
+                                        </div>
+                                        <div class="txt_box">
+                                            <strong class="tit">생태 탐사 포트폴리오</strong>
+                                            <p class="desc">정기 구독자는 1년 동안 올린 탐사기록을 내려받을 수 있는 포트폴리오 제공</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer id="footer" class="footer">
+                <ul class="footer_menu">
+                    <li><a href="">회사소개</a></li>
+                    <li><a href="">광고안내</a></li>
+                    <li><a href="">개인정보취급방침</a></li>
+                </ul>
+                <div class="footer_policy">
+                    <h2 class="footer_policy_tit">
+                        <button type="button" class="btn_policy">㈜동아사이언스 키즈 플랫폼 <i></i></button>
+                    </h2>
+                    <div class="txt_box">
+                        ㈜동아사이언스 팝콘플래닛, 시민과학콘 | 대표 : 장경애 <br>
+                        개인정보관리책임자 : <span>김수희 (privacy@dongascience.com) |</span> <span>청소년보호책임자 : 조기견</span> <br><br>
+                        서울시 용산구 청파로 109, 7층 (04370) | 문의 : 02-6749-2000 ｜팩스 : 02-3148-0789  사업자등록번호 : 101-81-62201 (사업자정보확인) | 통신판매업신고번호 : 제2013-서울용산-01101호 | 온라인 결제를 위한 PG사의 구매안전서비스(가입사실 확인)
+                    </div>
+                </div>
+                <p class="copy">Copyright © Dongascience. All right reserved.</p>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>
