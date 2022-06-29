@@ -66,6 +66,11 @@
             }
         }
     }
+    &.ty_expedition {
+        .pp_list_thumb {
+            width: 80px;
+        }
+    }
 
     &_link {
         display: flex;
