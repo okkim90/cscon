@@ -16,122 +16,15 @@
     <script type="text/javascript" src="./common/js/swiper.min.js"></script>
     <script type="text/javascript" src="./common/js/common.js"></script>
 
-    <style>
-        #expedition_info{
-            background:rgba(60, 179, 113, 0.07);
-            margin: 0 -20px;
-            padding: 20px;
-            margin-top: 20px;
-            font-size: 13px;
-            line-height: 1.43;
-        }
-        .half_HL {background: linear-gradient(to top, #FFE400 50%, transparent 50%);}
-        .dd_label {
-            margin-right: 15px;
-        }
-
-        .dd_radio {
-            margin-right: 5px;
-        }
-
-        .dd_checkbox {
-            margin-right: 5px;
-        }
-
-        .dd_strong {
-            /*margin-left: 10px;*/
-            word-break: keep-all
-        }
-
-        .dd_q + .dd_q {
-           margin-top: 30px;
-        }
-
-        .dd_a {
-            margin-top: 10px;
-        }
-
-        .dd_href {
-            text-decoration: underline!important; ;
-            color: #0000FF!important;
-        }
-
-        .dd_select {
-            margin-right: 5px;
-            padding: 0 30px 0 10px;
-            width:21%;
-            height:46px;
-            background:#fff;
-            border:1px solid #e5e5e5;
-            border-radius:3px; color:#444;
-            cursor:pointer; margin-right:5px;
-            background-image: url(../../images/ico/arrow_bot_b.svg);
-            background-repeat: no-repeat;
-            background-position: calc(100% - 10px) center;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-
-        .dd_msg {
-            display:block;
-            color: #ff2400;
-            margin-left: 10px;
-            word-break: keep-all;
-            margin-top: 10px;
-        }
-
-        .dd_table {
-            /*margin-left: 50px;*/
-
-        }
-
-        .dd_table td { text-align:center;
-            border:1px solid #eee; padding:10px 0; word-break: keep-all
-        }
-        .dd_table td .dd_radio{ margin:0 }
-        .dd_table tr td:first-child { text-align:left; padding-left:10px;
-        }
-
-        .dd_textarea {
-            border:1px solid #e4e2dd;
-            font-size:14px;
-            background:#fffef9;
-            width:93%;
-            height:100px;
-            vertical-align:middle;
-        }
-
-        .dd_subtxt {
-            margin-left: 20px;
-        }
-
-        .dd_subtxt2 {
-            margin-left: 81px;
-        }
-
-        .dd_date{
-            width: 150px;
-            height: 46px;
-            line-height: 46px;
-            border: 1px solid #ccc;
-            font-size: 17px;
-        }
-
-        .dd_time{
-            width: 150px;
-            height: 46px;
-            line-height: 46px;
-            border: 1px solid #ccc;
-            font-size: 17px;
-        }
-    </style>
+    <!-- 탐사기록 작성 폼 스타일 (기존 어과동에 탐사기록 작성 페이지 상단에 있던 스타일 가져와서 일부 수정함) -->
+    <link rel="stylesheet" href="./common/css/expedition.css">
 </head>
 <body>
     <div id="wrap">
         <div id="content" class="sub_m">
             <header id="header" class="sub_header">
                 <a href="" class="btn_back"><span class="blind">뒤로가기</span></a>
-                <h1 class="tit"><span class="blind">기사콘</span> 기사쓰기</h1>
+                <h1 class="tit"><span class="blind">지구사랑탐사대</span> 탐사기록 쓰기</h1>
                 <div class="btns">
                     <button type="button" class="btn_small white4">임시저장</button>
                     <button type="button" class="btn_save ty_small"><span class="blind">등록</span></button>
@@ -140,8 +33,51 @@
             <div id="container" class="sub_m">
                 <div class="sub_wrap pt0">
                     <div class="sub_inner">
-
                         <div class="wp_cont">
+                            <div class="expedition_top">
+                                <div class="expedition_top_select">
+                                    <select name="CATEGORY" id="CATEGORY" class="select_ty1 ty_big">
+                                        <option value="" selected="selected">선택하세요.</option>
+                                        <option value="개미">개미</option>
+                                        <option value="거미">거미</option>
+                                        <option value="귀화식물">귀화식물</option>
+                                        <option value="나비">나비</option>
+                                        <option value="단풍탐사">단풍탐사</option>
+                                        <option value="도롱뇽">도롱뇽</option>
+                                        <option value="매미">매미</option>
+                                        <option value="민물고기">민물고기</option>
+                                        <option value="바닷물고기">바닷물고기</option>
+                                        <option value="박쥐">박쥐</option>
+                                        <option value="소리모아">소리모아</option>
+                                        <option value="식물개화">식물개화</option>
+                                        <option value="양서류">양서류</option>
+                                        <option value="제비">제비</option>
+                                        <option value="조류">조류</option>
+                                        <option value="특산식물">특산식물</option>
+                                        <option value="화분매개자">화분매개자</option>
+                                        <option value="지사탐 수다방">지사탐 수다방</option>
+                                        <option value="시민과학풀씨_전기차">시민과학풀씨_전기차</option>
+                                        <option value="시민과학풀씨_미끈망둑">시민과학풀씨_미끈망둑</option>
+                                        <option value="시민과학풀씨_왕우렁이">시민과학풀씨_왕우렁이</option>
+                                        <option value="시민과학풀씨_피라미">시민과학풀씨_피라미</option>
+                                        <option value="시민과학풀씨_법의곤충">시민과학풀씨_법의곤충</option>
+                                        <option value="시민과학풀씨_거미_기후변화지표종">시민과학풀씨_거미_기후변화지표종</option>
+                                    </select>
+                                </div>
+                                <div class="expedition_top_loc">
+                                    <div class="chk_toggle_set">
+                                        <span class="chk_toggle_tit">위치</span>
+                                        <label class="chk_toggle">
+                                            <input type="checkbox" class="hidden_chk name_chk" onchange="edit_name(this)">
+                                            <span class="chk_toggle_box">
+                                                <em class="txt_on">ON</em>
+                                                <i class="chk_toggle_ico"></i>
+                                            </span>
+                                        </label>
+                                    </div>
+                                    <input type="text" class="loc_txt" value="대한민국 서울특별시 노원구" readonly>
+                                </div>
+                            </div>
                             <input type="text" class="input_ty1" placeholder="제목을 입력 해주세요.">
 
                             <div id="expedition_info">
@@ -150,21 +86,28 @@
                                     <input type="hidden" name="resch_2_q" id="resch_2_q" value="2. 새를 탐사한 장소는 어디인가요? (다중 선택 가능)">
                                     <input type="hidden" name="resch_3_q" id="resch_3_q" value="3. 관찰한 새 종류와 수를 적어주세요. (관찰 도중 보였던 새의 ‘최대 수’를 적어주세요.)">
                                     <div class="dd_q">
-                                    <strong class="dd_strong">1. 탐사를 5분 동안 했나요?</strong>
-                                    <div class="dd_a">
-                                        <label class="dd_label">
-                                        <input name="resch_1" id="resch_1" type="radio" value="예, 5분 동안 탐사했습니다." class="dd_radio">예, 5분 동안 탐사했습니다. </label>
-                                    </div>
+                                        <strong class="dd_strong half_HL">연구의 목적</strong>
+                                        <br>
+                                        <br>
+                                        <strong class="dd_strong">우리 주변의 나무에 단풍이 들어가는 모습을 보며, 우리나라의 생태계가 기후변화에 따라 어떤 변화가 나타나는지 확인한다.</strong>
+                                        <br>
+                                      </div>
+                                    <div class="dd_q">
+                                        <strong class="dd_strong">1. 탐사를 5분 동안 했나요?</strong>
+                                        <div class="dd_a">
+                                            <label class="dd_label">
+                                            <input name="resch_1" id="resch_1" type="radio" value="예, 5분 동안 탐사했습니다." class="dd_radio">예, 5분 동안 탐사했습니다. </label>
+                                        </div>
                                     </div>
                                     <div class="dd_q">
-                                    <strong class="dd_strong">1. 박쥐를 발견한 날짜와 시간을 선택해 주세요.</strong>
-                                    <br>
-                                    <div class="dd_a">
-                                        <label class="dd_label">
-                                        <input type="date" name="resch_1" id="resch_1" class="dd_date" value="2022-06-28" autocomplete="off">
-                                        <input type="time" name="resch_2" id="resch_2" class="dd_time" value="16:05" autocomplete="off">
-                                        </label>
-                                    </div>
+                                        <strong class="dd_strong">1. 박쥐를 발견한 날짜와 시간을 선택해 주세요.</strong>
+                                        <br>
+                                        <div class="dd_a">
+                                            <label class="dd_label">
+                                            <input type="date" name="resch_1" id="resch_1" class="dd_date" value="2022-06-28" autocomplete="off">
+                                            <input type="time" name="resch_2" id="resch_2" class="dd_time" value="16:05" autocomplete="off">
+                                            </label>
+                                        </div>
                                     </div>
                                     <div class="dd_q">
                                     <strong class="dd_strong">2. 새를 탐사한 장소는 어디인가요? (다중 선택 가능)</strong>
@@ -231,6 +174,17 @@
                                     </div>
                                     </div>
                                     <div class="dd_q">
+                                        <strong class="dd_strong">3. 도롱뇽을 발견한 계곡이나 하천의 상태를 확인하고, 주변 환경 사진도 함께 찍어 주세요.</strong>
+                                        <div class="dd_a">
+                                          <label class="dd_label">
+                                            <input name="resch_3" id="resch_3" type="radio" value="말라 있음" class="dd_radio">말라 있음 </label>
+                                          <label class="dd_label">
+                                            <input name="resch_3" id="resch_3" type="radio" value="보통" class="dd_radio">보통 </label>
+                                          <label class="dd_label">
+                                            <input name="resch_3" id="resch_3" type="radio" value="넘쳐 흐름" class="dd_radio">넘쳐 흐름 </label>
+                                        </div>
+                                      </div>
+                                    <div class="dd_q">
                                     <strong class="dd_strong">3. 탐사 장소가 언제 지어졌는지 또는 언제 재개발되었는지 연도를 적어 주세요.</strong>
                                     <div class="dd_a">
                                         <textarea name="resch_3" id="resch_3" class="dd_textarea"></textarea>
@@ -252,283 +206,283 @@
                                     <a class="fancybox-thumbs" data-fancybox-group="thumb" href="/assets/fancybox/img/birds/9.JPG" title="9/10"></a>
                                     <a class="fancybox-thumbs" data-fancybox-group="thumb" href="/assets/fancybox/img/birds/10.JPG" title="10/10"></a>
                                     <div class="dd_a">
-                                        <div class="dd_a dd_a_0">
-                                        <label class="dd_label">
-                                            <select name="resch_3" id="resch_3" class="dd_select" required="">
-                                            <option value="">종명</option>
-                                            <option value="개똥지빠귀">개똥지빠귀</option>
-                                            <option value="곤줄박이">곤줄박이</option>
-                                            <option value="괭이갈매기">괭이갈매기</option>
-                                            <option value="까마귀">까마귀</option>
-                                            <option value="까치">까치</option>
-                                            <option value="노랑지빠귀">노랑지빠귀</option>
-                                            <option value="노랑턱멧새">노랑턱멧새</option>
-                                            <option value="동고비">동고비</option>
-                                            <option value="되새">되새</option>
-                                            <option value="딱새">딱새</option>
-                                            <option value="때까치">때까치</option>
-                                            <option value="말똥가리">말똥가리</option>
-                                            <option value="멧비둘기">멧비둘기</option>
-                                            <option value="물까치">물까치</option>
-                                            <option value="민물가마우지">민물가마우지</option>
-                                            <option value="박새">박새</option>
-                                            <option value="방울새">방울새</option>
-                                            <option value="붉은머리오목눈이">붉은머리오목눈이</option>
-                                            <option value="상모솔새">상모솔새</option>
-                                            <option value="새매">새매</option>
-                                            <option value="쇠딱따구리">쇠딱따구리</option>
-                                            <option value="쇠박새">쇠박새</option>
-                                            <option value="쇠백로">쇠백로</option>
-                                            <option value="알락할미새">알락할미새</option>
-                                            <option value="어치">어치</option>
-                                            <option value="오목눈이">오목눈이</option>
-                                            <option value="오색딱따구리">오색딱따구리</option>
-                                            <option value="왜가리">왜가리</option>
-                                            <option value="원앙">원앙</option>
-                                            <option value="유리딱새">유리딱새</option>
-                                            <option value="중대백로">중대백로</option>
-                                            <option value="직박구리">직박구리</option>
-                                            <option value="진박새">진박새</option>
-                                            <option value="집비둘기">집비둘기</option>
-                                            <option value="찌르레기">찌르레기</option>
-                                            <option value="참새">참새</option>
-                                            <option value="청둥오리">청둥오리</option>
-                                            <option value="청딱다구리">청딱다구리</option>
-                                            <option value="콩새">콩새</option>
-                                            <option value="큰부리까마귀">큰부리까마귀</option>
-                                            <option value="해오라기">해오라기</option>
-                                            <option value="황조롱이">황조롱이</option>
-                                            <option value="흰뺨검둥오리">흰뺨검둥오리</option>
-                                            <option value="기타">기타</option>
-                                            </select>
-                                        </label>
-                                        <label class="dd_label">
-                                            <input type="number" min="0" max="9999" name="resch_4" id="resch_4" value="" class="dd_select" required="">
-                                        </label>
-                                        <label class="dd_label">
-                                            <a href="javascript:fn_updown('down');" style="display:block;float:right;position:relative;border:1px solid #e0e0e0;margin-right:10px;background:#fff;cursor:pointer">
-                                            <img src="//img.dongascience.com/dlibrary2017/images/common/btn_reduce.png">
-                                            </a>
-                                            <a href="javascript:fn_updown('up');" style="display:block;float:right;position:relative;border:1px solid #e0e0e0;margin-right:10px;background:#fff;cursor:pointer">
-                                            <img src="//img.dongascience.com/dlibrary2017/images/common/btn_expand.png">
-                                            </a>
-                                        </label>
+                                        <div class="add_form_set dd_a dd_a_0">
+                                            <label class="add_form_select dd_label ">
+                                                <select name="resch_3" id="resch_3" class="dd_select" required="">
+                                                <option value="">종명</option>
+                                                <option value="개똥지빠귀">개똥지빠귀</option>
+                                                <option value="곤줄박이">곤줄박이</option>
+                                                <option value="괭이갈매기">괭이갈매기</option>
+                                                <option value="까마귀">까마귀</option>
+                                                <option value="까치">까치</option>
+                                                <option value="노랑지빠귀">노랑지빠귀</option>
+                                                <option value="노랑턱멧새">노랑턱멧새</option>
+                                                <option value="동고비">동고비</option>
+                                                <option value="되새">되새</option>
+                                                <option value="딱새">딱새</option>
+                                                <option value="때까치">때까치</option>
+                                                <option value="말똥가리">말똥가리</option>
+                                                <option value="멧비둘기">멧비둘기</option>
+                                                <option value="물까치">물까치</option>
+                                                <option value="민물가마우지">민물가마우지</option>
+                                                <option value="박새">박새</option>
+                                                <option value="방울새">방울새</option>
+                                                <option value="붉은머리오목눈이">붉은머리오목눈이</option>
+                                                <option value="상모솔새">상모솔새</option>
+                                                <option value="새매">새매</option>
+                                                <option value="쇠딱따구리">쇠딱따구리</option>
+                                                <option value="쇠박새">쇠박새</option>
+                                                <option value="쇠백로">쇠백로</option>
+                                                <option value="알락할미새">알락할미새</option>
+                                                <option value="어치">어치</option>
+                                                <option value="오목눈이">오목눈이</option>
+                                                <option value="오색딱따구리">오색딱따구리</option>
+                                                <option value="왜가리">왜가리</option>
+                                                <option value="원앙">원앙</option>
+                                                <option value="유리딱새">유리딱새</option>
+                                                <option value="중대백로">중대백로</option>
+                                                <option value="직박구리">직박구리</option>
+                                                <option value="진박새">진박새</option>
+                                                <option value="집비둘기">집비둘기</option>
+                                                <option value="찌르레기">찌르레기</option>
+                                                <option value="참새">참새</option>
+                                                <option value="청둥오리">청둥오리</option>
+                                                <option value="청딱다구리">청딱다구리</option>
+                                                <option value="콩새">콩새</option>
+                                                <option value="큰부리까마귀">큰부리까마귀</option>
+                                                <option value="해오라기">해오라기</option>
+                                                <option value="황조롱이">황조롱이</option>
+                                                <option value="흰뺨검둥오리">흰뺨검둥오리</option>
+                                                <option value="기타">기타</option>
+                                                </select>
+                                            </label>
+                                            <label class="dd_label">
+                                                <input type="number" min="0" max="9999" name="resch_4" id="resch_4" value="" class="dd_select" required="">
+                                            </label>
+                                            <label class="add_form_btns dd_label">
+                                                <a href="javascript:fn_updown('down');" class="btn_updown">
+                                                <img src="//img.dongascience.com/dlibrary2017/images/common/btn_reduce.png">
+                                                </a>
+                                                <a href="javascript:fn_updown('up');" class="btn_updown">
+                                                <img src="//img.dongascience.com/dlibrary2017/images/common/btn_expand.png">
+                                                </a>
+                                            </label>
                                         </div>
-                                        <div class="dd_a dd_a_1" style="display: none;">
-                                        <label class="dd_label">
-                                            <select name="resch_5" id="resch_5" class="dd_select" required="">
-                                            <option value="">종명</option>
-                                            <option value="개똥지빠귀">개똥지빠귀</option>
-                                            <option value="곤줄박이">곤줄박이</option>
-                                            <option value="괭이갈매기">괭이갈매기</option>
-                                            <option value="까마귀">까마귀</option>
-                                            <option value="까치">까치</option>
-                                            <option value="노랑지빠귀">노랑지빠귀</option>
-                                            <option value="노랑턱멧새">노랑턱멧새</option>
-                                            <option value="동고비">동고비</option>
-                                            <option value="되새">되새</option>
-                                            <option value="딱새">딱새</option>
-                                            <option value="때까치">때까치</option>
-                                            <option value="말똥가리">말똥가리</option>
-                                            <option value="멧비둘기">멧비둘기</option>
-                                            <option value="물까치">물까치</option>
-                                            <option value="민물가마우지">민물가마우지</option>
-                                            <option value="박새">박새</option>
-                                            <option value="방울새">방울새</option>
-                                            <option value="붉은머리오목눈이">붉은머리오목눈이</option>
-                                            <option value="상모솔새">상모솔새</option>
-                                            <option value="새매">새매</option>
-                                            <option value="쇠딱따구리">쇠딱따구리</option>
-                                            <option value="쇠박새">쇠박새</option>
-                                            <option value="쇠백로">쇠백로</option>
-                                            <option value="알락할미새">알락할미새</option>
-                                            <option value="어치">어치</option>
-                                            <option value="오목눈이">오목눈이</option>
-                                            <option value="오색딱따구리">오색딱따구리</option>
-                                            <option value="왜가리">왜가리</option>
-                                            <option value="원앙">원앙</option>
-                                            <option value="유리딱새">유리딱새</option>
-                                            <option value="중대백로">중대백로</option>
-                                            <option value="직박구리">직박구리</option>
-                                            <option value="진박새">진박새</option>
-                                            <option value="집비둘기">집비둘기</option>
-                                            <option value="찌르레기">찌르레기</option>
-                                            <option value="참새">참새</option>
-                                            <option value="청둥오리">청둥오리</option>
-                                            <option value="청딱다구리">청딱다구리</option>
-                                            <option value="콩새">콩새</option>
-                                            <option value="큰부리까마귀">큰부리까마귀</option>
-                                            <option value="해오라기">해오라기</option>
-                                            <option value="황조롱이">황조롱이</option>
-                                            <option value="흰뺨검둥오리">흰뺨검둥오리</option>
-                                            <option value="기타">기타</option>
-                                            </select>
-                                        </label>
-                                        <label class="dd_label">
-                                            <input type="number" min="0" max="9999" name="resch_6" id="resch_6" value="" class="dd_select" required="">
-                                        </label>
+                                        <div class="add_form_set dd_a dd_a_1" style="display: none;">
+                                            <label class="add_form_select dd_label">
+                                                <select name="resch_5" id="resch_5" class="dd_select" required="">
+                                                <option value="">종명</option>
+                                                <option value="개똥지빠귀">개똥지빠귀</option>
+                                                <option value="곤줄박이">곤줄박이</option>
+                                                <option value="괭이갈매기">괭이갈매기</option>
+                                                <option value="까마귀">까마귀</option>
+                                                <option value="까치">까치</option>
+                                                <option value="노랑지빠귀">노랑지빠귀</option>
+                                                <option value="노랑턱멧새">노랑턱멧새</option>
+                                                <option value="동고비">동고비</option>
+                                                <option value="되새">되새</option>
+                                                <option value="딱새">딱새</option>
+                                                <option value="때까치">때까치</option>
+                                                <option value="말똥가리">말똥가리</option>
+                                                <option value="멧비둘기">멧비둘기</option>
+                                                <option value="물까치">물까치</option>
+                                                <option value="민물가마우지">민물가마우지</option>
+                                                <option value="박새">박새</option>
+                                                <option value="방울새">방울새</option>
+                                                <option value="붉은머리오목눈이">붉은머리오목눈이</option>
+                                                <option value="상모솔새">상모솔새</option>
+                                                <option value="새매">새매</option>
+                                                <option value="쇠딱따구리">쇠딱따구리</option>
+                                                <option value="쇠박새">쇠박새</option>
+                                                <option value="쇠백로">쇠백로</option>
+                                                <option value="알락할미새">알락할미새</option>
+                                                <option value="어치">어치</option>
+                                                <option value="오목눈이">오목눈이</option>
+                                                <option value="오색딱따구리">오색딱따구리</option>
+                                                <option value="왜가리">왜가리</option>
+                                                <option value="원앙">원앙</option>
+                                                <option value="유리딱새">유리딱새</option>
+                                                <option value="중대백로">중대백로</option>
+                                                <option value="직박구리">직박구리</option>
+                                                <option value="진박새">진박새</option>
+                                                <option value="집비둘기">집비둘기</option>
+                                                <option value="찌르레기">찌르레기</option>
+                                                <option value="참새">참새</option>
+                                                <option value="청둥오리">청둥오리</option>
+                                                <option value="청딱다구리">청딱다구리</option>
+                                                <option value="콩새">콩새</option>
+                                                <option value="큰부리까마귀">큰부리까마귀</option>
+                                                <option value="해오라기">해오라기</option>
+                                                <option value="황조롱이">황조롱이</option>
+                                                <option value="흰뺨검둥오리">흰뺨검둥오리</option>
+                                                <option value="기타">기타</option>
+                                                </select>
+                                            </label>
+                                            <label class="dd_label">
+                                                <input type="number" min="0" max="9999" name="resch_6" id="resch_6" value="" class="dd_select" required="">
+                                            </label>
                                         </div>
-                                        <div class="dd_a dd_a_2" style="display: none;">
-                                        <label class="dd_label">
-                                            <select name="resch_7" id="resch_7" class="dd_select" required="">
-                                            <option value="">종명</option>
-                                            <option value="개똥지빠귀">개똥지빠귀</option>
-                                            <option value="곤줄박이">곤줄박이</option>
-                                            <option value="괭이갈매기">괭이갈매기</option>
-                                            <option value="까마귀">까마귀</option>
-                                            <option value="까치">까치</option>
-                                            <option value="노랑지빠귀">노랑지빠귀</option>
-                                            <option value="노랑턱멧새">노랑턱멧새</option>
-                                            <option value="동고비">동고비</option>
-                                            <option value="되새">되새</option>
-                                            <option value="딱새">딱새</option>
-                                            <option value="때까치">때까치</option>
-                                            <option value="말똥가리">말똥가리</option>
-                                            <option value="멧비둘기">멧비둘기</option>
-                                            <option value="물까치">물까치</option>
-                                            <option value="민물가마우지">민물가마우지</option>
-                                            <option value="박새">박새</option>
-                                            <option value="방울새">방울새</option>
-                                            <option value="붉은머리오목눈이">붉은머리오목눈이</option>
-                                            <option value="상모솔새">상모솔새</option>
-                                            <option value="새매">새매</option>
-                                            <option value="쇠딱따구리">쇠딱따구리</option>
-                                            <option value="쇠박새">쇠박새</option>
-                                            <option value="쇠백로">쇠백로</option>
-                                            <option value="알락할미새">알락할미새</option>
-                                            <option value="어치">어치</option>
-                                            <option value="오목눈이">오목눈이</option>
-                                            <option value="오색딱따구리">오색딱따구리</option>
-                                            <option value="왜가리">왜가리</option>
-                                            <option value="원앙">원앙</option>
-                                            <option value="유리딱새">유리딱새</option>
-                                            <option value="중대백로">중대백로</option>
-                                            <option value="직박구리">직박구리</option>
-                                            <option value="진박새">진박새</option>
-                                            <option value="집비둘기">집비둘기</option>
-                                            <option value="찌르레기">찌르레기</option>
-                                            <option value="참새">참새</option>
-                                            <option value="청둥오리">청둥오리</option>
-                                            <option value="청딱다구리">청딱다구리</option>
-                                            <option value="콩새">콩새</option>
-                                            <option value="큰부리까마귀">큰부리까마귀</option>
-                                            <option value="해오라기">해오라기</option>
-                                            <option value="황조롱이">황조롱이</option>
-                                            <option value="흰뺨검둥오리">흰뺨검둥오리</option>
-                                            <option value="기타">기타</option>
-                                            </select>
-                                        </label>
-                                        <label class="dd_label">
-                                            <input type="number" min="0" max="9999" name="resch_8" id="resch_8" value="" class="dd_select" required="">
-                                        </label>
+                                        <div class="add_form_set dd_a dd_a_2" style="display: none;">
+                                            <label class="add_form_select dd_label">
+                                                <select name="resch_7" id="resch_7" class="dd_select" required="">
+                                                <option value="">종명</option>
+                                                <option value="개똥지빠귀">개똥지빠귀</option>
+                                                <option value="곤줄박이">곤줄박이</option>
+                                                <option value="괭이갈매기">괭이갈매기</option>
+                                                <option value="까마귀">까마귀</option>
+                                                <option value="까치">까치</option>
+                                                <option value="노랑지빠귀">노랑지빠귀</option>
+                                                <option value="노랑턱멧새">노랑턱멧새</option>
+                                                <option value="동고비">동고비</option>
+                                                <option value="되새">되새</option>
+                                                <option value="딱새">딱새</option>
+                                                <option value="때까치">때까치</option>
+                                                <option value="말똥가리">말똥가리</option>
+                                                <option value="멧비둘기">멧비둘기</option>
+                                                <option value="물까치">물까치</option>
+                                                <option value="민물가마우지">민물가마우지</option>
+                                                <option value="박새">박새</option>
+                                                <option value="방울새">방울새</option>
+                                                <option value="붉은머리오목눈이">붉은머리오목눈이</option>
+                                                <option value="상모솔새">상모솔새</option>
+                                                <option value="새매">새매</option>
+                                                <option value="쇠딱따구리">쇠딱따구리</option>
+                                                <option value="쇠박새">쇠박새</option>
+                                                <option value="쇠백로">쇠백로</option>
+                                                <option value="알락할미새">알락할미새</option>
+                                                <option value="어치">어치</option>
+                                                <option value="오목눈이">오목눈이</option>
+                                                <option value="오색딱따구리">오색딱따구리</option>
+                                                <option value="왜가리">왜가리</option>
+                                                <option value="원앙">원앙</option>
+                                                <option value="유리딱새">유리딱새</option>
+                                                <option value="중대백로">중대백로</option>
+                                                <option value="직박구리">직박구리</option>
+                                                <option value="진박새">진박새</option>
+                                                <option value="집비둘기">집비둘기</option>
+                                                <option value="찌르레기">찌르레기</option>
+                                                <option value="참새">참새</option>
+                                                <option value="청둥오리">청둥오리</option>
+                                                <option value="청딱다구리">청딱다구리</option>
+                                                <option value="콩새">콩새</option>
+                                                <option value="큰부리까마귀">큰부리까마귀</option>
+                                                <option value="해오라기">해오라기</option>
+                                                <option value="황조롱이">황조롱이</option>
+                                                <option value="흰뺨검둥오리">흰뺨검둥오리</option>
+                                                <option value="기타">기타</option>
+                                                </select>
+                                            </label>
+                                            <label class="dd_label">
+                                                <input type="number" min="0" max="9999" name="resch_8" id="resch_8" value="" class="dd_select" required="">
+                                            </label>
                                         </div>
-                                        <div class="dd_a dd_a_3" style="display: none;">
-                                        <label class="dd_label">
-                                            <select name="resch_9" id="resch_9" class="dd_select" required="">
-                                            <option value="">종명</option>
-                                            <option value="개똥지빠귀">개똥지빠귀</option>
-                                            <option value="곤줄박이">곤줄박이</option>
-                                            <option value="괭이갈매기">괭이갈매기</option>
-                                            <option value="까마귀">까마귀</option>
-                                            <option value="까치">까치</option>
-                                            <option value="노랑지빠귀">노랑지빠귀</option>
-                                            <option value="노랑턱멧새">노랑턱멧새</option>
-                                            <option value="동고비">동고비</option>
-                                            <option value="되새">되새</option>
-                                            <option value="딱새">딱새</option>
-                                            <option value="때까치">때까치</option>
-                                            <option value="말똥가리">말똥가리</option>
-                                            <option value="멧비둘기">멧비둘기</option>
-                                            <option value="물까치">물까치</option>
-                                            <option value="민물가마우지">민물가마우지</option>
-                                            <option value="박새">박새</option>
-                                            <option value="방울새">방울새</option>
-                                            <option value="붉은머리오목눈이">붉은머리오목눈이</option>
-                                            <option value="상모솔새">상모솔새</option>
-                                            <option value="새매">새매</option>
-                                            <option value="쇠딱따구리">쇠딱따구리</option>
-                                            <option value="쇠박새">쇠박새</option>
-                                            <option value="쇠백로">쇠백로</option>
-                                            <option value="알락할미새">알락할미새</option>
-                                            <option value="어치">어치</option>
-                                            <option value="오목눈이">오목눈이</option>
-                                            <option value="오색딱따구리">오색딱따구리</option>
-                                            <option value="왜가리">왜가리</option>
-                                            <option value="원앙">원앙</option>
-                                            <option value="유리딱새">유리딱새</option>
-                                            <option value="중대백로">중대백로</option>
-                                            <option value="직박구리">직박구리</option>
-                                            <option value="진박새">진박새</option>
-                                            <option value="집비둘기">집비둘기</option>
-                                            <option value="찌르레기">찌르레기</option>
-                                            <option value="참새">참새</option>
-                                            <option value="청둥오리">청둥오리</option>
-                                            <option value="청딱다구리">청딱다구리</option>
-                                            <option value="콩새">콩새</option>
-                                            <option value="큰부리까마귀">큰부리까마귀</option>
-                                            <option value="해오라기">해오라기</option>
-                                            <option value="황조롱이">황조롱이</option>
-                                            <option value="흰뺨검둥오리">흰뺨검둥오리</option>
-                                            <option value="기타">기타</option>
-                                            </select>
-                                        </label>
-                                        <label class="dd_label">
-                                            <input type="number" min="0" max="9999" name="resch_10" id="resch_10" value="" class="dd_select" required="">
-                                        </label>
+                                        <div class="add_form_set dd_a dd_a_3" style="display: none;">
+                                            <label class="add_form_select dd_label">
+                                                <select name="resch_9" id="resch_9" class="dd_select" required="">
+                                                <option value="">종명</option>
+                                                <option value="개똥지빠귀">개똥지빠귀</option>
+                                                <option value="곤줄박이">곤줄박이</option>
+                                                <option value="괭이갈매기">괭이갈매기</option>
+                                                <option value="까마귀">까마귀</option>
+                                                <option value="까치">까치</option>
+                                                <option value="노랑지빠귀">노랑지빠귀</option>
+                                                <option value="노랑턱멧새">노랑턱멧새</option>
+                                                <option value="동고비">동고비</option>
+                                                <option value="되새">되새</option>
+                                                <option value="딱새">딱새</option>
+                                                <option value="때까치">때까치</option>
+                                                <option value="말똥가리">말똥가리</option>
+                                                <option value="멧비둘기">멧비둘기</option>
+                                                <option value="물까치">물까치</option>
+                                                <option value="민물가마우지">민물가마우지</option>
+                                                <option value="박새">박새</option>
+                                                <option value="방울새">방울새</option>
+                                                <option value="붉은머리오목눈이">붉은머리오목눈이</option>
+                                                <option value="상모솔새">상모솔새</option>
+                                                <option value="새매">새매</option>
+                                                <option value="쇠딱따구리">쇠딱따구리</option>
+                                                <option value="쇠박새">쇠박새</option>
+                                                <option value="쇠백로">쇠백로</option>
+                                                <option value="알락할미새">알락할미새</option>
+                                                <option value="어치">어치</option>
+                                                <option value="오목눈이">오목눈이</option>
+                                                <option value="오색딱따구리">오색딱따구리</option>
+                                                <option value="왜가리">왜가리</option>
+                                                <option value="원앙">원앙</option>
+                                                <option value="유리딱새">유리딱새</option>
+                                                <option value="중대백로">중대백로</option>
+                                                <option value="직박구리">직박구리</option>
+                                                <option value="진박새">진박새</option>
+                                                <option value="집비둘기">집비둘기</option>
+                                                <option value="찌르레기">찌르레기</option>
+                                                <option value="참새">참새</option>
+                                                <option value="청둥오리">청둥오리</option>
+                                                <option value="청딱다구리">청딱다구리</option>
+                                                <option value="콩새">콩새</option>
+                                                <option value="큰부리까마귀">큰부리까마귀</option>
+                                                <option value="해오라기">해오라기</option>
+                                                <option value="황조롱이">황조롱이</option>
+                                                <option value="흰뺨검둥오리">흰뺨검둥오리</option>
+                                                <option value="기타">기타</option>
+                                                </select>
+                                            </label>
+                                            <label class="dd_label">
+                                                <input type="number" min="0" max="9999" name="resch_10" id="resch_10" value="" class="dd_select" required="">
+                                            </label>
                                         </div>
-                                        <div class="dd_a dd_a_4" style="display: none;">
-                                        <label class="dd_label">
-                                            <select name="resch_11" id="resch_11" class="dd_select" required="">
-                                            <option value="">종명</option>
-                                            <option value="개똥지빠귀">개똥지빠귀</option>
-                                            <option value="곤줄박이">곤줄박이</option>
-                                            <option value="괭이갈매기">괭이갈매기</option>
-                                            <option value="까마귀">까마귀</option>
-                                            <option value="까치">까치</option>
-                                            <option value="노랑지빠귀">노랑지빠귀</option>
-                                            <option value="노랑턱멧새">노랑턱멧새</option>
-                                            <option value="동고비">동고비</option>
-                                            <option value="되새">되새</option>
-                                            <option value="딱새">딱새</option>
-                                            <option value="때까치">때까치</option>
-                                            <option value="말똥가리">말똥가리</option>
-                                            <option value="멧비둘기">멧비둘기</option>
-                                            <option value="물까치">물까치</option>
-                                            <option value="민물가마우지">민물가마우지</option>
-                                            <option value="박새">박새</option>
-                                            <option value="방울새">방울새</option>
-                                            <option value="붉은머리오목눈이">붉은머리오목눈이</option>
-                                            <option value="상모솔새">상모솔새</option>
-                                            <option value="새매">새매</option>
-                                            <option value="쇠딱따구리">쇠딱따구리</option>
-                                            <option value="쇠박새">쇠박새</option>
-                                            <option value="쇠백로">쇠백로</option>
-                                            <option value="알락할미새">알락할미새</option>
-                                            <option value="어치">어치</option>
-                                            <option value="오목눈이">오목눈이</option>
-                                            <option value="오색딱따구리">오색딱따구리</option>
-                                            <option value="왜가리">왜가리</option>
-                                            <option value="원앙">원앙</option>
-                                            <option value="유리딱새">유리딱새</option>
-                                            <option value="중대백로">중대백로</option>
-                                            <option value="직박구리">직박구리</option>
-                                            <option value="진박새">진박새</option>
-                                            <option value="집비둘기">집비둘기</option>
-                                            <option value="찌르레기">찌르레기</option>
-                                            <option value="참새">참새</option>
-                                            <option value="청둥오리">청둥오리</option>
-                                            <option value="청딱다구리">청딱다구리</option>
-                                            <option value="콩새">콩새</option>
-                                            <option value="큰부리까마귀">큰부리까마귀</option>
-                                            <option value="해오라기">해오라기</option>
-                                            <option value="황조롱이">황조롱이</option>
-                                            <option value="흰뺨검둥오리">흰뺨검둥오리</option>
-                                            <option value="기타">기타</option>
-                                            </select>
-                                        </label>
-                                        <label class="dd_label">
-                                            <input type="number" min="0" max="9999" name="resch_12" id="resch_12" value="" class="dd_select" required="">
-                                        </label>
+                                        <div class="add_form_set dd_a dd_a_4" style="display: none;">
+                                            <label class="add_form_select dd_label">
+                                                <select name="resch_11" id="resch_11" class="dd_select" required="">
+                                                <option value="">종명</option>
+                                                <option value="개똥지빠귀">개똥지빠귀</option>
+                                                <option value="곤줄박이">곤줄박이</option>
+                                                <option value="괭이갈매기">괭이갈매기</option>
+                                                <option value="까마귀">까마귀</option>
+                                                <option value="까치">까치</option>
+                                                <option value="노랑지빠귀">노랑지빠귀</option>
+                                                <option value="노랑턱멧새">노랑턱멧새</option>
+                                                <option value="동고비">동고비</option>
+                                                <option value="되새">되새</option>
+                                                <option value="딱새">딱새</option>
+                                                <option value="때까치">때까치</option>
+                                                <option value="말똥가리">말똥가리</option>
+                                                <option value="멧비둘기">멧비둘기</option>
+                                                <option value="물까치">물까치</option>
+                                                <option value="민물가마우지">민물가마우지</option>
+                                                <option value="박새">박새</option>
+                                                <option value="방울새">방울새</option>
+                                                <option value="붉은머리오목눈이">붉은머리오목눈이</option>
+                                                <option value="상모솔새">상모솔새</option>
+                                                <option value="새매">새매</option>
+                                                <option value="쇠딱따구리">쇠딱따구리</option>
+                                                <option value="쇠박새">쇠박새</option>
+                                                <option value="쇠백로">쇠백로</option>
+                                                <option value="알락할미새">알락할미새</option>
+                                                <option value="어치">어치</option>
+                                                <option value="오목눈이">오목눈이</option>
+                                                <option value="오색딱따구리">오색딱따구리</option>
+                                                <option value="왜가리">왜가리</option>
+                                                <option value="원앙">원앙</option>
+                                                <option value="유리딱새">유리딱새</option>
+                                                <option value="중대백로">중대백로</option>
+                                                <option value="직박구리">직박구리</option>
+                                                <option value="진박새">진박새</option>
+                                                <option value="집비둘기">집비둘기</option>
+                                                <option value="찌르레기">찌르레기</option>
+                                                <option value="참새">참새</option>
+                                                <option value="청둥오리">청둥오리</option>
+                                                <option value="청딱다구리">청딱다구리</option>
+                                                <option value="콩새">콩새</option>
+                                                <option value="큰부리까마귀">큰부리까마귀</option>
+                                                <option value="해오라기">해오라기</option>
+                                                <option value="황조롱이">황조롱이</option>
+                                                <option value="흰뺨검둥오리">흰뺨검둥오리</option>
+                                                <option value="기타">기타</option>
+                                                </select>
+                                            </label>
+                                            <label class="dd_label">
+                                                <input type="number" min="0" max="9999" name="resch_12" id="resch_12" value="" class="dd_select" required="">
+                                            </label>
                                         </div>
                                     </div>
                                     </div>

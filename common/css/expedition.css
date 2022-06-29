@@ -1,0 +1,145 @@
+#expedition_info{
+    background:rgba(60, 179, 113, 0.07);
+    margin: 0 -20px;
+    padding: 20px;
+    margin-top: 20px;
+    font-size: 13px;
+    line-height: 1.43;
+}
+.half_HL {background: linear-gradient(to top, #FFE400 50%, transparent 50%);}
+.dd_label {
+    margin-right: 15px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.dd_radio {
+    margin: 0;
+    margin-right: 5px;
+}
+
+.dd_checkbox {
+    margin: 0;
+    margin-right: 5px;
+}
+
+.dd_strong {
+    /*margin-left: 10px;*/
+    word-break: keep-all
+}
+
+.btn_updown {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    border: 1px solid #e5e5e5;
+    box-sizing: border-box;
+}
+
+.dd_q + .dd_q {
+   margin-top: 32px;
+}
+
+.dd_a {
+    margin-top: 10px;
+}
+
+.dd_href {
+    text-decoration: underline!important; ;
+    color: #0000FF!important;
+}
+
+.dd_select {
+    height:30px;
+    background:#fff;
+    border:1px solid #e5e5e5;
+    border-radius:3px; color:#444;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+.add_form_set {
+    display: flex;
+
+}
+.add_form_set .add_form_select {
+    max-width: 200px;
+}
+.add_form_set .add_form_select .dd_select {
+    width: 100%;
+}
+.add_form_set .add_form_btns {
+    flex-shrink: 0;
+    margin-right: 0;
+}
+select.dd_select {
+    padding: 0 30px 0 10px;
+    cursor:pointer;
+    background-image: url(../../images/ico/arrow_bot_b.svg);
+    background-repeat: no-repeat;
+    background-position: calc(100% - 10px) center;
+}
+input[type="number"].dd_select {
+    width: 70px;
+}
+
+
+.dd_msg {
+    display:block;
+    color: #ff2400;
+    margin-left: 10px;
+    word-break: keep-all;
+    margin-top: 10px;
+}
+
+.dd_table {
+    /*margin-left: 50px;*/
+
+}
+
+.dd_table td { text-align:center;
+    border:1px solid #eee; padding:10px 0; word-break: keep-all
+}
+.dd_table td .dd_radio{ margin:0 }
+.dd_table tr td:first-child { text-align:left; padding-left:10px;
+}
+
+.dd_textarea {
+    border:1px solid #e4e2dd;
+    font-size:14px;
+    background:#fffef9;
+    width: 100%;
+    height:100px;
+    vertical-align:middle;
+    box-sizing: border-box;
+}
+
+.dd_subtxt {
+    margin-left: 20px;
+}
+
+.dd_subtxt2 {
+    margin-left: 81px;
+}
+
+.dd_date, .dd_time {
+    width: 130px;
+    height: 30px;
+    line-height: 28px;
+    border: 1px solid #ccc;
+    padding: 0 5px 0 10px;
+    font-size: 13px;
+    box-sizing: border-box;
+}
+.dd_date::-webkit-calendar-picker-indicator {
+    width: 17px;
+    height: 17px;
+}
+.dd_time::-webkit-calendar-picker-indicator {
+    width: 17px;
+    height: 17px;
+}

@@ -44,3 +44,34 @@
         }
     }
 }
+
+.expedition_top {
+    margin-bottom: 20px;
+    &_select {
+        .select_ty1 {
+            //width: auto;
+            //max-width: 100%;
+        }
+    }
+    &_loc {
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+        .chk_toggle_set {
+            margin-right: 10px;
+        }
+        .loc_txt {
+            height: 40px;
+            border: 1px solid $c_key;
+            text-align: center;
+            font-size: 12px;
+            color: #666;
+            flex: 1;
+            border-radius: 3px;
+            box-sizing: border-box;
+            padding: 0 10px;
+
+
+        }
+    }
+}
