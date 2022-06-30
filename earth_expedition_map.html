@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <title>시민과학콘</title>
+    <!--스타일 공통-->
+    <link rel="stylesheet" href="./common/css/common.css">
+
+    <!-- 지사탐 기존 스타일 -->
+    <link rel="stylesheet" href="./common/css/earth.css">
+
+
+    <!--js 공통-->
+    <script type="text/javascript" src="./common/js/jquery.min.js"></script>
+    <script type="text/javascript" src="./common/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="./common/js/jquery.ui.touch-punch.min.js"></script>
+    <script type="text/javascript" src="https://kit.fontawesome.com/a9123cc962.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./common/js/swiper.min.js"></script>
+    <script type="text/javascript" src="./common/js/common.js"></script>
+
+
+
+    <!-- 지도, 차트 -->
+    <script type="text/javascript" charset="UTF-8" src="https://www.gstatic.com/charts/51/loader.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/49/6/intl/ko_ALL/common.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/49/6/intl/ko_ALL/util.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/49/6/intl/ko_ALL/map.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/49/6/intl/ko_ALL/infowindow.js"></script>
+    <link id="load-css-0" rel="stylesheet" type="text/css" href="https://www.gstatic.com/charts/51/css/core/tooltip.css">
+    <link id="load-css-1" rel="stylesheet" type="text/css" href="https://www.gstatic.com/charts/51/css/util/util.css">
+    <script type="text/javascript" charset="UTF-8" src="https://www.gstatic.com/charts/51/js/jsapi_compiled_default_module.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="https://www.gstatic.com/charts/51/js/jsapi_compiled_graphics_module.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="https://www.gstatic.com/charts/51/js/jsapi_compiled_ui_module.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="https://www.gstatic.com/charts/51/js/jsapi_compiled_corechart_module.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/49/6/intl/ko_ALL/stats.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/49/6/intl/ko_ALL/onion.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps/api/js/ViewportInfoService.GetViewportInfo?1m6&amp;1m2&amp;1d37.50872560823254&amp;2d126.93781717110042&amp;2m2&amp;1d37.55799345679214&amp;2d126.98867430509743&amp;2u15&amp;4sko-KR&amp;5e3&amp;6sm%40609000000&amp;7b0&amp;8e0&amp;12e1&amp;13shttps%3A%2F%2Fmkids.dongascience.com%2FExploratioRecord&amp;14b1&amp;callback=_xdc_._qsrjkc&amp;key=AIzaSyBUmzzyOj9opmriehKRIUz3qb5e9IMIUpk&amp;token=49757"></script>
+    <script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps/api/js/AuthenticationService.Authenticate?1shttps%3A%2F%2Fmkids.dongascience.com%2FExploratioRecord&amp;4sAIzaSyBUmzzyOj9opmriehKRIUz3qb5e9IMIUpk&amp;7m1&amp;1e0&amp;callback=_xdc_._iov5fu&amp;key=AIzaSyBUmzzyOj9opmriehKRIUz3qb5e9IMIUpk&amp;token=55690"></script>
+    <script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps/vt?pb=!1m4!1m3!1i15!2i27939!3i12692!1m4!1m3!1i15!2i27939!3i12693!1m4!1m3!1i15!2i27939!3i12694!1m4!1m3!1i15!2i27940!3i12692!1m4!1m3!1i15!2i27940!3i12693!1m4!1m3!1i15!2i27941!3i12692!1m4!1m3!1i15!2i27941!3i12693!1m4!1m3!1i15!2i27940!3i12694!1m4!1m3!1i15!2i27941!3i12694!2m3!1e0!2sm!3i609339464!3m17!2sko-KR!3sKR!5e18!12m4!1e68!2m2!1sset!2sRoadmapSatellite!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcy50OjMzfHAudjpvZmY!4e3!12m1!5b1!23i1379903&amp;callback=_xdc_._xoskqa&amp;key=AIzaSyBUmzzyOj9opmriehKRIUz3qb5e9IMIUpk&amp;token=129770"></script>
+    <script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps/api/js/QuotaService.RecordEvent?1shttps%3A%2F%2Fmkids.dongascience.com%2FExploratioRecord&amp;3sAIzaSyBUmzzyOj9opmriehKRIUz3qb5e9IMIUpk&amp;7sz9r57d&amp;10e1&amp;callback=_xdc_._g6otbl&amp;key=AIzaSyBUmzzyOj9opmriehKRIUz3qb5e9IMIUpk&amp;token=118506"></script>
+    <script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/49/6/intl/ko_ALL/controls.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/49/6/intl/ko_ALL/marker.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <div id="content">
+            <header id="header" class="header">
+                <div class="header_top">
+                    <div class="header_top_inner">
+                        <h1 class="logo">
+                            <a href="">
+                                <span class="blind">시민과학콘</span>
+                                <img src="./images/common/logo.svg" alt="시민과학콘">
+                            </a>
+                        </h1>
+                        <div class="header_util">
+                            <a href="" class="btn_mypage"><span class="blind">마이페이지</span></a>
+
+                            <!--로그아웃 상태-->
+                            <button type="button" class="btn_sign ty_logout">
+                                <i class="btn_sign_ico"></i>
+                                <span class="btn_sign_txt">로그인</span>
+                            </button>
+                            <!--// 로그아웃 상태-->
+                            <!-- 로그인 상태-->
+                            <!--
+                            <button type="button" class="btn_sign ty_login">
+                                <i class="btn_sign_ico"></i>
+                                <span class="btn_sign_txt">로그아웃</span>
+                            </button>
+                            -->
+                            <!--// 로그인 상태-->
+
+                            <!-- 햄버거버튼 삭제
+                            <button type="button" class="btn_lm">
+                                <span class="blind">전체메뉴</span>
+                                <div class="bar_box">
+                                    <span class="bar top"></span>
+                                    <span class="bar mid"></span>
+                                    <span class="bar bot"></span>
+                                </div>
+                            </button>
+                            -->
+                        </div>
+                    </div>
+                </div>
+                <div class="nav_area">
+                    <nav id="nav" class="nav">
+                        <ul class="nav_list">
+                            <li class="on"><a href=""><span>지구사랑탐사대</span></a></li>
+                            <li><a href=""><span>우동수비대</span></a></li>
+                            <li><a href=""><span>플라스틱다이어트</span></a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+            <div id="container" class="sub_m ">
+                <div class="menu_dep2 ">
+                    <ul class="menu_dep2_list">
+                        <li class="menu_dep2_item">
+                            <a href="" class="menu_dep2_link ">탐사기록</a>
+                        </li>
+                        <li class="menu_dep2_item">
+                            <a href="" class="menu_dep2_link ">탐사방법</a>
+                        </li>
+                        <li class="menu_dep2_item">
+                            <a href="" class="menu_dep2_link on">탐사지도</a>
+                        </li>
+                        <li class="menu_dep2_item">
+                            <a href="" class="menu_dep2_link">탐사력</a>
+                        </li>
+                        <li class="menu_dep2_item">
+                            <a href="" class="menu_dep2_link">소개/가입</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="sub_wrap">
+                    <div class="sub_inner">
+                        <form onsubmit="return false;" onchange="getData();" name="filterForm" class="list_top_sec ty_select">
+                            <div class="select_box">
+                                <select name="group_id" id="group" class="select_ty1 ty_big">
+                                    <option value="">전체</option>
+                                    <option value="1460" selected="">지구사랑탐사대 10기</option>
+                                    <option value="1459">지구사랑탐사대 9기</option>
+                                    <option value="1458">지구사랑탐사대 8기</option>
+                                    <option value="1457">지구사랑탐사대 7기</option>
+                                    <option value="1456">지구사랑탐사대 6기</option>
+                                    <option value="1455">지구사랑탐사대 5기</option>
+                                    <option value="1454">지구사랑탐사대 4기</option>
+                                </select>
+                            </div>
+                            <div class="select_box">
+                                <select name="category" id="category" class="select_ty1 ty_big">
+                                    <option value="" selected="selected">전체</option>
+                                    <option value="개미">개미</option>
+                                    <option value="거미">거미</option>
+                                    <option value="귀화식물">귀화식물</option>
+                                    <option value="나비">나비</option>
+                                    <option value="단풍탐사">단풍탐사</option>
+                                    <option value="도롱뇽">도롱뇽</option>
+                                    <option value="매미">매미</option>
+                                    <option value="민물고기">민물고기</option>
+                                    <option value="바닷물고기">바닷물고기</option>
+                                    <option value="박쥐">박쥐</option>
+                                    <option value="소리모아">소리모아</option>
+                                    <option value="식물개화">식물개화</option>
+                                    <option value="양서류">양서류</option>
+                                    <option value="제비">제비</option>
+                                    <option value="조류">조류</option>
+                                    <option value="특산식물">특산식물</option>
+                                    <option value="화분매개자">화분매개자</option>
+                                    <option value="시민과학풀씨_전기차">시민과학풀씨_전기차</option>
+                                    <option value="시민과학풀씨_미끈망둑">시민과학풀씨_미끈망둑</option>
+                                    <option value="시민과학풀씨_왕우렁이">시민과학풀씨_왕우렁이</option>
+                                    <option value="시민과학풀씨_피라미">시민과학풀씨_피라미</option>
+                                    <option value="시민과학풀씨_법의곤충">시민과학풀씨_법의곤충</option>
+                                    <option value="시민과학풀씨_거미_기후변화지표종">시민과학풀씨_거미_기후변화지표종</option>
+                                </select>
+                            </div>
+                        </form>
+                        <!-- map -->
+                        <div class="map_area">
+                            <div id="map" class="map"></div>
+                        </div>
+                        <!--// map -->
+                        <!-- 우수 대원 -->
+                        <div class="best_member">
+                            <div class="best_member_thumb">
+                                <div class="sc_thumb ty_circle">
+                                    <div class="sc_thumb_img">
+                                        <img src="./images/common/thumb_sample.jpg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="best_member_txt">
+                                <strong class="tit fc_key">6월 우수 대원 <img src="./images/ico/ico_best.svg" alt=""></strong>
+                                <p class="txt">탐사기록을 많이 올려준 <br> <b class="fc_key td_u2">장원영</b> 친구를 소개해요.</p>
+                                <p class="txt_s">총 <b class="fc_key">85,676,153,202</b>개의 탐사기록을 올렸어요.</p>
+                            </div>
+                        </div>
+                        <!--// 우수회원 -->
+
+                        <!-- chart -->
+                        <div id="chart_div" class="chart_div"></div>
+                        <div id="chart_div2" class="chart_div"></div>
+                        <!--// chart -->
+
+                        <!-- popup -->
+                        <div class="mapinfo" style="display: none;">
+                            <dl>
+                                <dt>
+                                    <strong class="mapInfoTitle">주변자세히보기 - 220525 - 1</strong>
+                                    <a class="btn_close" href="javascript:void(0)" onclick="closeModal();">닫기</a>
+                                </dt>
+                                <dd>
+                                    <div class="scroll">
+                                        <div class="m_img"><img src="https://picsum.photos/900/1800"></div>
+                                        <div class="info">
+                                            <!--<a href="#" class="info_link">포스팅 보기</a>-->
+                                            <ul>
+                                                <li class="date">2022.05.05</li>
+                                                <li class="name">주변자세히보기</li>
+                                                <li class="part">지구사랑탐사대 10기 | 식물개화</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+                        <!--// popup -->
+                    </div>
+                </div>
+
+            </div>
+            <footer id="footer" class="footer">
+                <ul class="footer_menu">
+                    <li><a href="">회사소개</a></li>
+                    <li><a href="">광고안내</a></li>
+                    <li><a href="">개인정보취급방침</a></li>
+                </ul>
+                <div class="footer_policy">
+                    <h2 class="footer_policy_tit">
+                        <button type="button" class="btn_policy">㈜동아사이언스 키즈 플랫폼 <i></i></button>
+                    </h2>
+                    <div class="txt_box">
+                        ㈜동아사이언스 팝콘플래닛, 시민과학콘 | 대표 : 장경애 <br>
+                        개인정보관리책임자 : <span>김수희 (privacy@dongascience.com) |</span> <span>청소년보호책임자 : 조기견</span> <br><br>
+                        서울시 용산구 청파로 109, 7층 (04370) | 문의 : 02-6749-2000 ｜팩스 : 02-3148-0789  사업자등록번호 : 101-81-62201 (사업자정보확인) | 통신판매업신고번호 : 제2013-서울용산-01101호 | 온라인 결제를 위한 PG사의 구매안전서비스(가입사실 확인)
+                    </div>
+                </div>
+                <p class="copy">Copyright © Dongascience. All right reserved.</p>
+            </footer>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function (){
+            $('#group').change(function(){
+                window.location.href = '/ExploratioRecord?group_id='+$(this).val();
+            });
+        })
+    </script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script>
+        /**
+         * Created by mkhong on 2017-03-15.
+         */
+
+
+    // Load the Visualization API and the corechart package.
+        google.charts.load('current', {'packages':['corechart']});
+
+
+        var map;
+        var marker = [];
+        var infowindow;
+
+
+        // Set a callback to run when the Google Visualization API is loaded.
+        // google.charts.setOnLoadCallback(drawChart);
+
+        // Callback that creates and populates a data table,
+        // instantiates the pie chart, passes in the data and
+        // draws it.
+        function convertChartData(data)
+        {
+            var result = {
+                month: [],
+                address : [
+                    ['서울', 0, '#00e100'],
+                    ['경기', 0, '#14e114'],
+                    ['강원', 0, '#28e128'],
+                    ['충남', 0, '#3ce13c'],
+                    ['충북', 0, '#50e150'],
+                    ['전남', 0, '#64e164'],
+                    ['전북', 0, '#78e164'],
+                    ['경남', 0, '#8ce164'],
+                    ['경북', 0, '#a0e1a0'],
+                    ['제주', 0, '#b4e1b4']
+                ]
+            };
+
+            $.each(new Array(12), function (n){
+                result.month[n] = [n+'월' , 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+            });
+
+
+            var address_map = {
+                '서울특별시' : '서울',
+                '전라북도' : '전북',
+                '광명시' : '경기',
+                '경기도' : '경기',
+                '성남시' : '경기',
+                '군포시' : '경기',
+                '인천광역시' : '경기',
+                '강원도' : '강원',
+                '광주광역시' : '전남',
+                '경상남도' : '경남',
+                '충청남도' : '충남',
+                '부천시' : '경기',
+                '김천시' : '경북',
+                '대전광역시' : '충남',
+                '충청북도' : '충북',
+                '경상북도' : '경북',
+                '제주특별자치도' : '제주',
+                '용인시' : '경기',
+                '충주시' : '충북',
+                '수원시' : '경기',
+                '제천시' : '충남',
+                '여수시' : '전남',
+                '고양시' : '경기',
+                '익산시' : '경기',
+                '전라남도' : '전남',
+                '부산광역시' : '경남',
+                '양주시' : '경기',
+                '대구광역시' : '경남',
+                '하남시' : '경기',
+                '서산시' : '경기',
+                '김포시' : '경기',
+                '안양시' : '경기',
+                '전주시' : '전북',
+                '과천시' : '경기',
+                '춘천시' : '강원',
+                '원주시' : '강원',
+                '평택시' : '경기',
+                '오산시' : '경기',
+                '시흥시' : '경기'
+            };
+
+            var category_mapping = {
+                '전체' : 1,'개미' : 2,'거미' : 3,'귀화식물' : 4,'나비' : 5,'단풍탐사' : 6,'도롱뇽' : 7,'매미' : 8,'민물고기' : 9,'바닷물고기' : 10,'박쥐' : 11,'소리모아' : 12,'식물개화' : 13,'양서류' : 14,'제비' : 15,'조류' : 16,'특산식물' : 17,'화분매개자' : 18,'시민과학풀씨_전기차' : 19,'시민과학풀씨_미끈망둑' : 20,'시민과학풀씨_왕우렁이' : 21,'시민과학풀씨_피라미' : 22,'시민과학풀씨_법의곤충' : 23,'시민과학풀씨_거미_기후변화지표종' : 24,        };
+
+            if ($(document.filterForm.group_id).val() == '') {
+                result.month.map(function(v){
+                    v.push(0);
+                });
+            }
+
+            $.each(data, function(k, v){
+                var d = v['WRITE_TIME'].replace(/\s.{1,}/g, '').split('-');
+
+                var row_dt = new Date(d[0], parseInt(d[1]) -1, d[2]);
+                var m = row_dt.getMonth();
+                if (v['POS_ADDR']) {
+                    var addr = v['POS_ADDR'].split(' ')[1];
+                    var row_addr = address_map[addr];
+                    var addr_filter = result.address.filter(function(v, k){
+
+                        if (v[0] != row_addr) {
+                            return false;
+                        }
+                        result.address[k][1]++;
+
+                        return true;
+                    });
+                    if (addr_filter.length < 1) {
+                        // result.address.push([row_addr, 1]);
+                    }
+                }
+                if (typeof result.month[m][category_mapping[v['CATEGORY']]] != "undefined") {
+                    result.month[m][category_mapping[v['CATEGORY']]]++;
+                }
+                result.month[m][1]++;
+            });
+
+            return result;
+
+        }
+
+
+        function drawChart(chartData) {
+
+            // Create the data table.
+            // var data = new google.visualization.DataTable();
+            var data = {
+                'month' : new google.visualization.DataTable(),
+                'address' : new google.visualization.DataTable()
+            };
+            data.month.addColumn('string', '월');
+                    data.month.addColumn('number', '전체');
+                    data.month.addColumn('number', '개미');
+                    data.month.addColumn('number', '거미');
+                    data.month.addColumn('number', '귀화식물');
+                    data.month.addColumn('number', '나비');
+                    data.month.addColumn('number', '단풍탐사');
+                    data.month.addColumn('number', '도롱뇽');
+                    data.month.addColumn('number', '매미');
+                    data.month.addColumn('number', '민물고기');
+                    data.month.addColumn('number', '바닷물고기');
+                    data.month.addColumn('number', '박쥐');
+                    data.month.addColumn('number', '소리모아');
+                    data.month.addColumn('number', '식물개화');
+                    data.month.addColumn('number', '양서류');
+                    data.month.addColumn('number', '제비');
+                    data.month.addColumn('number', '조류');
+                    data.month.addColumn('number', '특산식물');
+                    data.month.addColumn('number', '화분매개자');
+                    data.month.addColumn('number', '시민과학풀씨_전기차');
+                    data.month.addColumn('number', '시민과학풀씨_미끈망둑');
+                    data.month.addColumn('number', '시민과학풀씨_왕우렁이');
+                    data.month.addColumn('number', '시민과학풀씨_피라미');
+                    data.month.addColumn('number', '시민과학풀씨_법의곤충');
+                    data.month.addColumn('number', '시민과학풀씨_거미_기후변화지표종');
+
+            data.address.addColumn('string', '');
+            data.address.addColumn('number', '');
+            data.address.addColumn({
+                type: 'string',
+                role: 'style'
+            });
+
+
+
+            if (chartData) {
+                var convertData = convertChartData(chartData);
+                data.month.addRows(convertData.month);
+                data.address.addRows(convertData.address);
+            }
+
+            var chartSize = {
+                width : 380,
+                height : 200
+            };
+
+            // Instantiate and draw our chart, passing in some options.
+            var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+            // var chart2 = new google.visualization.PieChart(document.getElementById('chart_div2'));
+            var chart2 = new google.visualization.ColumnChart(document.getElementById('chart_div2'));
+
+            var series = {};
+
+                series = {
+                    0: { color: '#276e99' },1: { color: '#c64e7e' },2: { color: '#384e82' },3: { color: '#268a3a' },4: { color: '#c7a003' },5: { color: '#8a9914' },6: { color: '#c95203' },7: { color: '#a05103' },8: { color: '#0367c7' },9: { color: '#0391c7' },10: { color: '#1603aa' },11: { color: '#032ac7' },12: { color: '#bf03b3' },13: { color: '#97b803' },14: { color: '#12c769' },15: { color: '#c71c0b' },16: { color: '#05c803' },17: { color: '#734dc7' },18: { color: '#0bc7c5' },19: { color: '#cc0b6a' },20: { color: '#6303cd' },21: { color: '' },22: { color: '' },23: { color: '' }            };
+
+
+
+            var charRender = function() {
+                chart.draw(data.month, {'title':'월별 탐사통계',
+                    'width':'100%',
+                    'height':chartSize.height,
+                    curveType: 'function',
+                    legend: { position: 'top',maxLines : 4 },
+                    // chartArea:{left:40,top:30,width:'90%',height:'70%'}
+                    chartArea:{
+                        left:40,
+                        width:'90%',
+                        top : '30%',
+                        height : '50%'
+                    },
+
+                    vAxis: {
+                        minValue: 0,
+                        viewWindow: {
+                            min: 0
+                        }
+                    },
+
+                    series: series
+
+
+
+                });
+
+                chart2.draw(data.address, {'title':'지역별 탐사통계',
+                    'width':'100%',
+                    'height':chartSize.height,
+                    curveType: 'function',
+                    chartArea:{left:40,width:'90%'},
+                    bar: {groupWidth: "35%"},
+                    legend: { position: "none" },
+                    vAxis: {
+                        minValue: 0,
+                        viewWindow: {
+                            min: 0
+                        }
+                    }
+
+                });
+            };
+            charRender();
+
+            $(window).resize(function(){
+                charRender();
+            });
+        }
+
+
+
+
+        function initMap() {
+
+            var dsLocation = {lat: 37.5333745, lng : 126.9632842};
+            map = new google.maps.Map(document.getElementById('map'), {
+                center: dsLocation,
+                zoom: 15,
+                mapTypeId: google.maps.MapTypeId.HYBRID,
+                styles : [
+                    {
+                        featureType: 'poi.business',
+                        stylers: [{visibility: 'off'}]
+                    }
+                ]
+            });
+
+
+            getData();
+
+
+
+            var infoWindow = new google.maps.InfoWindow({map: map});
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function(position) {
+                    var pos = {
+                        lat: position.coords.latitude,
+                        lng: position.coords.longitude
+                    };
+                    var zoomlevel = 20; // 대부분 최대한 확대하여 시작한다.
+                    if (position.coords.accuracy > 80) {
+                        zoomlevel -= Math.round(Math.log(position.coords.accuracy / 50) / Math.LN2);
+                    }
+                    var currentLoactionMarker = new google.maps.Marker({
+                        position : pos,
+                        map : map,
+                        title : '현재위치',
+                        zIndex : 100
+                        /*icon : {
+                         path: google.maps.SymbolPath.CIRCLE,
+                         strokeColor : 'white',
+                         fillColor : 'pink',
+                         fillOpacity : 0.8,
+                         strokeWeight : 2,
+                         scale: 8
+                         }*/
+                    });
+
+                    // map.zoom = zoomlevel;
+                    infoWindow.setPosition(pos);
+                    infoWindow.setContent('현재위치');
+                    map.setCenter(pos);
+                }, function() {
+                    // handleLocationError(true, infoWindow, map.getCenter());
+                });
+            } else {
+                // Browser doesn't support Geolocation
+                // handleLocationError(false, infoWindow, map.getCenter());
+            }
+        }
+
+        function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+            infoWindow.setPosition(pos);
+            infoWindow.setContent(browserHasGeolocation ?
+                'Error: The Geolocation service failed.' :
+                'Error: Your browser doesn\'t support geolocation.');
+        }
+
+        var marker_img = {
+            '전체' : ['//img.dongascience.com/kids2016/images/earth/marker_00.png', '//img.dongascience.com/kids2016/images/earth/marker_00_on.png'],'개미' : ['//img.dongascience.com/kids2016/images/earth/marker_01.png', '//img.dongascience.com/kids2016/images/earth/marker_01_on.png'],'거미' : ['//img.dongascience.com/kids2016/images/earth/marker_02.png', '//img.dongascience.com/kids2016/images/earth/marker_02_on.png'],'귀화식물' : ['//img.dongascience.com/kids2016/images/earth/marker_03.png', '//img.dongascience.com/kids2016/images/earth/marker_03_on.png'],'나비' : ['//img.dongascience.com/kids2016/images/earth/marker_04.png', '//img.dongascience.com/kids2016/images/earth/marker_04_on.png'],'단풍탐사' : ['//img.dongascience.com/kids2016/images/earth/marker_05.png', '//img.dongascience.com/kids2016/images/earth/marker_05_on.png'],'도롱뇽' : ['//img.dongascience.com/kids2016/images/earth/marker_06.png', '//img.dongascience.com/kids2016/images/earth/marker_06_on.png'],'매미' : ['//img.dongascience.com/kids2016/images/earth/marker_07.png', '//img.dongascience.com/kids2016/images/earth/marker_07_on.png'],'민물고기' : ['//img.dongascience.com/kids2016/images/earth/marker_08.png', '//img.dongascience.com/kids2016/images/earth/marker_08_on.png'],'바닷물고기' : ['//img.dongascience.com/kids2016/images/earth/marker_09.png', '//img.dongascience.com/kids2016/images/earth/marker_09_on.png'],'박쥐' : ['//img.dongascience.com/kids2016/images/earth/marker_10.png', '//img.dongascience.com/kids2016/images/earth/marker_10_on.png'],'소리모아' : ['//img.dongascience.com/kids2016/images/earth/marker_11.png', '//img.dongascience.com/kids2016/images/earth/marker_11_on.png'],'식물개화' : ['//img.dongascience.com/kids2016/images/earth/marker_12.png', '//img.dongascience.com/kids2016/images/earth/marker_12_on.png'],'양서류' : ['//img.dongascience.com/kids2016/images/earth/marker_13.png', '//img.dongascience.com/kids2016/images/earth/marker_13_on.png'],'제비' : ['//img.dongascience.com/kids2016/images/earth/marker_14.png', '//img.dongascience.com/kids2016/images/earth/marker_14_on.png'],'조류' : ['//img.dongascience.com/kids2016/images/earth/marker_15.png', '//img.dongascience.com/kids2016/images/earth/marker_15_on.png'],'특산식물' : ['//img.dongascience.com/kids2016/images/earth/marker_16.png', '//img.dongascience.com/kids2016/images/earth/marker_16_on.png'],'화분매개자' : ['//img.dongascience.com/kids2016/images/earth/marker_17.png', '//img.dongascience.com/kids2016/images/earth/marker_17_on.png'],'시민과학풀씨_전기차' : ['//img.dongascience.com/kids2016/images/earth/marker_18.png', '//img.dongascience.com/kids2016/images/earth/marker_18_on.png'],'시민과학풀씨_미끈망둑' : ['//img.dongascience.com/kids2016/images/earth/marker_19.png', '//img.dongascience.com/kids2016/images/earth/marker_19_on.png'],'시민과학풀씨_왕우렁이' : ['//img.dongascience.com/kids2016/images/earth/marker_20.png', '//img.dongascience.com/kids2016/images/earth/marker_20_on.png'],'시민과학풀씨_피라미' : ['//img.dongascience.com/kids2016/images/earth/marker_21.png', '//img.dongascience.com/kids2016/images/earth/marker_21_on.png'],'시민과학풀씨_법의곤충' : ['//img.dongascience.com/kids2016/images/earth/marker_22.png', '//img.dongascience.com/kids2016/images/earth/marker_22_on.png'],'시민과학풀씨_거미_기후변화지표종' : ['//img.dongascience.com/kids2016/images/earth/marker_23.png', '//img.dongascience.com/kids2016/images/earth/marker_23_on.png'],    };
+
+
+
+
+
+
+        function getData() {
+            $.ajax({
+                url: '/ExploratioRecord/getGeoData',
+                type: 'get',
+                dataType: 'json',
+                data: $(document.filterForm).serialize(),
+                cache: true,
+                beforeSend: function () {
+
+                    if ($(document.filterForm.group_id).val() == '') {
+                        if ($(document.filterForm.category).find('option[value=\'꿀벌과 밀원식물\']').length < 1) {
+                            $(document.filterForm.category).find('option[value=\'수원청개구리\']').after('<option value="꿀벌과 밀원식물">꿀벌과 밀원식물</option>');
+                        }
+                        if ($(document.filterForm.category).find('option[value=\'화분매개자\']').length < 1) {
+                            $(document.filterForm.category).append('<option value="화분매개자">화분매개자</option>');
+                        }
+                    } else if ($(document.filterForm.group_id).val() == "1454") {
+                        if ($(document.filterForm.category).find('option[value=\'꿀벌과 밀원식물\']').length < 1) {
+                            $(document.filterForm.category).find('option[value=\'수원청개구리\']').after('<option value="꿀벌과 밀원식물">꿀벌과 밀원식물</option>');
+                        }
+                        $(document.filterForm.category).find('option[value=\'화분매개자\']').remove();
+                    } else {
+                        $(document.filterForm.category).find('option[value=\'꿀벌과 밀원식물\']').remove();
+                        if ($(document.filterForm.category).find('option[value=\'화분매개자\']').length < 1) {
+                            $(document.filterForm.category).append('<option value="화분매개자">화분매개자</option>');
+                        }
+                    }
+
+                    marker.map(function (v, i) {
+                        marker[i].setMap(null);
+                    });
+                    marker = [];
+                    try{
+                        // $('.maplist > .list > .maplistSlide').slick('unslick');
+                        // $('.maplist > .list > .maplistSlide').empty();
+                    }catch (e)
+                    {
+
+                    }
+                },
+                success: function (json) {
+                    if (json['error']) {
+                        alert('error');
+                    } else if (json['success']) {
+
+                        $.each(json['data'], function (k, v) {
+                            var icon = '//img.dongascience.com/kids2016/images/earth/marker_00.png';
+                            if (marker_img[v['CATEGORY']]) {
+
+                                icon = marker_img[v['CATEGORY']][0].replace(/(marker_)(\d{2})(_on)?(\.[a-z]{1,})/i, '$1$2_on$4');
+                            }
+                            var row_maker = new google.maps.Marker({
+                                position: {lat: parseFloat(v['LATITUDE']), lng: parseFloat(v['LONGITUDE'])},
+                                map: map,
+                                title: v['NAME'] + ' ' + v['CATEGORY'],
+                                icon: icon
+
+                            });
+                            marker.push(row_maker);
+                            (function (marker, i) {
+                                // add click event
+                                google.maps.event.addListener(marker, 'click', function () {
+                                    /*try {
+                                     infowindow.close();
+                                     } catch (e) {
+                                     }*/
+
+                                    openModal(v);
+                                });
+
+                            })(row_maker, k);
+
+                        });
+
+
+                        google.charts.setOnLoadCallback(function(){
+                            drawChart(json['data']);
+                        });
+
+
+                        getLatestData(json['currentMonth']);
+                        // initSlideBanner(json['latestData']);
+                    }
+                },
+                error: function (e) {
+                    var error = JSON.parse(e.responseText);
+                    alert(error['error']);
+                },complete : function(){
+                    var zoomLevel = 1;
+                    var icons = {
+                        1 : '//img.dongascience.com/kids2016/images/earth/marker_01.png',
+                        2 : '//img.dongascience.com/kids2016/images/earth/marker_01_on.png'
+                    };
+                    google.maps.event.addListener(map, 'zoom_changed', function() {
+                        var prevZoomLevel;
+                        prevZoomLevel = zoomLevel;
+                        if (map.getZoom() > 15) {
+                            map.setMapTypeId(google.maps.MapTypeId.ROADMAP);
+                        } else {
+                            map.setMapTypeId(google.maps.MapTypeId.HYBRID);
+                        }
+                        map.getZoom() < 14 ? zoomLevel = 1 : zoomLevel = 2;
+                        if (prevZoomLevel !== zoomLevel) {
+                            marker.map(function(v, k){
+                                if (zoomLevel == 1) {
+                                    marker[k].setIcon(marker[k].getIcon().replace(/(marker_)(\d{2})(_on)?(\.[a-z]{1,})/i, '$1$2$4'))
+                                } else {
+                                    marker[k].setIcon(marker[k].getIcon().replace(/(marker_)(\d{2})(_on)?(\.[a-z]{1,})/i, '$1$2_on$4'));
+                                }
+                                // marker[k].setIcon(icons[zoomLevel]);
+                            });
+                        }
+                    });
+
+                }
+
+            });
+        }
+
+        function getLatestData(data) {
+            var count = {
+                'posting': {},
+                'comment': {}
+            };
+            var img = {};
+
+            if (data.length < 1) {
+                var data = {
+                    'MEMBER_IMG' : '//img.dongascience.com/kids2016/images/earth/earth_basic.jpg',
+                    'TITLE' : '현재 기록이 존재하지 않습니다.'
+                };
+                writeBestPosting(data, '.best_posting', '현재 기록이 존재하지 않습니다.', true);
+                writeBestPosting(data, '.best_comment', '현재 기록이 존재하지 않습니다.', true);
+                writeBestPosting(data, '.best_last', '현재 기록이 존재하지 않습니다.', true);
+                return;
+            }
+            for (var i in data){
+                var row = data[i];
+                if (row['CURRENT_MONTH'] < 1) {
+                    continue;
+                }
+
+                if (typeof count['posting'][row['WRITER_ID']] == "undefined") {
+                    count['posting'][row['WRITER_ID']] = 0;
+                }
+                count['posting'][row['WRITER_ID']]++;
+
+                if (typeof count['comment'][row['WRITER_ID']] == "undefined") {
+                    count['comment'][row['WRITER_ID']] = 0;
+                }
+                count['comment'][row['WRITER_ID']] += parseInt(row['COMMENT_COUNT']);
+
+                if (typeof img[row['WRITER_ID']] == "undefined") {
+                    img[row['WRITER_ID']] = row['MEMBER_IMG'];
+                }
+            }
+
+            var best_posting_id = Object.keys(count['posting']).reduce(function (a, b) {
+                return count['posting'][a] > count['posting'][b] ? a : b
+            });
+            var best_comment_id = Object.keys(count['comment']).reduce(function (a, b) {
+                return count['comment'][a] > count['comment'][b] ? a : b
+            });
+            var last_posting = data[Object.keys(data).reduce(function (a, b) {
+                return data[a]['TIME'] > data[b]['TIME'] ? a : b
+            })];
+
+
+            var bestId = {
+                // 탐사기록이 많은 대원
+                'posting': {
+                    'id' : best_posting_id,
+                    'count' : count['posting'][best_posting_id],
+                    'img' : img[best_posting_id],
+                    'data' : data.filter(function(v){
+                        if (v['WRITER_ID'] == best_posting_id) {
+                            return true;
+                        }
+                        return false;
+                    }).shift()
+                },
+                // 댓글이 많은 탐사대원
+                'comment': {
+                    'id' : best_comment_id,
+                    'count' : count['comment'][best_comment_id],
+                    'img' : img[best_comment_id],
+                    'data' : data.filter(function(v){
+                        if (v['WRITER_ID'] == best_comment_id) {
+                            return true;
+                        }
+                        return false;
+                    }).shift()
+                },
+                // 최근 글을 쓴 탐사대원
+                'lastPosting' : {
+                    'id' : last_posting['WRITER_ID'],
+                    'time' : (function(){
+                        var dt = new Date(last_posting['WRITE_TIME']);
+                        var current = new Date();
+                        var gap = current.getTime() - dt.getTime();
+
+                        var d = Math.floor(gap /  1000 / 60 / 60 / 24);
+                        var hh = Math.floor(gap /  1000 / 60 / 60) - (d * 24);
+                        var min = Math.floor(gap /  1000 / 60) - (d * 24 * 60) - (hh * 60);
+
+                        var timeString = '';
+                        if (d) {
+                            timeString += String(d) + '일 전';
+                        } else if (hh) {
+                            timeString += String(hh) + '시간 전';
+                        } else if (min) {
+                            timeString += String(min) + '분 전';
+                        }
+                        return timeString;
+                    })(),
+                    'img' : last_posting['MEMBER_IMG'],
+                    'data' : data.filter(function(v){
+                        if (v['WRITER_ID'] == last_posting['WRITER_ID']) {
+                            return true;
+                        }
+                        return false;
+                    }).shift()
+                }
+            };
+            writeBestPosting(bestId['posting']['data'], '.best_posting', '포스팅 ' + bestId['posting']['count'] + '건');
+            writeBestPosting(bestId['comment']['data'], '.best_comment', '댓글 ' + bestId['comment']['count'] + '건');
+            writeBestPosting(bestId['lastPosting']['data'], '.best_last', bestId['lastPosting']['time']);
+
+        }
+
+
+
+
+        function openModal(data) {
+            $('.mapinfo').find('.mapInfoTitle').text(data['TITLE']);
+            var img = '//img.dongascience.com/kids2016/images/earth/earth_basic.jpg';
+            var onerror = '';
+            if (data['IMG']) {
+                onerror = 'this.src=\''+img+'\'';
+                img = data['IMG'];
+            }
+            $('.mapinfo').find('.m_img > img').attr('src', img);
+            if (onerror) {
+                $('.mapinfo').find('.m_img > img').attr('onerror', onerror);
+            }
+            $('.mapinfo').find('.date').text(data['WRITE_TIME'].replace(/(\d{1,})-((\d{1,}))-((\d{1,})).*/g, '$1.$2.$3'));
+            // $('.mapinfo').find('.name').text(data['SCHOOL_NAME'] + ' ' + data['SCHOOL_GRADE'] + '학년' + ' ' + data['MEMBER_NAME']);
+            $('.mapinfo').find('.name').text(data['TEAM_NAME']);
+
+            $('.mapinfo').find('.part').text(data['NAME'] + ' | ' + data['CATEGORY']);
+            /*$('.mapinfo').find('.info_link').attr('href', '/earth/postview/' + data['IDX'])
+             .attr('target', '_blank');*/
+
+            $('.mapinfo').show();
+        }
+
+        function closeModal() {
+            $('.mapinfo').hide();
+        }
+
+        function writeBestPosting(data, selector, comment, nodata) {
+            $(selector).find('.name').text(data['MEMBER_NAME']);
+            $(selector).find('img').attr('src', data['MEMBER_IMG']).attr('alt', data['MEMBER_NAME']).load(function(){
+                /*$(this).removeAttr('style');
+                 if (this.naturalWidth > this.naturalHeight) {
+                 $(this).css('width', 'initial');
+                 } else {
+                 $(this).css('min-height', 'initial');
+                 }*/
+
+            });
+            $(selector).find('.today').text(comment);
+            if (!nodata) {
+                $(selector).find('>a').on('click', function(){
+                    openModal(data);
+                });
+                $(selector).find('.txt').show();
+            } else {
+                $(selector).find('.txt').hide();
+            }
+
+        }
+
+        function initSlideBanner(data) {
+
+            data.map(function(v) {
+                var row = $('<div class="maplistSlideItem">');
+                row.append($('<div class="maplistSlideItemImgWrap"><img src="' + v['IMG'] + '" width="100%"></div>'));
+                // row.append($('<div class="maplistSlideItemDescription">' + v['SCHOOL_NAME'] + ' ' + v['MEMBER_NAME'] + ' 기자</div>'));
+                row.append($('<div class="maplistSlideItemDescription">' + v['TITLE'] + '</div>'));
+                row.find('img').on('click', function(){
+                    openModal(v);
+                });
+                // $('.maplist > .list > .maplistSlide').slick('slickAdd', row);
+                $('.maplist > .list > .maplistSlide').append(row);
+            });
+            $('.maplist > .list > .maplistSlide img').each(function(){
+
+            });
+
+            /*$('.maplist > .list > .maplistSlide').slick({
+             slidesToShow : 5,
+             slidesToScroll : 1,
+             adaptiveHeight : false,
+             centerPadding : '50px',
+             swipe : false,
+             /!*centerMode: true,*!/
+
+             });
+             $('.maplist > .btn_prev > a').on('click', function(){
+             $('.maplist > .list > .maplistSlide').slick('slickPrev');
+             });
+             $('.maplist > .btn_next > a').on('click', function(){
+             $('.maplist > .list > .maplistSlide').slick('slickNext');
+             });
+             */
+
+
+            /*$('.maplist > .list > .maplistSlide').empty();*/
+            /*for (var i in data) {
+             var row = $('<div class="maplistSlideItem">');
+             row.append($('<a><img src="'+data[i]['IMG']+'" width="100%"></a>'));
+             row.find('a').on('click', function(){
+             openModal(data[i]);
+             });
+             $('.maplist > .list > .maplistSlide').append(row);
+             }*/
+            /*data.map(function(v) {
+             var row = $('<li>');
+             row.append($('<a><img src="'+v['IMG']+'"></a>'));
+             row.find('a').on('click', function(){
+             openModal(v);
+             });
+             $('.maplist > .list > .maplistSlide').append(row);
+             });*/
+
+        }
+
+        var resizeMap = function () {
+            var mapHeight = $(window).height() - (parseInt($('#container .wrap').css('paddingTop')) + parseInt($('#earth_map > form:eq(0)').height()));
+            $('#map').height(mapHeight);
+        };
+
+        $(function(){
+            resizeMap();
+        });
+        $(window).resize(function(){
+            resizeMap();
+        });
+    </script>
+    <script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBUmzzyOj9opmriehKRIUz3qb5e9IMIUpk&amp;callback=initMap&amp;region=KR&amp;libraries=places,geometry,drawing"> </script>
+</body>
+</html>

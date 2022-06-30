@@ -1,0 +1,472 @@
+@charset "UTF-8";
+.map_area { margin: 0 -20px; margin-bottom: 20px; padding-top: 90%; position: relative; background-color: #ddd; }
+
+.map_area .map { position: absolute; left: 0; top: 0; width: 100%; height: 100%; }
+
+.chart_div { margin-top: 20px; }
+
+.best_member { margin: 30px 0; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
+
+.best_member_thumb { -ms-flex-negative: 0; flex-shrink: 0; width: 110px; padding-right: 20px; }
+
+.best_member_txt .tit { display: block; font-size: 18px; line-height: 26px; }
+
+.best_member_txt .tit img { vertical-align: top; margin-top: 2px; }
+
+.best_member_txt .txt { margin-top: 8px; font-size: 16px; line-height: 1.38; letter-spacing: -.4px; }
+
+.best_member_txt .txt_s { margin-top: 5px; font-size: 13px; line-height: 1.38; letter-spacing: -.33px; color: #666; }
+
+.mapinfo { position: fixed; border-radius: 1vh; left: 2vw; right: 2vw; top: 2vh; /*bottom:2vh;*/ z-index: 101; background: #fff; border: 1px solid #ccc; }
+
+.mapinfo dl dt { padding: 1vh 2vw; border-bottom: 1px solid #ccc; }
+
+.mapinfo dl dt strong { display: inline-block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; width: calc(92vw - 16px - 2vw); }
+
+.mapinfo dt .btn_close { position: absolute; right: 0; width: 16px; height: 16px; padding: 0.3vh 2vw; text-indent: -9999rem; background: url(//img.dongascience.com/kids2016/images/common/btn_layer_close.png) center no-repeat; }
+
+.mapinfo dd .scroll { overflow: auto; max-height: 90vh; }
+
+.mapinfo dd .info { position: relative; width: 94%; margin: 0 auto 3% auto; }
+
+.mapinfo dd .info .date { font-size: 0.8rem; letter-spacing: 0.1em; line-height: 1.7rem; }
+
+.mapinfo dd .info .name { color: #333; font-size: 0.9rem; line-height: 1.7rem; }
+
+.mapinfo dd .info .part { color: #666; font-size: 0.9rem; }
+
+.mapinfo .m_img { width: 94%; margin: 3% auto; }
+
+.mapinfo .m_img img { width: 100%; }
+
+/* 기존 지사탐 earth.css + 어과동 common.css 일부 */
+/* list type */
+/* 세로형 이미지있음 */
+.list_type_A { display: block; padding: 4px 0 4px; clear: both; *zoom: 1; }
+
+.list_type_A:after { display: block; height: 0; content: "."; font-size: 0; visibility: hidden; clear: both; }
+
+.list_type_A a { display: block; position: relative; }
+
+.list_type_A li { float: left; width: 50%; padding: 4px; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; }
+
+.list_type_A dl { background: #fff; border: 1px solid #dcdcdc; border-radius: 3px; overflow: hidden; }
+
+.list_type_A dt { overflow: hidden; height: 89px; position: relative; }
+
+.list_type_A dt img { width: 100%; }
+
+.list_type_A dd { line-height: 19px; }
+
+.list_type_A dd h4 { height: 40px; overflow: hidden; margin: 8px 10px; font-weight: normal; }
+
+.list_type_A dd h4 span { color: #eb4e44; font-size: 13px; margin-left: 2px; vertical-align: top; }
+
+/* 가로형 이미지있음 */
+.list_type_B a { display: block; }
+
+.list_type_B ul { padding: 0 16px 0 16px; }
+
+.list_type_B li { clear: both; border-top: 1px solid #eeeeee; }
+
+.list_type_B dt { float: right; border: 1px solid #e5e5e5; border-radius: 3px; margin: 8px 0 8px 20px; width: 107px; height: 60px; overflow: hidden; }
+
+.list_type_B dt img { width: 100%; }
+
+.list_type_B dd { padding: 14px 0; }
+
+.list_type_B dd h4 { font-weight: normal; }
+
+.list_type_B dd h4 span { color: #eb4e44; font-size: 13px; margin-left: 2px; vertical-align: top; }
+
+/* 가로형 이미지없음(제목한줄 + 날짜는 선택) */
+.list_type_C a { display: block; padding: 14px 0; }
+
+.list_type_C ul { padding: 0 16px 0 16px; }
+
+.list_type_C li { border-top: 1px solid #eeeeee; }
+
+.list_type_C h4 strong { font-weight: normal; display: inline-block; height: 19px; max-width: 280px; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; }
+
+.list_type_C h4 span { color: #eb4e44; font-size: 13px; margin-left: 2px; vertical-align: top; }
+
+.list_type_C p.date { color: #999; font-size: 13px; letter-spacing: 0.04em; }
+
+/* 가로형(제목한줄) 이미지있음 + 서브타이틀 */
+.list_type_D a { display: block; }
+
+.list_type_D ul { padding: 0 16px 0 16px; }
+
+.list_type_D li { clear: both; border-top: 1px solid #eeeeee; }
+
+.list_type_D dt { float: right; border: 1px solid #e5e5e5; border-radius: 3px; margin: 8px 0 8px 20px; width: 107px; height: 60px; overflow: hidden; }
+
+.list_type_D dt img { width: 100%; }
+
+.list_type_D dd { padding: 14px 0; }
+
+.list_type_D dd h4 { display: inline-block; font-weight: normal; height: 19px; max-width: 190px; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; }
+
+.list_type_D dd p strong { font-weight: normal; display: inline-block; color: #777; font-size: 14px; height: 19px; max-width: 150px; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; }
+
+.list_type_D dd p span { color: #eb4e44; font-size: 13px; margin-left: 2px; vertical-align: top; }
+
+/* 가로형(제목두줄) 이미지있음 + 서브타이틀 */
+.list_type_E a { display: block; }
+
+.list_type_E ul { padding: 0 16px 0 16px; }
+
+.list_type_E li { clear: both; border-top: 1px solid #eeeeee; }
+
+.list_type_E dt { float: right; border: 1px solid #e5e5e5; border-radius: 3px; margin: 8px 0 8px 20px; width: 107px; height: 60px; overflow: hidden; }
+
+.list_type_E dt img { width: 100%; }
+
+.list_type_E dd { padding: 14px 0; }
+
+.list_type_E dd h4 { font-weight: normal; }
+
+.list_type_E dd h4 span { color: #eb4e44; font-size: 13px; margin-left: 2px; vertical-align: top; }
+
+.list_type_E p.date { color: #999; font-size: 13px; letter-spacing: 0.04em; }
+
+/* 서브 리스트 조합형 */
+.list_type_F a { display: block; }
+
+.list_type_F ul { padding: 0 16px 0 16px; }
+
+.list_type_F li { clear: both; border-bottom: 1px solid #eeeeee; }
+
+.list_type_F li:last-child { border-bottom: 0; }
+
+.list_type_F dt { float: right; border: 1px solid #e5e5e5; border-radius: 3px; margin: 16px 0 0 20px; width: 107px; height: 60px; overflow: hidden; }
+
+.list_type_F dt img { width: 100%; }
+
+.list_type_F dd { padding: 14px 0; min-height: 94px; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+.list_type_F dd h4 { font-weight: normal; padding-bottom: 5px; }
+
+.list_type_F dd h4 span.cate { color: #444; font-size: 15px; margin-left: 0; padding-right: 4px; }
+
+.list_type_F dd h4 span.count { color: #eb4e44; padding-left: 4px; }
+
+.list_type_F p.name { color: #777; font-size: 13px; letter-spacing: 0.04em; }
+
+.list_type_F p.name span:first-child { padding-right: 5px; margin-right: 5px; background: url(//img.dongascience.com/kids2016/mobile/images/common/ico_bar.png) 100% 5px no-repeat; }
+
+.list_type_F p.date { position: relative; width: 170px; /*padding-top:5px;*/ color: #999; font-size: 12px; letter-spacing: 0.04em; }
+
+.list_type_F p.date.notice { float: right; font-size: 12px; padding: 0 0 0 20px; width: auto; }
+
+.list_type_F p.date2 { padding-top: 12px; font-size: 12px; color: #999; }
+
+.list_type_F p.date2 span:first-child { padding-right: 5px; margin-right: 5px; background: url(//img.dongascience.com/kids2016/mobile/images/common/ico_bar.png) 100% 5px no-repeat; }
+
+/* 세로형 이미지있음 + 제목+ 이름 */
+.list_type_G { display: block; padding: 4px 0 4px; clear: both; *zoom: 1; }
+
+.list_type_G:after { display: block; height: 0; content: "."; font-size: 0; visibility: hidden; clear: both; }
+
+.list_type_G a { display: block; }
+
+.list_type_G ul { padding: 0 12px 0 12px; }
+
+.list_type_G li { float: left; width: 50%; padding: 4px; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; }
+
+.list_type_G dl { background: #fff; border: 1px solid #dcdcdc; border-radius: 3px; overflow: hidden; }
+
+.list_type_G dt { overflow: hidden; height: 89px; }
+
+.list_type_G dt img { width: 100%; }
+
+.list_type_G dd { line-height: 19px; }
+
+.list_type_G dd h4 { height: 38px; overflow: hidden; margin: 8px 10px; font-weight: normal; }
+
+.list_type_G dd h4 span { color: #eb4e44; font-size: 13px; margin-left: 2px; vertical-align: top; }
+
+.list_type_G p { margin: 8px 10px; }
+
+.list_type_G p.name { color: #777; font-size: 13px; letter-spacing: 0.04em; }
+
+.list_type_G p.name span:first-child { padding-right: 5px; margin-right: 5px; background: url(//img.dongascience.com/kids2016/mobile/images/common/ico_bar.png) 100% 5px no-repeat; }
+
+/* 세로형 이미지있음 + 제목+ 이름 */
+.list_type_H { height: 164px; overflow: hidden; padding-left: 12px; }
+
+.list_type_H li { position: relative; float: left; margin: 0 4px; border-radius: 3px; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; width: 200px; height: 164px; border: 1px solid #dddddd; overflow: hidden; display: block; }
+
+.list_type_H .thum { width: 198px; height: 111px; display: block; overflow: hidden; }
+
+.list_type_H .thum .mov { position: absolute; top: 0; left: 0; width: 198px; height: 111px; background: url(//img.dongascience.com/kids2016/mobile/images/common/mov.png) no-repeat; background-size: 100%; }
+
+.list_type_H .tle { margin: 6px 8px 6px 8px; height: 38px; overflow: hidden; }
+
+/* 티셔츠안내 */
+.ts_info { background: #fafffc; border-top: 1px solid #eee; }
+
+.ts_info h4 { font-size: 15px; color: #20af4b; text-align: left; padding: 0 0 10px 0; }
+
+.ts_info p { background: none; font-size: 12px; color: #666; line-height: 20px; margin: 0 0 10px 0; padding: 0; text-align: left; }
+
+.ts_info p img { width: 100%; height: auto; }
+
+.ts_info p em { color: #20af4b; text-decoration: underline; margin: 0; padding: 0; font-weight: bold; letter-spacing: 0; display: inline; word-break: keep-all; }
+
+.ts_info h5 { font-size: 13px; text-align: left; line-height: 30px; margin-top: 15px; }
+
+.ts_info table { color: #333; font-size: 12px; border-right: 1px solid #ccc; background: #fff; }
+
+.ts_info table th, .ts_info table td { font-size: 12px; border-left: 1px solid #ccc; border-bottom: 1px solid #ccc; padding: 10px 5px; }
+
+.ts_info table span { display: block; color: #666; font-size: 11px; }
+
+.ts_info table th:first-child { text-align: left; }
+
+.ts_info table th[scope="row"] { text-align: left; width: 70px; }
+
+.ts_info table th[scope="col"] { border-bottom: 1px solid #000; border-top: 1px solid #000; }
+
+/* 탐사력 */
+#earth_quiz { position: fixed; top: 0; left: 0; bottom: 0; right: 0; z-index: 9999; background: url(//img.dongascience.com/kids2016/images/common/bg_modal.png); overflow: auto; }
+
+#quiz_group img { width: 100%; vertical-align: top; }
+
+#quiz_group .line { display: block; position: absolute; top: 0; left: 0; right: 0; bottom: 0; border: 1px solid #000; opacity: 0.1; }
+
+#quiz_wrap { position: relative; margin: 100px auto; max-width: 520px; background: #fff; }
+
+#quiz_wrap h1 { position: absolute; width: 100%; top: -60px; text-align: center; font-size: 18px; line-height: 60px; height: 60px; overflow: hidden; color: #fff; }
+
+#quiz_wrap h1 a.close { position: absolute; right: -15px; top: 0; display: block; width: 60px; height: 60px; background: url(//img.dongascience.com/kids2016/images/earth/ico_x.png) center no-repeat; background-size: 100%; text-indent: -200px; overflow: hidden; }
+
+#quiz_top { height: 64px; }
+
+#quiz_top #progress { height: 6px; background: #dfdfdf; }
+
+#quiz_top #progress .now { position: relative; height: 6px; background: #0faf4b; }
+
+#quiz_top #progress .now .state { position: absolute; top: -18px; right: -12px; width: 42px; height: 17px; border: 1px solid #0faf4b; border-radius: 20px; background: #fff; text-align: center; line-height: 17px; font-size: 12px; }
+
+#quiz_top #progress .now .state strong { color: #0faf4b; }
+
+#quiz_top #progress .now .state em { position: absolute; display: block; bottom: -6px; width: 11px; height: 6px; right: 5px; background: url(//img.dongascience.com/kids2016/images/earth/ico_arrow.png) no-repeat; }
+
+#quiz_top #grade { margin-top: 20px; overflow: hidden; float: left; border-radius: 40px; border-bottom-left-radius: 0; border-top-left-radius: 0; background: url(//img.dongascience.com/kids2016/images/earth/po_bg.jpg) left center no-repeat; }
+
+#quiz_top #grade .degree { display: inline-block; vertical-align: middle; height: 28px; font-size: 12px; line-height: 26px; padding: 0 10px; color: #0faf4b; }
+
+#quiz_top #grade .degree strong { position: relative; top: 1px; font-size: 14px; }
+
+#quiz_top #grade .point { display: inline-block; vertical-align: middle; padding: 0 15px; color: #fff; font-size: 14px; font-weight: bold; height: 28px; line-height: 28px; letter-spacing: 0; }
+
+#quiz_top #expect { margin-top: 23px; padding-right: 15px; float: right; font-size: 14px; }
+
+#quiz_top #expect span { display: inline-block; border-radius: 20px; background: #0faf4b; width: 21px; height: 21px; line-height: 19px; font-size: 16px; color: #fff; font-weight: bold; text-align: center; }
+
+#quiz_top #expect em { font-style: normal; }
+
+#quiz_top #expect strong { color: #0faf4b; }
+
+#quiz_top #expect strong.qa_total_point { font-size: 18px; }
+
+#quiz_group { clear: both; text-align: center; }
+
+.answer { padding: 0 4% 50px 4%; }
+
+.answer ul:after { content: ''; display: block; clear: both; }
+
+.question { margin-bottom: 30px; }
+
+.question h2 { font-size: 20px; line-height: 26px; padding: 3% 10% 0 10%; word-break: keep-all; }
+
+/* 질문- 텍스트타입 */
+/* 질문- 이미지타입 */
+.question .type_img div { position: relative; display: inline-block; width: 360px; height: 200px; overflow: hidden; margin-top: 3%; }
+
+.question .type_img div img { min-height: 203px; }
+
+/* 질문- 동영상타입 */
+.question .type_mov div { position: relative; display: inline-block; margin-top: 3%; }
+
+.question .type_mov div iframe { position: relative; vertical-align: top; width: 360px; height: 200px; overflow: hidden; background: #000; }
+
+/* 질문- 오디오타입 */
+.question .type_aud div.aud { position: relative; display: inline-block; width: 360px; height: 220px; margin-top: 3%; background: url(//img.dongascience.com/kids2016/images/earth/ico_audio.png) top center no-repeat; }
+
+.question .type_aud div audio { position: relative; vertical-align: top; margin-top: 172px; height: 28px; width: 100%; }
+
+/* 답변- 텍스트타입 */
+.answer .type_txt { text-align: center; }
+
+.answer .type_txt li { display: inline-block; cursor: pointer; margin-bottom: 15px; text-align: left; width: 90%; }
+
+.answer .type_txt li div { position: relative; display: block; vertical-align: middle; line-height: 24px; padding: 18px 5%; }
+
+.answer .type_txt li div strong { display: inline-block; background: #666; color: #fff; width: 20px; height: 20px; line-height: 18px; font-size: 14px; text-align: center; margin-right: 2px; }
+
+.answer .type_txt li div span { position: relative; font-size: 16px; line-height: 20px; top: -1px; font-weight: bold; }
+
+.answer .type_txt .line_t { display: block; position: absolute; top: 0; left: 0; right: 0; bottom: 0; border: 1px solid #000; border-radius: 10px; opacity: 0.1; }
+
+.answer .type_txt li.sel .line_t { opacity: 0.9; border: 1px solid #666; background: url(//img.dongascience.com/kids2016/images/earth/answer_X.png) center no-repeat; }
+
+.answer .type_txt li.ok .line_t { opacity: 0.9; border: 2px solid #0faf4b; background: url(//img.dongascience.com/kids2016/images/earth/answer_O.png) center no-repeat; }
+
+.answer .type_txt li.ok div strong { background: #0faf4b; }
+
+/* 답변- 이미지타입 */
+.answer .type_img li { cursor: pointer; margin-bottom: 25px; float: left; width: 50%; }
+
+.answer .type_img dl { display: inline-block; vertical-align: middle; width: 80%; margin: 0 10%; }
+
+.answer .type_img dt { text-align: left; }
+
+.answer .type_img dt strong { display: inline-block; background: #666; color: #fff; width: 20px; height: 20px; line-height: 18px; font-size: 14px; text-align: center; margin-right: 2px; }
+
+.answer .type_img dt span { position: relative; display: inline-block; font-size: 16px; top: -1px; font-weight: bold; }
+
+.answer .type_img dd { position: relative; }
+
+.answer .type_img dd img { width: 100%; vertical-align: top; }
+
+.answer .type_img li .line { display: block; position: absolute; top: 0; left: 0; right: 0; bottom: 0; border: 1px solid #000; opacity: 0.1; }
+
+.answer .type_img li.sel .line { opacity: 0.9; border: 1px solid #666; background: url(//img.dongascience.com/kids2016/images/earth/answer_X.png) center no-repeat; }
+
+.answer .type_img li.ok .line { opacity: 0.9; border: 2px solid #0faf4b; background: url(//img.dongascience.com/kids2016/images/earth/answer_O.png) center no-repeat; }
+
+.answer .type_img li.ok dt strong { background: #0faf4b; }
+
+/* 답변- 오디오타입 */
+.answer .type_aud li { margin-bottom: 30px; float: left; width: 50%; }
+
+.answer .type_aud dl { display: inline-block; vertical-align: middle; width: 83%; margin: 0 8%; }
+
+.answer .type_aud dt { text-align: left; }
+
+.answer .type_aud dt strong { display: inline-block; background: #666; color: #fff; width: 20px; height: 20px; line-height: 18px; font-size: 14px; text-align: center; margin-right: 2px; }
+
+.answer .type_aud dt span input { position: relative; top: 3px; display: inline-block; width: 18px; height: 18px; }
+
+.answer .type_aud dd { position: relative; background: url(//img.dongascience.com/kids2016/images/earth/ico_audio_s.png) center top no-repeat; }
+
+.answer .type_aud dd audio { position: relative; width: 100%; height: 20px; margin-top: 90px; vertical-align: top; }
+
+.answer .type_aud dd .line_a { display: none; position: absolute; top: 0; left: 0; right: 0; bottom: 0; }
+
+.answer .type_aud li.ok dt strong { background: #0faf4b; }
+
+.answer .type_aud li.ok .line_a { display: block; opacity: 0.9; border: 2px solid #0faf4b; background: url(//img.dongascience.com/kids2016/images/earth/answer_O.png) center no-repeat; }
+
+.answer .type_aud li.sel .line_a { display: block; opacity: 0.9; background: url(//img.dongascience.com/kids2016/images/earth/answer_X.png) center no-repeat; }
+
+.answer .type_aud li.sel dd { background: #f1f1f1 url(//img.dongascience.com/kids2016/images/earth/ico_audio_s.png) center top no-repeat; }
+
+/* 버튼 - 정답보기,해설,다음, 결과보기*/
+.quiz_btn { clear: both; width: 100%; height: 49px; text-align: center; border-top: 1px solid #0faf4b; }
+
+.quiz_btn li { float: left; width: 50%; background: #fff; }
+
+.quiz_btn li a { display: block; height: 49px; line-height: 49px; color: #0faf4b; }
+
+.quiz_btn li.check { width: 100%; }
+
+.quiz_btn li.check a { color: #fff; background: #0faf4b; }
+
+.quiz_btn li.next a { color: #fff; background: #0faf4b; }
+
+.quiz_btn li.result a { color: #fff; background: #ff4e17; }
+
+.explain { display: none; position: absolute; left: 0; right: 0; bottom: 49px; background: #e7f7ed; border-top: 2px solid #0faf4b; border-bottom: 1px solid #e7f7ed; }
+
+.explain .txt { padding: 5%; font-size: 14px; line-height: 20px; max-height: 310px; overflow: auto; }
+
+.explain .txt p { margin-bottom: 10px; }
+
+.explain .close a { display: block; position: absolute; bottom: -50px; width: 50%; background: #e7f7ed; height: 49px; line-height: 49px; color: #0faf4b; text-align: center; }
+
+.explain h3 { font-size: 18px; line-height: 30px; margin-bottom: 20px; color: #0faf4b; }
+
+#exploration { background: #FFF; padding-top: 10px; }
+
+#exploration .link_more2 { width: 100%; margin-bottom: 5px; }
+
+#exploration .link_more2 a { margin: 0; }
+
+#exploration_top { background: #fff; margin-bottom: 8px; border-bottom: 1px solid #dcdcdc; }
+
+#exploration_top .my { padding: 10px 0 30px 0; }
+
+#exploration_top .board { position: relative; }
+
+#exploration_top .my ul { padding: 0; text-align: center; border: 1px solid #ccc; border-top-left-radius: 20px; border-top-right-radius: 20px; border-bottom: none; }
+
+#exploration_top .my li { display: inline-block; padding: 25px 20px; }
+
+#exploration_top .my li dt { font-size: 15px; line-height: 20px; }
+
+#exploration_top .my li dd { font-size: 36px; letter-spacing: 0; line-height: 46px; font-family: Verdana, Geneva, sans-serif; font-weight: bold; color: #0faf4b; }
+
+#exploration_top:after { clear: both; content: ''; display: block; }
+
+#exploration_top h3 { position: relative; margin: 0 0 15px 0; font-size: 16px; line-height: 21px; }
+
+#exploration_top .guide { clear: both; display: block; font-size: 18px; line-height: 45px; color: #2eaf48; text-align: center; background: #0faf4b url(//img.dongascience.com/kids2016/images/common/ico_go.png) right center no-repeat; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px; color: #fff; }
+
+#exploration_top .tip { display: inline-block; vertical-align: top; width: 21px; height: 21px; border-radius: 25px; background: #2eaf48; color: #fff; text-align: center; font-size: 16px; line-height: 20px; cursor: pointer; }
+
+.info_layer { display: none; z-index: 10; position: absolute; left: 70px; top: -15px; font-size: 12px; line-height: 15px; width: 170px; padding: 10px 35px 10px 10px; border: 1px solid #ccc; border-radius: 6px; background: #fff; opacity: 0.8; }
+
+.info_layer .btn_close { cursor: pointer; position: absolute; top: 0px; right: 0; width: 40px; height: 40px; text-indent: -9999em; background: url(//img.dongascience.com/kids2016/images/common/btn_layer_close.png) center no-repeat; }
+
+.E_guide { position: absolute; right: 0; top: -5px; }
+
+.E_guide img { height: 30px; width: auto; }
+
+.nodata { font-size: 16px; line-height: 24px; padding: 20px 0 20px 0; color: #2eaf48; text-align: center; font-weight: 500; }
+
+.quiz_info_txt { font-size: 16px; line-height: 24px; padding: 0 0 10px 0; font-weight: 500; text-align: center; }
+
+#exploration_top .date { position: absolute; right: 0; font-size: 13px; font-weight: normal; letter-spacing: 0.03em; }
+
+#exploration_top table th { text-align: left; padding: 10px 0; border-top: 2px solid #0faf4b; font-weight: bold; letter-spacing: 0.1em; color: #0faf4b; font-size: 13px; line-height: 20px; }
+
+#exploration_top table td { text-align: left; padding: 0; border-top: 1px solid #eee; font-size: 14px; line-height: 35px; }
+
+#exploration_top table td .more { color: #0faf4b; font-size: 12px; padding: 0 10px; display: inline-block; }
+
+#exploration li { position: relative; }
+
+#exploration li .ico_end { display: none; }
+
+#exploration li.end .ico_end { display: block; position: absolute; right: 12px; top: 12px; width: 50px; height: 60px; background: url(//img.dongascience.com/kids2016/images/earth/ico_end.png); text-indent: -1000px; overflow: hidden; }
+
+#exploration li.end dl { border: 1px solid #0faf4b; color: #0faf4b; background: #ecf9f1; }
+
+/*  랭킹 팝업 */
+#modal_layer { display: none; position: absolute; z-index: 10; top: 92px; right: 0; }
+
+.layer_ranking { width: 200px; background: #fff; border-radius: 3px; overflow: hidden; border: 1px solid #aaa; }
+
+.layer_ranking.on { display: block; }
+
+.layer_ranking dt { height: 100px; padding: 10px 0 0 20px; line-height: 40px; border-bottom: 1px solid #ccc; font-size: 18px; color: #222; font-weight: bold; }
+
+.layer_ranking dt a { position: absolute; top: 0px; right: 0; width: 35px; height: 60px; text-indent: -9999em; background: url(//img.dongascience.com/kids2016/images/common/btn_layer_close.png) center left no-repeat; }
+
+.layer_ranking dt input[type=text] { width: 158px; border: 1px solid #ccc; height: 32px; }
+
+.layer_ranking ol { height: 225px; overflow-y: scroll; }
+
+.layer_ranking li { height: 44px; padding: 0 20px; line-height: 44px; background: #f9f9f9; border-bottom: 1px solid #e5e5e5; }
+
+/*.layer_catton li:last-child{ border-bottom:0;}*/
+@media (max-width: 640px) { #earth_quiz { overflow: auto; }
+  #quiz_wrap { margin: 60px auto 0 auto; height: auto; }
+  #quiz_wrap h1 a.close { right: 10px; top: 10px; width: 40px; height: 40px; }
+  .question h2 { font-size: 18px; line-height: 24px; padding: 3% 5% 0 5%; }
+  .answer .type_aud dd audio { background: url(//img.dongascience.com/kids2016/images/earth/ico_audio_s.png) center top no-repeat; } }
+
+@media (max-width: 360px) { #quiz_top #expect em { display: none; } }

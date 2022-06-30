@@ -31,6 +31,21 @@
 .td_u {
     text-decoration: underline;
 }
+.td_u2 {
+    position: relative;
+    z-index: 1;
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 0.5em;
+        background-color: rgba(248, 206, 0, 0.15);
+        z-index: -1;
+    }
+}
+
 
 .cursor {
     &_default {
@@ -1321,6 +1336,9 @@
     &.ty_sq {
         padding-top: 100%;
     }
+    &.ty_circle {
+        padding-top: 100%;
+    }
     &.ty2 {
         padding-top: 136%;
     }
@@ -1344,10 +1362,16 @@
         background-repeat: no-repeat;
         background-position: center center;
         background-size: 50%;
+        @at-root .ty_circle & {
+            border-radius: 50%;
+            &:hover img {
+                transform: scale(1);
+            }
+        }
         img {
             width: 100%;
             height: 100%;
-            object-fit: cover;222222222222222222222
+            object-fit: cover;
             transition: all .2s ease-in-out;
         }
         &:hover img {

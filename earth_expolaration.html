@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <title>시민과학콘</title>
+    <!--스타일 공통-->
+    <link rel="stylesheet" href="./common/css/common.css">
+
+    <!-- 지사탐 기존 스타일 -->
+    <link rel="stylesheet" href="./common/css/earth.css">
+
+    <!--js 공통-->
+    <script type="text/javascript" src="./common/js/jquery.min.js"></script>
+    <script type="text/javascript" src="./common/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="./common/js/jquery.ui.touch-punch.min.js"></script>
+    <script type="text/javascript" src="https://kit.fontawesome.com/a9123cc962.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./common/js/swiper.min.js"></script>
+    <script type="text/javascript" src="./common/js/common.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <div id="content">
+            <header id="header" class="header">
+                <div class="header_top">
+                    <div class="header_top_inner">
+                        <h1 class="logo">
+                            <a href="">
+                                <span class="blind">시민과학콘</span>
+                                <img src="./images/common/logo.svg" alt="시민과학콘">
+                            </a>
+                        </h1>
+                        <div class="header_util">
+                            <a href="" class="btn_mypage"><span class="blind">마이페이지</span></a>
+
+                            <!--로그아웃 상태-->
+                            <button type="button" class="btn_sign ty_logout">
+                                <i class="btn_sign_ico"></i>
+                                <span class="btn_sign_txt">로그인</span>
+                            </button>
+                            <!--// 로그아웃 상태-->
+                            <!-- 로그인 상태-->
+                            <!--
+                            <button type="button" class="btn_sign ty_login">
+                                <i class="btn_sign_ico"></i>
+                                <span class="btn_sign_txt">로그아웃</span>
+                            </button>
+                            -->
+                            <!--// 로그인 상태-->
+
+                            <!-- 햄버거버튼 삭제
+                            <button type="button" class="btn_lm">
+                                <span class="blind">전체메뉴</span>
+                                <div class="bar_box">
+                                    <span class="bar top"></span>
+                                    <span class="bar mid"></span>
+                                    <span class="bar bot"></span>
+                                </div>
+                            </button>
+                            -->
+                        </div>
+                    </div>
+                </div>
+                <div class="nav_area">
+                    <nav id="nav" class="nav">
+                        <ul class="nav_list">
+                            <li class="on"><a href=""><span>지구사랑탐사대</span></a></li>
+                            <li><a href=""><span>우동수비대</span></a></li>
+                            <li><a href=""><span>플라스틱다이어트</span></a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+            <div id="container" class="sub_m ">
+                <div class="menu_dep2 ">
+                    <ul class="menu_dep2_list">
+                        <li class="menu_dep2_item">
+                            <a href="" class="menu_dep2_link ">탐사기록</a>
+                        </li>
+                        <li class="menu_dep2_item">
+                            <a href="" class="menu_dep2_link ">탐사방법</a>
+                        </li>
+                        <li class="menu_dep2_item">
+                            <a href="" class="menu_dep2_link">탐사지도</a>
+                        </li>
+                        <li class="menu_dep2_item">
+                            <a href="" class="menu_dep2_link on">탐사력</a>
+                        </li>
+                        <li class="menu_dep2_item">
+                            <a href="" class="menu_dep2_link">소개/가입</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="sub_wrap">
+                    <div class="sub_inner">
+                        <div id="exploration_top">
+                            <div class="group my">
+                                <h3>내 탐사력 <span class="tip" onclick="$('.info_layer').css({display:'block'});">!</span>
+                                    <div class="info_layer">오늘 적립한 탐사포인트와 내 순위는 내일 0시부터 적용됩니다. <a class="btn_close" onclick="$('.info_layer').css({display:'none'});">닫기</a>
+                                    </div>
+                                </h3>
+                                <ul>
+                                    <li>
+                                        <dl>
+                                            <dt>탐사력 참여는 <br>로그인이 필요합니다. </dt>
+                                            <dd></dd>
+                                        </dl>
+                                    </li>
+                                </ul>
+                                <a href="/notice/view/1085" class="guide">탐사력왕에 도전하세요!</a>
+                            </div>
+                            <div class="group board">
+                                <h3>이달의 랭킹 <span class="date">22.06.01 ~ 22.06.29 기준</span>
+                                </h3>
+                                <div id="modal_layer" style="display: none;">
+                                    <div class="layer_ranking on">
+                                        <dl id="epList">
+                                            <dt>
+                                                <span id="modal_rank">4</span>위
+                                                <!-- <span id="modal_point">11,305</span>pt-->
+                                                <a class="btn_close" href="javascript:modalHide('#modal_layer');" style="cursor: pointer">닫기</a>
+                                                <input type="text" id="filtersearch" value="" placeholder="이름을 입력하세요">
+                                            </dt>
+                                            <dd>
+                                                <ol id="modal_list">
+                                                    <li>조기견</li>
+                                                    <li>장원숙</li>
+                                                    <li>이상준</li>
+                                                    <li>임석민</li>
+                                                    <li>송원재</li>
+                                                    <li>허성재</li>
+                                                    <li>권창환</li>
+                                                    <li>차선영</li>
+                                                </ol>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tbody>
+                                        <tr>
+                                            <th scope="col">순위</th>
+                                            <th scope="col">Point</th>
+                                            <th scope="col">이름</th>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>23,295</td>
+                                            <td>
+                                                <a href="javascript:alert('포트폴리오를 생성하지 않은 회원입니다.')"> 서윤하 </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>23,000</td>
+                                            <td>
+                                                <a href="/portfolio/info/readsky2000naver.com" target="_blank"> 이경수 </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>19,950</td>
+                                            <td>
+                                                <a href="/portfolio/info/ddodddo" target="_blank"> 최지한 </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>19,035</td>
+                                            <td>
+                                                <a href="/portfolio/info/heony0913" target="_blank"> 이정헌 </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>5</td>
+                                            <td>17,905</td>
+                                            <td>
+                                                <a href="javascript:alert('포트폴리오를 생성하지 않은 회원입니다.')"> 송연우 </a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div id="exploration">
+                            <div class="list_type_A">
+                                <div class="quiz_info_txt">매일 새로운 탐사력 퀴즈가 출제됩니다.</div>
+                                <ul id="list">
+                                    <li data-idx="15">
+                                        <dl>
+                                            <dt>
+                                                <img src="/upload/expedition/2020/04/15863462073228.jpg">
+                                            </dt>
+                                            <dd>
+                                                <h4>민물고기/바닷물고기</h4>
+                                            </dd>
+                                        </dl>
+                                    </li>
+                                    <li data-idx="14">
+                                        <dl>
+                                            <dt>
+                                                <img src="/upload/expedition/2020/04/15863455525061.jpg">
+                                            </dt>
+                                            <dd>
+                                                <h4>거미</h4>
+                                            </dd>
+                                        </dl>
+                                    </li>
+                                    <li data-idx="13">
+                                        <dl>
+                                            <dt>
+                                                <img src="/upload/expedition/2020/04/1586341144312.jpg">
+                                            </dt>
+                                            <dd>
+                                                <h4>도롱뇽/양서류</h4>
+                                            </dd>
+                                        </dl>
+                                    </li>
+                                    <li data-idx="12">
+                                        <dl>
+                                            <dt>
+                                                <img src="/upload/expedition/2020/04/15863236451057.jpg">
+                                            </dt>
+                                            <dd>
+                                                <h4>식물개화</h4>
+                                            </dd>
+                                        </dl>
+                                    </li>
+                                    <li data-idx="11">
+                                        <dl>
+                                            <dt>
+                                                <img src="/upload/expedition/2020/03/1585622204.jpg">
+                                            </dt>
+                                            <dd>
+                                                <h4>귀화식물</h4>
+                                            </dd>
+                                        </dl>
+                                    </li>
+                                    <li data-idx="10">
+                                        <dl>
+                                            <dt>
+                                                <img src="/upload/expedition/2020/03/15855537116532.JPG">
+                                            </dt>
+                                            <dd>
+                                                <h4>나비</h4>
+                                            </dd>
+                                        </dl>
+                                    </li>
+                                    <li data-idx="9">
+                                        <dl>
+                                            <dt>
+                                                <img src="/upload/expedition/2019/04/15562904506325.jpg">
+                                            </dt>
+                                            <dd>
+                                                <h4>특산식물</h4>
+                                            </dd>
+                                        </dl>
+                                    </li>
+                                    <li data-idx="8">
+                                        <dl>
+                                            <dt>
+                                                <img src="/upload/expedition/2019/04/15562548310526.jpg">
+                                            </dt>
+                                            <dd>
+                                                <h4>개미</h4>
+                                            </dd>
+                                        </dl>
+                                    </li>
+                                    <li data-idx="7">
+                                        <dl>
+                                            <dt>
+                                                <img src="/upload/expedition/2019/04/1556064728601.jpg">
+                                            </dt>
+                                            <dd>
+                                                <h4>제비</h4>
+                                            </dd>
+                                        </dl>
+                                    </li>
+                                    <li data-idx="6">
+                                        <dl>
+                                            <dt>
+                                                <img src="/upload/expedition/2019/04/15550449441345.jpg">
+                                            </dt>
+                                            <dd>
+                                                <h4>화분매개자</h4>
+                                            </dd>
+                                        </dl>
+                                    </li>
+                                    <li data-idx="5">
+                                        <dl>
+                                            <dt>
+                                                <img src="/upload/expedition/2019/04/15550353456155.jpg">
+                                            </dt>
+                                            <dd>
+                                                <h4>조류</h4>
+                                            </dd>
+                                        </dl>
+                                    </li>
+                                    <li data-idx="4">
+                                        <dl>
+                                            <dt>
+                                                <img src="/upload/expedition/2019/04/15550450103675.jpg">
+                                            </dt>
+                                            <dd>
+                                                <h4>매미</h4>
+                                            </dd>
+                                        </dl>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <footer id="footer" class="footer">
+                <ul class="footer_menu">
+                    <li><a href="">회사소개</a></li>
+                    <li><a href="">광고안내</a></li>
+                    <li><a href="">개인정보취급방침</a></li>
+                </ul>
+                <div class="footer_policy">
+                    <h2 class="footer_policy_tit">
+                        <button type="button" class="btn_policy">㈜동아사이언스 키즈 플랫폼 <i></i></button>
+                    </h2>
+                    <div class="txt_box">
+                        ㈜동아사이언스 팝콘플래닛, 시민과학콘 | 대표 : 장경애 <br>
+                        개인정보관리책임자 : <span>김수희 (privacy@dongascience.com) |</span> <span>청소년보호책임자 : 조기견</span> <br><br>
+                        서울시 용산구 청파로 109, 7층 (04370) | 문의 : 02-6749-2000 ｜팩스 : 02-3148-0789  사업자등록번호 : 101-81-62201 (사업자정보확인) | 통신판매업신고번호 : 제2013-서울용산-01101호 | 온라인 결제를 위한 PG사의 구매안전서비스(가입사실 확인)
+                    </div>
+                </div>
+                <p class="copy">Copyright © Dongascience. All right reserved.</p>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>
