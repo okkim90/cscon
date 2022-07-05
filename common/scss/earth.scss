@@ -1,3 +1,6 @@
+@import '_variable';
+
+
 .map_area {
     margin: 0 -20px;
     margin-bottom: 20px;
@@ -128,6 +131,237 @@
 
 
 
+/* 지사탐 가입하기 상단  */
+.earth_apply {
+    padding: 0 20px;
+    padding-bottom: 30px;
+    margin-bottom: 8px;
+    background-color: #fff;
+    &_txt {
+        .name {
+            display: block;
+            font-size: 18px;
+            line-height: 1.56;
+
+        }
+        p {
+            font-size: 14px;
+            line-height: 1.43;
+            letter-spacing: -.35px;
+        }
+        margin-top: 8px;
+    }
+    &_period {
+        padding: 9px 10px;
+        background-color: #f2faf5;
+        border-radius: 6px;
+        text-align: center;
+        margin-top: 20px;
+        font-size: 12px;
+        font-weight: bold;
+        line-height: 1.5;
+    }
+}
+
+.earth_intro {
+    &_sec {
+        margin-top: 30px;
+        font-size: 14px;
+        line-height: 1.7;
+        color: #666;
+        &_tit {
+            display: block;
+            text-align: center;
+            font-size: 24px;
+            letter-spacing: -.6px;
+            line-height: 1.5;
+            &.taL {
+                text-align: left;
+            }
+        }
+        &.ty_bg {
+            margin-left: -20px;
+            margin-right: -20px;
+            padding: 40px 20px;
+            background-color: rgba(60, 179, 113, 0.07);
+        }
+    }
+
+    &_top {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .txt_box {
+            padding-right: 10px;
+            p {
+                margin-top: 10px;
+                font-size: 20px;
+                line-height: 1.4;
+            }
+        }
+        &_tit {
+            font-size: 24px;
+        }
+    }
+    .txt_mid {
+        font-size: 16px;
+    }
+    .img_box {
+        &.ty_full {
+            margin: 0 -20px;
+            img {
+                width: 100%;
+            }
+        }
+    }
+    .txt_cite {
+        display: block;
+        text-align: right;
+        font-size: 11px;
+        line-height: 16px;
+        color: #999;
+        &.ty_bot {
+            margin-top: 10px;
+        }
+    }
+    .benefit_list {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -10px;
+        &_item {
+            width: 50%;
+            flex-shrink: 0;
+            margin-top: 30px;
+            text-align: center;
+            padding: 0 10px;
+            box-sizing: border-box;
+            .img_box {
+                img {
+                    width: 80%;
+                    max-width: 200px;
+                }
+            }
+            .txt_box {
+                margin-top: 10px;
+                .tit {
+                    display: block;
+                    font-size: 16px;
+                    letter-spacing: -.16px;
+                }
+                .desc {
+                    font-size: 14px;
+                    letter-spacing: -.35px;
+                    line-height: 1.43;
+                    margin-top: 8px;
+                }
+            }
+        }
+    }
+    .partner_list {
+        &_item {
+            display: flex;
+            & + .partner_list_item {
+                margin-top: 30px;
+            }
+            .img_box {
+                width: 70px;
+                flex-shrink: 0;
+            }
+            .txt_box {
+                flex: 1;
+                padding-left: 10px;
+                padding-top: 10px;
+                .tit {
+                    display: block;
+                    font-size: 18px;
+                    line-height: 1.2;
+                    letter-spacing: -.45px;
+                    color: #212121;
+                }
+                .desc {
+
+                    margin-top: 10px;
+                    font-size: 14px;
+                    line-height: 1.6;
+                    color: #666;
+                }
+            }
+        }
+    }
+
+
+}
+
+
+.earth_history {
+    padding: 30px 0;
+    background-color: #fff;
+    margin-top: 8px;
+    border-top: 1px solid #dcdcdc;
+    .history_sec {
+        padding-left: 20px;
+        position: relative;
+        margin-top: 20px;
+        padding-bottom: 30px;
+        &:last-child {
+            padding-bottom: 0;
+        }
+        & + .history_sec {
+            margin-top: 5px;
+        }
+        &::before {
+            content:'';
+            position: absolute;
+            width: 1px;
+            height: 100%;
+            background-color: $c_key;
+            left: 0;
+            top: 5px;
+        }
+        &::after {
+            content:'';
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: $c_key;
+            left: -4.5px;
+            top: 5px;
+        }
+        &_tit {
+            display: block;
+            font-size: 18px;
+            line-height: 24px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+    }
+    .history_cont {
+        dt {
+            display: block;
+            font-size: 16px;
+            line-height: 24px;
+            font-weight: bold;
+        }
+        dd {
+            font-size: 14px;
+            line-height: 20px;
+            margin-top: 5px;
+            color: #666;
+        }
+        dd + dt {
+            margin-top: 20px;
+        }
+        &_list {
+            li + li {
+                margin-top: 6px;
+            }
+        }
+    }
+}
+
+
+
 
 /* 기존 지사탐 earth.css + 어과동 common.css 일부 */
 
@@ -233,8 +467,131 @@
 
 
 
+/* 실험도구 사러 가기 */
+#sci_mall{ background:#fff; margin-top:8px; padding:16px; border-top:1px solid #e5e5e5;}
+#sci_mall .list{position:relative; min-height:108px;margin-bottom:10px; }
+#sci_mall .list dt{ display:none;}
+#sci_mall .list .thumb{ position:absolute; top:0; left:0;}
+#sci_mall .list .thumb img{ width:106px; height:106px; border:1px solid #e5e5e5; border-radius:3px; background-size:100%;}
+
+#sci_mall .list .txt{ padding-left:123px; }
+#sci_mall .list .txt h4{ padding-bottom:6px; font-weight:normal; color:#ff4e17;}
+#sci_mall .list .txt .desc{ font-size:14px; color: #777;}
+#sci_mall .list .txt .link{width:100%; height:40px; position:relative;}
+#sci_mall .list .txt .link i{ position:absolute; top:16px; right:0;height:26px; padding-left:32px;background:url(//img.dongascience.com/kids2016/mobile/images/common/ico_cart.png) no-repeat; background-size:30px 26px; font-style:normal; }
+#sci_mall .list .txt .link span{ font-size:13px; padding-bottom:2px; border-bottom:1px solid #ff4e17;  }
+
+#sci_mall.view{ padding:16px; margin:16px; border:1px solid #e5e5e5; border-radius:3px;}
+#sci_mall.view .list .txt h4{ color:#ff4e17;}
+
+/* 내 가입 상태 */
+.status .tname{color:#2eaf48;}
+.status{ /*padding:16px;*/ margin-bottom:8px; background:#fff; border-top:1px solid #e5e5e5; border-bottom:1px solid #dcdcdc;}
+.status h3{/*padding-bottom:15px;*/ padding:16px 0 15px 16px; color: #222;font-size:17px; font-weight:normal;}
+.status ul{/*border:1px solid #e5e5e5;*/ border-top:1px solid #e5e5e5; border-radius:3px; padding:16px;}
+.status li{ display:block; padding:16px 0 16px 16px; border-bottom:1px solid #e5e5e5;}
+.status li:last-child{ border-bottom:0;}
+.status p.type1 {word-break: keep-all; color: #2eaf48; font-size: 16px; text-align: center; line-height: 1.4; font-weight: 500; padding: 5px 0 10px;}
+
+
+/* 등록 신청 */
+.signup{margin-bottom:8px; background:#fff; border-top:1px solid #e5e5e5; border-bottom:1px solid #dcdcdc;}
+.signup h3{position: relative; padding:16px 0 15px 16px; color: #222;font-size:17px; font-weight:normal; border-bottom:1px solid #eee;}
+.signup div{ /*padding:16px;*/ text-align:center}
+.signup .opt{ position:inherit; display:inline-block;padding:0 10px;width: 147px;height:46px;text-align: center;background:#fff;border:1px solid #e5e5e5;border-radius:3px;cursor:pointer;}
+.signup .btn_signup{display:inline-block; width:104px; height:46px; margin-left:7px; background:#fff; border:1px solid #2eaf48; border-radius:3px; color:#2eaf48; font-weight:bold; cursor:pointer;}
+.signup p.desc{ height:40px; padding:12px 0; background:#fafafa; text-align:center; }
+
+
+
+/* 등록신청 */
+.signup .type5 p {padding-bottom: 10px;}
+.signup .tname{color:#2eaf48;}
+.signup .now{color:#e83428}
+.signup h3 .now{ position:absolute; right:30px; }
+.signup ul li{ height:49px; line-height:49px; padding-left:20px; border-bottom:1px solid #eee; background:#fefefe}
+.signup ul li:last-child{ border-bottom:0;}
+.signup .btn_login{ width:82px; height:38px; margin-left:10px; background:#fff; border:1px solid #ccc; border-radius:3px; cursor:pointer;}
+.signup .btn_join, .sidebar.signup .btn_ok, .sidebar.signup .btn_cancel, .sidebar.signup .btn_signup{ width:134px; height:40px; background:#2eaf48;color: #fff;  border:0; border-radius:3px; cursor:pointer; }
+.signup .detail{text-align:center; font-size:15px; line-height:24px; padding:25px 0 15px 0;background:#fefefe}
+
+.signup .detail strong{ font-size:17px }
+.signup .info{ background:#fff; font-size:12px; line-height:20px; word-break:keep-all; color:#555; margin:0; padding:15px 20px 15px 20px;border-top:1px solid #eee; text-align:left;}
+.signup .info em{ text-decoration:underline}
+.signup .detail [type=button]{ width:130px; height:38px; background:#fff;color:#2eaf48; border:2px solid #2eaf48;font-weight:bold ;border-radius:3px; cursor:pointer; margin-bottom:30px }
+.signup .detail p.txt{padding:20px 10px; word-break:keep-all}
+.signup .detail .hline{ position:relative;top:12px;}
+.btn_area{ display:block; padding:30px 0 0;border-top:1px solid #eee; margin-top:30px}
+.btn_area input{ width:134px; height:40px; background:#2eaf48;color: #fff; border:0; border-radius:3px; cursor:pointer; }
+.hline{ display:block; width:20px; background:#2eaf48; height:1px; font-size:1px; margin:8px auto; /*margin:0 auto;*/ }
+
+
+
+
+/* 접수확인 */
+.apply_ok h4{ font-weight:normal; font-size:18px; line-height:28px;color:#2eaf48; text-align:center; margin:40px 0 20px 0}
+.apply_ok p{ padding:20px 0 30px 0;}
+.apply_ok .btn_area{margin-top:40px}
+a.btn_edit{ display:block; line-height:40px; margin:0 auto;width:134px; height:40px; background:#2eaf48;color: #fff; border:0; border-radius:3px; margin-bottom:25px}
+a.btn_signup{ display:block; line-height:40px; margin:0 auto;width:134px; height:40px; background:#2eaf48;color: #fff; border:0; border-radius:3px; }
+#header #logo a { width: 250px; height: 135px; background: url(//img.dongascience.com/kids2016/images/common/logo_kids_earth.png) 1px 0 no-repeat }
+.sel_size select {  height: 40px; padding-left: 10px; font-size:12px }
+.sel_size th, .sel_size td{ border-top:1px solid #eee; height:60px; text-align:left}
+.sel_size th{ padding:0 0 0 15px; text-align:left}
+.sel_size .total{text-align:right; padding:0 30px 10px 30px; color:#2eaf48;border-top:1px solid #2eaf48; font-size:18px; }
+.sel_size .total strong.price{ font-size:22px; position:relative; top:2px; letter-spacing:0 }
+.sel_size .methods{ text-align:center; padding-right: 0;}
+.sel_size .methods label{ font-size: 14px;}
+.sel_size .methods label + label {margin-left: 15px;}
+.sel_size .methods label input[checked=checked]+span{ font-weight:bold}
+.sel_size  td{ text-align:right;padding:0 15px 0 0;}
+.sel_size .opt{ display:inline-block; float:none; padding:0; margin-right:4px; width: auto; }
+.sel_size .L{ min-width:100px}
+.signup .payinfo{ text-align:left; font-size:12px; line-height:20px; padding:5px 20px 30px 20px; color:#2eaf48}
+.signup .detail [type=button].btn_pay{ background:#2eaf48; color:#fff}
+
+
+/* 탐사대원증발급안내 */
+.license{ background:#fffdf9; border-top:1px solid #dcdcdc; padding:20px 30px;}
+.license h4{ font-size:17px; color:#67b932; line-height:46px; text-align:left}
+.license h4.c2{ color:#ec7000}
+.license h5{ text-align: left;padding-bottom: 10px}
+.license li{margin-bottom:10px; font-size:13px; line-height:17px; letter-spacing:-0.07em; text-align:left}
+.license li strong{ display:inline-block; width:18px; font-weight:bold}
+.license li span{ text-decoration:underline}
+
+
+/* 지구사랑탐사대 소개 */
+.intro{ padding:16px 0 30px; background:#fff; border-top:1px solid #e5e5e5;border-bottom: 1px solid #dcdcdc;}
+.intro h3{padding:0 0 15px 16px; color: #222;font-size:17px; font-weight:normal; border-bottom:1px solid #eee;}
+.intro .content img{ width:100%;}
+
+/* 색상변경 */
+#navi .mainmenu>li.sel>a{ border-bottom:2px solid #2eaf48;}
+#navi .mainmenu>li li.sel a{ color:#2eaf48;}
+
+
+.earth_card{ background:#fff;}
+#earth_card{ width:300px; margin:30px auto; padding-bottom:3px; border-radius:15px; background:#6fba2c url(//img.dongascience.com/kids2016/mobile/images/earth/earth_card.png) center top no-repeat; background-size:300px}
+#earth_card dl{ padding-top:270px;}
+#earth_card dl:after {display:block;height:0;content:".";font-size:0;clear:both}
+#earth_card dt{ float:right; margin:0 20px 20px 20px; width:120px; height:120px; border-radius:6px; overflow:hidden; background:#061833}
+#earth_card dt img{ width:100%; height:auto}
+#earth_card dd{ text-align:right; color:#061833; margin-top:50px}
+#earth_card dd .name{ font-size:30px; font-weight:600; line-height:40px; letter-spacing:-0.03em}
+#earth_card dd .team{ font-size:17px; line-height:25px}
+#earth_card .back { width:294px; height:320px; margin:0 auto;  border-radius:12px;background:#fff url(//img.dongascience.com/kids2016/mobile/images/earth/earth_card2.png) center bottom no-repeat;background-size:300px 170px}
+#earth_card .back li strong{ font-weight:600; display:inline-block; margin-right:10px}
+#earth_card .back ul{ margin:0 0 0 40px; padding-top:40px; line-height:30px; font-size:17px}
+#earth_card .back div{padding:60px 30px 0 30px;text-align:center}
+.ico_talk{ position:relative}
+.ico_talk span{ z-index:10;position:absolute; text-indent:-100px; display:block; width:24px; height:24px; background:url(//img.dongascience.com/kids2016/mobile/images/earth/ico_talk.png); background-size:100%; right:-5px; top:10px; overflow:hidden}
+
+
+
+
 /* 티셔츠안내 */
-.ts_info{ background:#fafffc; border-top:1px solid #eee}
+.ts_info{ background:#fafffc; padding: 20px ; border-top:1px solid #eee}
 .ts_info h4{ font-size:15px; color:#20af4b;  text-align:left;padding:0 0 10px 0;}
 .ts_info p{ background:none; font-size:12px; color:#666; line-height:20px; margin:0 0 10px 0; padding:0; text-align:left}
 .ts_info p img{ width:100%; height:auto}
@@ -407,8 +764,8 @@
 .question h2{ font-size:18px; line-height:24px; padding:3% 5% 0 5%;}
 .answer .type_aud dd audio{background:url(//img.dongascience.com/kids2016/images/earth/ico_audio_s.png) center top  no-repeat; }
 
-	}
+}
 @media (max-width:360px){
-#quiz_top #expect em{ display:none}
+    #quiz_top #expect em{ display:none}
 
-	}
+}

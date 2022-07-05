@@ -999,6 +999,8 @@
 
 .sub_inner { padding-left: 20px; padding-right: 20px; }
 
+.bg_grey { background-color: #e5e5e5; }
+
 .sub_wrap { padding-top: 30px; padding-bottom: 50px; }
 
 .menu_dep2 { padding: 16px 20px; -webkit-box-sizing: border-box; box-sizing: border-box; background-color: #f1faf5; text-align: center; position: relative; }
@@ -1066,6 +1068,20 @@
 
 .btn_area [class^=btn] { margin: 0 5px; }
 
+.btn_box { font-size: 0; }
+
+.btn_box.ty_bot { margin-top: 30px; }
+
+.btn_box.ty_bot2 { margin-top: 20px; }
+
+.btn_box.ty_bot3 { margin-top: 10px; }
+
+.btn_box.taC { text-align: center; }
+
+.btn_box.taR { text-align: right; }
+
+.btn_box [class^=btn] { margin: 0 5px; }
+
 .btn_small { display: inline-block; vertical-align: top; height: 24px; line-height: 22px; padding: 0 5px; border-radius: 6px; font-size: 12px; font-weight: 400; border-style: solid; border-width: 1px; }
 
 .btn_small.white { color: #fff; border-color: #fff; }
@@ -1096,7 +1112,7 @@
 
 .btn_s_mid.grey { border-color: #e1e1e1; color: #424242; background-color: #f5f5f5; padding: 0 7px; }
 
-.btn_mid { height: 36px; line-height: 34px; -webkit-box-sizing: border-box; box-sizing: border-box; border-radius: 8px; border: 1px solid #3cb371; background-color: #3cb371; text-align: center; padding: 0 15px; min-width: 80px; color: #fff; font-size: 13px; font-weight: 500; }
+.btn_mid { display: inline-block; vertical-align: top; height: 36px; line-height: 34px; -webkit-box-sizing: border-box; box-sizing: border-box; border-radius: 8px; border: 1px solid #3cb371; background-color: #3cb371; text-align: center; padding: 0 15px; min-width: 80px; color: #fff; font-size: 13px; font-weight: 500; }
 
 .btn_mid.white { color: #3cb371; background-color: #fff; }
 
@@ -1478,7 +1494,7 @@
 
 .ta_ty1::-webkit-scrollbar-track { background-color: #f5f5f5; border-radius: 2px; }
 
-.select_ty1 { display: inline-block; vertical-align: top; width: 100%; height: 30px; border: 1px solid #ccc; -webkit-box-sizing: border-box; box-sizing: border-box; padding: 0 30px 0 10px; border-radius: 4px; font-size: 13px; background-image: url(../../images/ico/arrow_bot_b.svg); background-repeat: no-repeat; background-position: calc(100% - 10px) center; overflow: hidden; text-overflow: ellipsis; }
+.select_ty1 { appearance: none; -moz-appearance: none; -webkit-appearance: none; background-color: #fff; display: inline-block; vertical-align: top; width: 100%; height: 30px; border: 1px solid #ccc; -webkit-box-sizing: border-box; box-sizing: border-box; padding: 0 30px 0 10px; border-radius: 4px; font-size: 13px; background-image: url(../../images/ico/arrow_bot_b.svg); background-repeat: no-repeat; background-position: calc(100% - 10px) center; overflow: hidden; text-overflow: ellipsis; }
 
 .select_ty1.ty_big { height: 40px; }
 
