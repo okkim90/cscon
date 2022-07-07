@@ -1,0 +1,535 @@
+
+.main_sec01 {
+    position: relative;
+    height: 430px;
+    background: #ffef56 url(//img.dongascience.com/kids2016/images/zooguard/main_top_visual.png) no-repeat;
+    background-position: center bottom;
+    .top_visual {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 30px;
+        box-sizing: border-box;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        background: url(//img.dongascience.com/kids2016/images/zooguard/main_top_visual_ani.png) no-repeat;
+        background-position: center bottom;
+    }
+    .top_visual img {
+        max-width: 100%;
+    }
+}
+
+
+// main_sec02
+.main_sec02 {
+    background: #fff4db;
+    padding: 90px 0 120px;
+    text-align: center;
+}
+
+.main_info {
+    .logo_egd {
+        margin-bottom: 44px;
+    }
+    .infoTit {
+        margin-bottom: 55px;
+    }
+    .desc01 {
+        color: #5c3b1e;
+        font-size: 26px;
+        letter-spacing: -0.06em;
+        line-height: 1.7;
+        position: relative;
+    }
+    .ico_Qmark {
+        display: inline-block;
+        vertical-align: baseline;
+        font-size: 19px;
+        position: relative;
+        display: inline-block;
+        width: 29px;
+        height: 29px;
+        background: #fde09c;
+        border: 2px solid #ffd270;
+        border-radius: 50%;
+        box-sizing: border-box;
+        text-align: center;
+
+    }
+
+    .chkList {
+        margin-top: 32px;
+        li {
+            color: #5c3b1e;
+            font-size: 26px;
+            line-height: 1.7;
+            &::before {
+                content: '';
+                background:url(//img.dongascience.com/kids2016/images/zooguard/ico_main_check.png) 0 0 no-repeat;
+                display:inline-block;
+                width: 23px; height: 17px;
+                margin-right: 9px;
+            }
+
+        }
+    }
+    .desc02 {
+        color: #5c3b1e;
+        font-size: 26px;
+        letter-spacing: -0.06em;
+        line-height: 1.7;
+    }
+    .wrap_qmark {
+        display: inline-block;
+        position: relative;
+    }
+    #popQmark {
+        display: none;
+        position: absolute;
+        left: 100%;
+        top: 100%;
+        z-index: 100;
+        .popup_inner {
+            border-radius: 20px;
+            border: 7px solid #fff157;
+            padding: 15px 25px;
+            width: 290px;
+            background-color: #fff;
+        }
+        .popup_cont {
+            padding-bottom: 20px;
+            .popTit {
+                color: #5c3b1e;
+                letter-spacing: -0.06em;
+                font-size: 22px;
+                padding: 15px 0 20px 0;
+            }
+            p {
+                font-size: 18px;
+                color: #5c3b1e;
+                letter-spacing: -0.06em;
+                word-break: keep-all;
+                line-height: 1.5;
+            }
+        }
+        .popClose {
+            font-size: 16px;
+            width:80px;
+            height: 42px;
+            background: #5c3b1e;
+            color: #fff;
+            letter-spacing: 0.02em;
+            border-radius: 20px;
+            border: 0;
+            margin: 0 auto;
+            cursor: pointer;
+            span {
+                line-height: 42px;
+            }
+        }
+    }
+    .btnState {
+        margin-top: 50px;
+    }
+    .btnGroup {
+        margin: 0 -10px;
+        margin-top: 30px;
+        display: flex;
+        flex-wrap: wrap;
+        &_item {
+            min-width: 350px;
+            flex: 1;
+            padding: 0 10px;
+            box-sizing: border-box;
+            margin-top: 20px;
+        }
+        .btnBox {
+            white-space: nowrap;
+            padding: 40px 0 30px;
+            background-color: #fff;
+            border-radius: 20px;
+            box-shadow: 6px 6px 0 rgba(0,0,0,.15);
+            .btnArea {
+                margin-top: 20px;
+                a {
+                    display: inline-block;
+                    vertical-align: top;
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+}
+
+.dbti_wrap {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    padding: 50px;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 6px 6px 0 rgba(0,0,0,.15);
+    .popListAni {
+        width: 31%;
+        border: 8px solid #fff8ae;
+        background-color: #fff157;
+        box-sizing: border-box;
+        border-radius: 20px;
+        .listAni {
+            border-radius: 20px;
+        }
+    }
+    .contGroup {
+        flex: 1;
+        padding-left: 30px;
+        text-align: left;
+        .txt {
+            margin-bottom: 40px;
+        }
+    }
+}
+
+.underline {
+    display: inline-block;
+    position: relative;
+    z-index: 10;
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        display: inline-block;
+        width: 100%;
+
+        height: 13px;
+        background: #ffed51;
+        z-index: -1;
+        text-align: center;
+    }
+}
+
+
+// main_sec03
+.main_sec03 {
+    padding: 120px 0;
+    background-color: #fff49e;
+    text-align: center;
+    .mainTit {
+        margin-bottom: 64px;
+    }
+    .missionList {
+        font-size: 0;
+        margin: 0 -10px;
+        margin-top: -20px;
+        &_item {
+            display: inline-block;
+            width: 50%;
+            vertical-align: top;
+            padding: 0 10px;
+            box-sizing: border-box;
+            margin-top: 20px;
+        }
+    }
+    .bot_btns {
+        margin-top: 50px;
+    }
+}
+
+
+// main_sec04
+.main_sec04 {
+    padding: 120px 0;
+    background-color: #fff4db;
+    text-align: center;
+    .ico_mainfree {
+        margin-bottom: 40px;
+    }
+    .mainTit {
+        margin-bottom: 42px;
+    }
+    .desc {
+        font-size: 26px;
+        line-height: 1.7;
+    }
+    .bot_btns {
+        margin-top: 50px;
+    }
+}
+
+
+.applyWrap {
+    position: fixed;
+    left: 50%;
+    top: 200px;
+    width: 100%;
+    max-width: 1080px;
+    transform: translateX(-50%);
+    z-index: 9999;
+    &_btns {
+        position: absolute;
+        left: 100%;
+        top: 0;
+    }
+    &_btn {
+        display: block;
+        text-align: center;
+        img {
+            max-width: none;
+        }
+    }
+}
+
+
+@media (max-width:1450px) {
+
+    .applyWrap {
+        max-width: none;
+        &_btns {
+            left: auto;
+            right: 15px;
+        }
+        &_btn {
+            img {
+                width: 120px;
+            }
+        }
+    }
+}
+
+
+@media (max-width:767px) {
+
+    .main_sec01 {
+        height: 40vw;
+        background-size: cover;
+        overflow: hidden;
+        .top_visual {
+            position: relative;
+            background-size: contain;
+            padding: 0;
+            width: auto;
+            margin: 0 -10%;
+            img {
+                max-height: 80%;
+            }
+        }
+    }
+    .underline {
+        &::after {
+            height: 7px;
+            bottom: 3px;
+        }
+    }
+    .main_sec02 {
+        padding: 40px 0 45px;
+    }
+    .main_info {
+        .logo_egd {
+            margin-bottom: 20px;
+            img {
+                max-height: 70px;
+            }
+        }
+        .infoTit {
+            margin-bottom: 20px;
+            img {
+                max-height: 30px;
+            }
+        }
+        .desc01 {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        .ico_Qmark {
+            width: 20px;
+            height: 20px;
+            font-size: 12px;
+            line-height: 16px;
+        }
+        .chkList {
+            margin-top: 15px;
+            li {
+                font-size: 14px;
+                &::before {
+                    width: 12px;
+                    height: 9px;
+                    background-size: cover;
+                    margin-right: 4px;
+                }
+            }
+        }
+        .desc02 {
+            font-size: 14px;
+        }
+        .btnState {
+            margin-top: 30px;
+            img {
+                height: 50px;
+            }
+        }
+
+
+        .btnGroup {
+            margin: 0;
+            margin-top: 30px;
+            display: block;
+            &_item {
+                min-width: auto;
+                width: 100%;
+                padding: 0;
+                margin: 0;
+                & + .btnGroup_item {
+                    margin-top: 20px;
+                }
+            }
+            .btnBox {
+                padding: 30px;
+                .title {
+                    img {
+                        height: 24px;
+                    }
+                }
+                .btnArea  {
+                    a {
+                        margin-top: 0;
+                    }
+                    img {
+                        height: 40px;
+                    }
+                }
+            }
+        }
+
+        #popQmark {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            background-color: rgba(0,0,0,.3);
+            z-index: 9999;
+            padding: 20px;
+            box-sizing: border-box;
+
+            .popup_flex {
+                display: flex;
+                height: 100%;
+                align-items: center;
+                justify-content: center;
+            }
+            .popup_inner {
+
+                max-width: 100%;
+                box-sizing: border-box;
+
+            }
+        }
+    }
+
+    .dbti_wrap {
+        display: block;
+        padding: 30px;
+        .popListAni {
+            width: 100%;
+            max-width: 240px;
+            margin: 0 auto;
+        }
+        .contGroup {
+            margin-top: 20px;
+            padding-left: 0;
+            text-align: center;
+            .txt {
+                margin-bottom: 20px;
+                img {
+                    max-height: 90px;
+                }
+            }
+        }
+        .btn_DBTI {
+            display: inline-block;
+            img {
+                height: 50px;
+            }
+        }
+    }
+
+    .applyWrap {
+        z-index: 0;
+        margin-top: 30px;
+        position: relative;
+        left: 0;
+        top: 0;
+        transform: translateX(0);
+
+        &_btns {
+            position: relative;
+            right: 0;
+        }
+        &_btn {
+            display: inline-block;
+            &.btn_analysis {
+                margin-top: 15px;
+            }
+            img {
+                width: auto;
+                height: 50px;
+                &.pc_only {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .mainTit {
+        img {
+            max-height: 30px;
+        }
+    }
+    .bot_btns {
+        img {
+            max-height: 50px;
+        }
+    }
+    .main_sec03 {
+        padding: 45px 0;
+        .mainTit {
+            margin-bottom: 25px;
+        }
+        .missionList {
+            margin-top: -15px;
+            &_item {
+                margin-top: 15px;
+                width: 100%;
+            }
+        }
+
+        .bot_btns {
+            margin-top: 30px;
+        }
+    }
+
+    .main_sec04 {
+        padding: 45px 0;
+        .ico_mainfree {
+            margin-bottom: 20px;
+            img {
+                height: 50px;
+            }
+        }
+        .mainTit {
+            margin-bottom: 20px;
+        }
+        .desc {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        .bot_btns {
+            margin-top: 20px;
+        }
+    }
+}
+
