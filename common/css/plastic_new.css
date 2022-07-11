@@ -15,7 +15,7 @@
 
 .plastic_main .sec01 .img_ani.img_turtle { left: 0; bottom: 3%; width: 34%; }
 
-.plastic_main .sec02 { padding: 80px 0 80px; background-color: #d5efff; /* 20.09.22 - 롯데케미칼 메뉴 추가 버전 */ /*body.plastic.wasteSorting*/ }
+.plastic_main .sec02 { padding: 80px 0 100px; background-color: #d5efff; /* 20.09.22 - 롯데케미칼 메뉴 추가 버전 */ /*body.plastic.wasteSorting*/ }
 
 .plastic_main .sec02 .inner { position: relative; }
 
