@@ -10,6 +10,7 @@
 }
 
 #content {
+    float: none;
     overflow: hidden;
     &.ty_sub {
         padding-top: 181px;
@@ -243,6 +244,7 @@
 
 
 .inner {
+    width: auto;
     max-width: 1080px;
     margin: 0 auto;
     padding: 0 40px;
