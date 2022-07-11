@@ -1,6 +1,11 @@
 #container.main {
     min-height: auto !important;
 }
+
+#footer {
+    position: relative;
+    z-index: 999;
+}
 .plastic_main {
     .sec01 {
         position: relative;
@@ -18,6 +23,8 @@
         }
         .main_title {
             padding-top: 100px;
+            position: relative;
+            z-index: 999;
         }
 
         .img_ani {
@@ -41,8 +48,10 @@
         }
     }
     .sec02 {
+        position: relative;
         padding: 80px 0 100px;
         background-color: #d5efff;
+        z-index: 11;
         .inner {
             position: relative;
         }
@@ -68,6 +77,8 @@
             font-size: 0;
             margin: 0 -15px;
             margin-top: -30px;
+            position: relative;
+            z-index: 10;
             li {
                 display: inline-block;
                 vertical-align: top;
@@ -91,7 +102,43 @@
                 width: 100%;
             }
         }
-        .link_area
+
+
+        .trash_wrap {
+            img {
+                position: absolute;
+                z-index: -1;
+                &.sec02_trash1 {
+                    left: -17%;
+                    top: -18%;
+                    width: 33%;
+                }
+                &.sec02_trash2 {
+                    right: -13%;
+                    top: 13%;
+                    width: 16%;
+                }
+                &.sec02_trash3 {
+                    left: -8%;
+                    bottom: 25%;
+                    width: 28.5%;
+                }
+                &.sec02_trash4 {
+                    right: -31%;
+                    bottom: 6%;
+                    width: 27.5%;
+                }
+                &.sec02_trash5 {
+                    left: -35%;
+                    bottom: -13%;
+                    width: 37.8%;
+                }
+            }
+
+        }
+
+
+
         .logo_lc {display: block; width: 93px;}
         .link_area .link_wasteSorting2 .logo_lc {position: absolute; top:-17px; left:-14px;}
         .menu_list .item {float: left; width: 290px;}
@@ -103,6 +150,9 @@
         .earth .tit_submain .logo_with {font-size: 0; display: inline-block; width: 160px; height: 37px; background: url(//img.dongascience.com/kids2016/images/plastic/logo_with.png) 0 0 no-repeat; margin-left: 20px;}
         .subdesc {margin-bottom: 9px;}
         .subdesc.warning {margin-bottom: 40px;}
+
+
+
     }
 }
 
@@ -184,82 +234,54 @@ opacity:0.4;
 .plastic_main .img_trash4 { display:none; position: absolute; top: -150px; left: 750px; display: block; width: 200px; height: 546px; background: url(//img.dongascience.com/kids2016/images/plastic/img_trash3.png) no-repeat; opacity: 0; background-size: 100%; z-index: 10; -webkit-transform: scale(0.1, 0.1) rotateZ(-10deg); -ms-transform: scale(0.1, 0.1) rotate(-10deg); transform: scale(0.1, 0.1) rotateZ(-10deg); background-size: 60%; }
 
 
-@-webkit-keyframes trash3 { 0% {
-    top:200px;
-    left:1500px;
-    -webkit-transform:scale(.6, .6);
-    transform:scale(.6, .6)
+
+@keyframes trash3 {
+    0% {
+        top:200px;
+        left:1500px;
+        -webkit-transform:scale(.6, .6);
+        transform:scale(.6, .6)
     }
     80% {
-    top:500px;
-    left:-600px;
-    -webkit-transform:scale(1, 1);
-    transform:scale(1, 1);
-    opacity:.4
+        top:500px;
+        left:-600px;
+        -webkit-transform:scale(1, 1);
+        transform:scale(1, 1);
+        opacity:.4
     }
     81% {
-    opacity:0;
-    left:-601px
+        opacity:0;
+        left:-601px
     }
     82% {
-    opacity:0
+        opacity:0
     }
-    }
-    @keyframes trash3 { 0% {
-    top:200px;
-    left:1500px;
-    -webkit-transform:scale(.6, .6);
-    transform:scale(.6, .6)
-    }
-    80% {
-    top:500px;
-    left:-600px;
-    -webkit-transform:scale(1, 1);
-    transform:scale(1, 1);
-    opacity:.4
-    }
-    81% {
-    opacity:0;
-    left:-601px
-    }
-    82% {
-    opacity:0
-    }
-    }
+}
 .plastic_main .img_trash3 { -webkit-animation-name: trash3; animation-name: trash3; -webkit-animation-duration: 20s; animation-duration: 20s; -webkit-animation-timing-function: linear; animation-timing-function: linear; -webkit-animation-iteration-count: infinite; animation-iteration-count: infinite }
-@-webkit-keyframes trash4 { 60% {
-top:-250px;
-left:10%;
--webkit-transform:scale(.1, .1) rotateZ(50deg);
-transform:scale(.1, .1) rotateZ(50deg);
-opacity:0
-}
-98% {
-top:-210px;
-left:42%;
--webkit-transform:scale(2, 2) rotateZ(220deg);
-transform:scale(2, 2) rotateZ(220deg);
-opacity:.15;
-z-index:9999
-}
-to { top: -210px; left: 46%; -webkit-transform: scale(2.2, 2.2) rotateZ(221deg); transform: scale(2.2, 2.2) rotateZ(221deg); opacity: .05 }
-}
-@keyframes trash4 { 60% {
-top:-250px;
-left:10%;
--webkit-transform:scale(.1, .1) rotateZ(50deg);
-transform:scale(.1, .1) rotateZ(50deg);
-opacity:0
-}
-98% {
-top:-210px;
-left:42%;
--webkit-transform:scale(2, 2) rotateZ(220deg);
-transform:scale(2, 2) rotateZ(220deg);
-opacity:.15;
-z-index:9999
-}
-to { top: -210px; left: 46%; -webkit-transform: scale(2.2, 2.2) rotateZ(221deg); transform: scale(2.2, 2.2) rotateZ(221deg); opacity: .05 }
+
+@keyframes trash4 {
+    60% {
+        top:-250px;
+        left:10%;
+        -webkit-transform:scale(.1, .1) rotateZ(50deg);
+        transform:scale(.1, .1) rotateZ(50deg);
+        opacity:0
+    }
+    98% {
+        top:-210px;
+        left:42%;
+        -webkit-transform:scale(2, 2) rotateZ(220deg);
+        transform:scale(2, 2) rotateZ(220deg);
+        opacity:.15;
+        z-index:998
+    }
+    to {
+        top: -210px;
+        left: 46%;
+        -webkit-transform: scale(2.2, 2.2) rotateZ(221deg);
+        transform: scale(2.2, 2.2) rotateZ(221deg);
+        opacity: .05
+    }
 }
 .plastic_main .img_trash4 { -webkit-animation-name: trash4; animation-name: trash4; -webkit-animation-duration: 15s; animation-duration: 15s; -webkit-animation-delay: 0s; animation-delay: 0s; -webkit-animation-timing-function: ease-in; animation-timing-function: ease-in; -webkit-animation-iteration-count: infinite; animation-iteration-count: infinite }
 
@@ -782,6 +804,12 @@ to { top: -210px; left: 46%; -webkit-transform: scale(2.2, 2.2) rotateZ(221deg);
     margin-bottom:40px;
 }
 
+
+
+
+
+
+
 @media (max-width: 1024px) {
     .plastic_main {
         .sec02 {
@@ -794,7 +822,42 @@ to { top: -210px; left: 46%; -webkit-transform: scale(2.2, 2.2) rotateZ(221deg);
                 right: 30px;
                 top: -20px;
             }
+
+            .trash_wrap {
+                img {
+                    position: absolute;
+                    z-index: -1;
+                    &.sec02_trash1 {
+                        left: -17%;
+                        top: -10vw;
+                        width: 33%;
+                    }
+                    &.sec02_trash2 {
+                        right: -10%;
+                        top: 16vw;
+                        width: 16%;
+                    }
+                    &.sec02_trash3 {
+                        left: -8%;
+                        bottom: 25%;
+                        width: 28.5%;
+                    }
+                    &.sec02_trash4 {
+                        right: -10vw;
+                        bottom: 6%;
+                        width: 27.5%;
+                    }
+                    &.sec02_trash5 {
+                        left: -14vw;
+                        bottom: -4vw;
+                        width: 37.8%;
+                    }
+                }
+
+            }
         }
+
+
     }
 }
 

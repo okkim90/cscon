@@ -1,11 +1,13 @@
 @charset "UTF-8";
 #container.main { min-height: auto !important; }
 
+#footer { position: relative; z-index: 999; }
+
 .plastic_main .sec01 { position: relative; z-index: 10; overflow: hidden; background: url(../../images/plastic/main_bg.png) no-repeat center center; background-size: cover; height: 750px; }
 
 .plastic_main .sec01 .inner { height: 100%; position: relative; text-align: center; }
 
-.plastic_main .sec01 .main_title { padding-top: 100px; }
+.plastic_main .sec01 .main_title { padding-top: 100px; position: relative; z-index: 999; }
 
 .plastic_main .sec01 .img_ani { position: absolute; z-index: -1; }
 
@@ -15,7 +17,7 @@
 
 .plastic_main .sec01 .img_ani.img_turtle { left: 0; bottom: 3%; width: 34%; }
 
-.plastic_main .sec02 { padding: 80px 0 100px; background-color: #d5efff; /* 20.09.22 - 롯데케미칼 메뉴 추가 버전 */ /*body.plastic.wasteSorting*/ }
+.plastic_main .sec02 { position: relative; padding: 80px 0 100px; background-color: #d5efff; z-index: 11; /* 20.09.22 - 롯데케미칼 메뉴 추가 버전 */ /*body.plastic.wasteSorting*/ }
 
 .plastic_main .sec02 .inner { position: relative; }
 
@@ -25,7 +27,7 @@
 
 .plastic_main .sec02 .btn_article_open { width: 140px; position: absolute; top: 40px; right: 40px; z-index: 999; }
 
-.plastic_main .sec02 .link_area { font-size: 0; margin: 0 -15px; margin-top: -30px; }
+.plastic_main .sec02 .link_area { font-size: 0; margin: 0 -15px; margin-top: -30px; position: relative; z-index: 10; }
 
 .plastic_main .sec02 .link_area li { display: inline-block; vertical-align: top; width: 50%; -webkit-box-sizing: border-box; box-sizing: border-box; padding: 0 15px; margin-top: 30px; }
 
@@ -35,7 +37,19 @@
 
 .plastic_main .sec02 .link_area img { width: 100%; }
 
-.plastic_main .sec02 .link_area .logo_lc { display: block; width: 93px; }
+.plastic_main .sec02 .trash_wrap img { position: absolute; z-index: -1; }
+
+.plastic_main .sec02 .trash_wrap img.sec02_trash1 { left: -17%; top: -18%; width: 33%; }
+
+.plastic_main .sec02 .trash_wrap img.sec02_trash2 { right: -13%; top: 13%; width: 16%; }
+
+.plastic_main .sec02 .trash_wrap img.sec02_trash3 { left: -8%; bottom: 25%; width: 28.5%; }
+
+.plastic_main .sec02 .trash_wrap img.sec02_trash4 { right: -31%; bottom: 6%; width: 27.5%; }
+
+.plastic_main .sec02 .trash_wrap img.sec02_trash5 { left: -35%; bottom: -13%; width: 37.8%; }
+
+.plastic_main .sec02 .logo_lc { display: block; width: 93px; }
 
 .plastic_main .sec02 .link_area .link_wasteSorting2 .logo_lc { position: absolute; top: -17px; left: -14px; }
 
@@ -178,7 +192,7 @@
     -webkit-transform: scale(2, 2) rotateZ(220deg);
     transform: scale(2, 2) rotateZ(220deg);
     opacity: .15;
-    z-index: 9999; }
+    z-index: 998; }
   to { top: -210px;
     left: 46%;
     -webkit-transform: scale(2.2, 2.2) rotateZ(221deg);
@@ -195,7 +209,7 @@
     -webkit-transform: scale(2, 2) rotateZ(220deg);
     transform: scale(2, 2) rotateZ(220deg);
     opacity: .15;
-    z-index: 9999; }
+    z-index: 998; }
   to { top: -210px;
     left: 46%;
     -webkit-transform: scale(2.2, 2.2) rotateZ(221deg);
@@ -437,7 +451,13 @@
 
 @media (max-width: 1024px) { .plastic_main .sec02 { position: relative; }
   .plastic_main .sec02 .inner { position: static; }
-  .plastic_main .sec02 .btn_article_open { width: 100px; right: 30px; top: -20px; } }
+  .plastic_main .sec02 .btn_article_open { width: 100px; right: 30px; top: -20px; }
+  .plastic_main .sec02 .trash_wrap img { position: absolute; z-index: -1; }
+  .plastic_main .sec02 .trash_wrap img.sec02_trash1 { left: -17%; top: -10vw; width: 33%; }
+  .plastic_main .sec02 .trash_wrap img.sec02_trash2 { right: -10%; top: 16vw; width: 16%; }
+  .plastic_main .sec02 .trash_wrap img.sec02_trash3 { left: -8%; bottom: 25%; width: 28.5%; }
+  .plastic_main .sec02 .trash_wrap img.sec02_trash4 { right: -10vw; bottom: 6%; width: 27.5%; }
+  .plastic_main .sec02 .trash_wrap img.sec02_trash5 { left: -14vw; bottom: -4vw; width: 37.8%; } }
 
 @media (max-width: 767px) { .plastic_main .sec01 { height: 100vw; }
   .plastic_main .sec01 .main_title { padding-top: 8vw; }
