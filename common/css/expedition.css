@@ -5,6 +5,7 @@
     margin-top: 20px;
     font-size: 13px;
     line-height: 1.43;
+
 }
 .half_HL {background: linear-gradient(to top, #FFE400 50%, transparent 50%);}
 .dd_label {
@@ -15,12 +16,12 @@
 
 .dd_radio {
     margin: 0;
-    margin-right: 5px;
+    margin-right: 5px !important;
 }
 
 .dd_checkbox {
     margin: 0;
-    margin-right: 5px;
+    margin-right: 5px !important;
 }
 
 .dd_strong {
@@ -77,6 +78,7 @@
     margin-right: 0;
 }
 select.dd_select {
+    appearance: none;
     padding: 0 30px 0 10px;
     cursor:pointer;
     background-image: url(../../images/ico/arrow_bot_b.svg);

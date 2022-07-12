@@ -108,10 +108,12 @@
             img {
                 position: absolute;
                 z-index: -1;
+                animation: trash_updown 2s linear infinite;
                 &.sec02_trash1 {
                     left: -17%;
                     top: -18%;
                     width: 33%;
+                    animation-delay: .2s;
                 }
                 &.sec02_trash2 {
                     right: -13%;
@@ -122,16 +124,19 @@
                     left: -8%;
                     bottom: 25%;
                     width: 28.5%;
+                    animation-delay: .6s;
                 }
                 &.sec02_trash4 {
                     right: -31%;
                     bottom: 6%;
                     width: 27.5%;
+                    animation-delay: 1s;
                 }
                 &.sec02_trash5 {
                     left: -35%;
                     bottom: -13%;
                     width: 37.8%;
+                    animation-delay: .1s;
                 }
             }
 
@@ -284,6 +289,26 @@ opacity:0.4;
     }
 }
 .plastic_main .img_trash4 { -webkit-animation-name: trash4; animation-name: trash4; -webkit-animation-duration: 15s; animation-duration: 15s; -webkit-animation-delay: 0s; animation-delay: 0s; -webkit-animation-timing-function: ease-in; animation-timing-function: ease-in; -webkit-animation-iteration-count: infinite; animation-iteration-count: infinite }
+
+
+
+@keyframes trash_updown {
+    0% {
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY(10px);
+    }
+    50% {
+        transform: translateY(0);
+    }
+    75% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
 
 
 
@@ -827,19 +852,20 @@ opacity:0.4;
                 img {
                     position: absolute;
                     z-index: -1;
+
                     &.sec02_trash1 {
-                        left: -17%;
+                        left: -15%;
                         top: -10vw;
                         width: 33%;
                     }
                     &.sec02_trash2 {
-                        right: -10%;
+                        right: -8%;
                         top: 16vw;
                         width: 16%;
                     }
                     &.sec02_trash3 {
                         left: -8%;
-                        bottom: 25%;
+                        bottom: 27%;
                         width: 28.5%;
                     }
                     &.sec02_trash4 {

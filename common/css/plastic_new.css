@@ -37,17 +37,17 @@
 
 .plastic_main .sec02 .link_area img { width: 100%; }
 
-.plastic_main .sec02 .trash_wrap img { position: absolute; z-index: -1; }
+.plastic_main .sec02 .trash_wrap img { position: absolute; z-index: -1; -webkit-animation: trash_updown 2s linear infinite; animation: trash_updown 2s linear infinite; }
 
-.plastic_main .sec02 .trash_wrap img.sec02_trash1 { left: -17%; top: -18%; width: 33%; }
+.plastic_main .sec02 .trash_wrap img.sec02_trash1 { left: -17%; top: -18%; width: 33%; -webkit-animation-delay: .2s; animation-delay: .2s; }
 
 .plastic_main .sec02 .trash_wrap img.sec02_trash2 { right: -13%; top: 13%; width: 16%; }
 
-.plastic_main .sec02 .trash_wrap img.sec02_trash3 { left: -8%; bottom: 25%; width: 28.5%; }
+.plastic_main .sec02 .trash_wrap img.sec02_trash3 { left: -8%; bottom: 25%; width: 28.5%; -webkit-animation-delay: .6s; animation-delay: .6s; }
 
-.plastic_main .sec02 .trash_wrap img.sec02_trash4 { right: -31%; bottom: 6%; width: 27.5%; }
+.plastic_main .sec02 .trash_wrap img.sec02_trash4 { right: -31%; bottom: 6%; width: 27.5%; -webkit-animation-delay: 1s; animation-delay: 1s; }
 
-.plastic_main .sec02 .trash_wrap img.sec02_trash5 { left: -35%; bottom: -13%; width: 37.8%; }
+.plastic_main .sec02 .trash_wrap img.sec02_trash5 { left: -35%; bottom: -13%; width: 37.8%; -webkit-animation-delay: .1s; animation-delay: .1s; }
 
 .plastic_main .sec02 .logo_lc { display: block; width: 93px; }
 
@@ -217,6 +217,18 @@
     opacity: .05; } }
 
 .plastic_main .img_trash4 { -webkit-animation-name: trash4; animation-name: trash4; -webkit-animation-duration: 15s; animation-duration: 15s; -webkit-animation-delay: 0s; animation-delay: 0s; -webkit-animation-timing-function: ease-in; animation-timing-function: ease-in; -webkit-animation-iteration-count: infinite; animation-iteration-count: infinite; }
+
+@-webkit-keyframes trash_updown { 0% { -webkit-transform: translateY(0); transform: translateY(0); }
+  25% { -webkit-transform: translateY(10px); transform: translateY(10px); }
+  50% { -webkit-transform: translateY(0); transform: translateY(0); }
+  75% { -webkit-transform: translateY(-10px); transform: translateY(-10px); }
+  100% { -webkit-transform: translateY(0); transform: translateY(0); } }
+
+@keyframes trash_updown { 0% { -webkit-transform: translateY(0); transform: translateY(0); }
+  25% { -webkit-transform: translateY(10px); transform: translateY(10px); }
+  50% { -webkit-transform: translateY(0); transform: translateY(0); }
+  75% { -webkit-transform: translateY(-10px); transform: translateY(-10px); }
+  100% { -webkit-transform: translateY(0); transform: translateY(0); } }
 
 /* 마우스 */
 .mouse { background: #28458d -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(50%, transparent), color-stop(50%, #ffffff), to(#ffffff)); background: #28458d linear-gradient(transparent 0%, transparent 50%, #ffffff 50%, #ffffff 100%); position: absolute; z-index: 999; width: 32px; height: 54px; border-radius: 100px; background-size: 100% 200%; -webkit-animation: colorSlide 5s linear infinite, nudgeMouse 5s ease-out infinite; animation: colorSlide 5s linear infinite, nudgeMouse 5s ease-out infinite; left: 50%; bottom: 100px; margin-left: -16px; }
@@ -453,9 +465,9 @@
   .plastic_main .sec02 .inner { position: static; }
   .plastic_main .sec02 .btn_article_open { width: 100px; right: 30px; top: -20px; }
   .plastic_main .sec02 .trash_wrap img { position: absolute; z-index: -1; }
-  .plastic_main .sec02 .trash_wrap img.sec02_trash1 { left: -17%; top: -10vw; width: 33%; }
-  .plastic_main .sec02 .trash_wrap img.sec02_trash2 { right: -10%; top: 16vw; width: 16%; }
-  .plastic_main .sec02 .trash_wrap img.sec02_trash3 { left: -8%; bottom: 25%; width: 28.5%; }
+  .plastic_main .sec02 .trash_wrap img.sec02_trash1 { left: -15%; top: -10vw; width: 33%; }
+  .plastic_main .sec02 .trash_wrap img.sec02_trash2 { right: -8%; top: 16vw; width: 16%; }
+  .plastic_main .sec02 .trash_wrap img.sec02_trash3 { left: -8%; bottom: 27%; width: 28.5%; }
   .plastic_main .sec02 .trash_wrap img.sec02_trash4 { right: -10vw; bottom: 6%; width: 27.5%; }
   .plastic_main .sec02 .trash_wrap img.sec02_trash5 { left: -14vw; bottom: -4vw; width: 37.8%; } }
 
