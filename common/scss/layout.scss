@@ -4,6 +4,9 @@
 
 @import '_variable';
 
+body {
+    overflow: auto;
+}
 
 .m_only {
     display: none;
@@ -262,6 +265,9 @@
 .sub_wrap {
     padding-top: 30px;
     padding-bottom: 50px;
+    .inner {
+        padding: 0 20px;
+    }
 }
 
 
@@ -662,3 +668,5 @@
         }
     }
 }
+
+
