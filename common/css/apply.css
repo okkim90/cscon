@@ -1,0 +1,97 @@
+
+/*apply.css */
+
+#header .go_prev a {background: url(//img.dongascience.com/kids2016/mobile/images/common/ico_prev3.png) center no-repeat; background-size:13px 24px;}
+
+#container.apply .wrap {padding-top:101px;}
+#container.view {background-color:#ebebeb;}
+
+.category.fr {position:absolute; left:0; top:51px; width:100%; background:#fff;}
+.category.fr .opt {float:left; width:50%; height:50px; background:url(//img.dongascience.com/star/mobile/ic_sel1.gif) right center no-repeat; background-size:20px 20px; padding:5px 0 5px 16px; -webkit-appearance:none; -moz-appearance:none; border:none; border-right:1px solid #eee; border-bottom:1px solid #eee;}
+
+.apply_list {background:#fff; border-top:1px solid #2eaf48;}
+.apply_list input{ padding:0 10px; height:30px; border-radius:3px; font-size:14px; letter-spacing:-0.03em}
+.apply_list th{ line-height:40px;color:#2eaf48; font-weight:bold; font-size:14px;border-bottom:1px solid #ddd; padding:5px}
+.apply_list td{ line-height:20px; border-bottom:1px solid #eeeeee;text-align:center;padding:10px 5px}
+.apply_list tr:hover{background:#f4fbf6;}
+.apply_list td.day{ font-size:13px; }
+
+.apply_list .lnum {text-align:center;width:120px; font-weight:bold; color:#2eaf48;}
+.apply_list .btn_ing {background:#2eaf48;color:#ffffff;border:1px solid #2eaf48;}
+.apply_list .btn_select_ing {background:#919994; color:#ffffff; border:1px solid #919994; cursor:unset;}
+.apply_list .btn_end {background:#ffffff;color:#2eaf48;border:1px solid #2eaf48;}
+.apply_list .btn_wait {background:#f5f5f5;color:#666;border:1px solid #666;}
+.earth_info li{ font-size:15px; line-height:26px}
+.earth_info li strong{ font-weight:500}
+.view_content{ line-height:30px}
+
+/* 활동신청 */
+#post_view .activity { display:block; text-align:center; padding:20px 0;}
+#post_view .activity>p{ font-size:18px;letter-spacing:0 }
+#post_view .activity>p>span{ font-size:24px; font-weight:bold; vertical-align:bottom;}
+#post_view .activity>p>span.em{ color:#2eaf48; font-size:36px}
+
+#apply {/*padding-top:30px;*/ clear:both; border-top:1px solid #2eaf48;}
+/*
+#apply h3 {font-size:20px;color:#2eaf48; line-height:22px;padding:0 16px 0}
+#apply h3+p {line-height:20px; padding:16px;word-break:keep-all}
+*/
+#apply .tit_submain:after {display:block; content:''; clear:both;}
+#apply .tit_submain {padding:24px 16px 24px 8px; word-break:keep-all; background-color:#fff;}
+#apply .tit_submain .tit {display:block; float:left; font-size:20px; line-height:22px; padding-left:8px;}
+#apply .tit_submain .num {position:relative; right:0; display:block; float:left; font-size:20px; line-height:22px; font-weight:bold; color:#2eaf48; padding-left:4px;}
+#apply .tit_submain .num em {color:#2eaf48; font-size:29px; font-weight:bold; vertical-align:top; font-style:normal;}
+#apply table {clear:both; background-color:#fff; border-top:1px solid #e2e2e2;}
+#apply td {border-bottom:1px solid #e2e2e2; padding:16px 0;}
+#apply th {width:26%;border-bottom:1px solid #e2e2e2;  font-size:15px; font-weight:500; text-align:left; padding:24px 0 24px 16px; line-height:16px; vertical-align:top;word-break:keep-all}
+#apply input[type=text] {border:1px solid #d9d9d9; background:#f8f8f8;height:38px;vertical-align:middle; font-size:16px; margin:5px 0}
+#apply select {border:1px solid #d9d9d9; background:#f8f8f8;height:40px;vertical-align:middle; font-size:16px}
+
+#apply .tRegion {word-break:keep-all;}
+
+#apply .tname input[type='text']{padding-left:10px}
+#apply .anum select{padding-left:10px}
+
+#apply .aname li .tel{display:none}
+#apply .aname li .tel input{ width:30%;}
+#apply .aname li .tel select{ width:30%;}
+#apply .aname li .tel p{ margin:10px 0}
+
+#apply .aname li{margin-top:10px}
+#apply .aname li input[type=radio]{ margin-right:10px}
+#apply .aname li input[type=radio]:checked + input + span{display:inline-block;}
+#apply .aname li input.name{ padding-left:10px}
+#apply .aname .text{ margin-bottom:15px; word-break:keep-all}
+
+#apply .mail input{ padding-left:10px}
+#apply_ok table{ position:relative;top:-1px; clear:both;background:#fff; border-top:1px solid #2eaf48}
+#apply_ok th{text-align:left;border-bottom:1px solid #e2e2e2;border-right:1px solid #e2e2e2; padding:10px 16px; line-height:30px; font-weight:500}
+#apply_ok td{text-align:left;border-bottom:1px solid #e2e2e2; padding:10px 0 10px 16px; line-height:30px}
+.bt_group {text-align:center; background-color:#fff; border-bottom:1px solid #e2e2e2;}
+.bt_group .apply_send{font-weight:bold; border-radius:6px;background:#2eaf48; color:#fff; font-size:18px; height:50px; border:1px solid #2eaf48; padding:0 25px; margin:24px 5px 24px 5px; display:inline-block}
+.bt_group .apply_cancel{font-weight:bold; border-radius:6px;background:#fff; color:#2eaf48; font-size:18px; height:50px; border:1px solid #2eaf48; padding:0 25px;margin:24px 5px 24px 5px;  display:inline-block}
+
+/* 지원동기 테이블 */
+#reason_table {width:100%; margin-top:8px;}
+#reason_table th {width:auto; line-height:1.4;}
+#reason_table th span {font-weight:400; color:#969696;}
+#reason_table td {padding:24px 20px;}
+#reason_table td textarea {margin:0px; height:95px; width:100%; border-color:#e2e2e2; padding:10px; box-sizing:border-box;}
+#reason_table td p {text-align:right; padding-top:10px;}
+#reason_table td #reasonMsgSize {color:#2eaf48; letter-spacing:-.02em;}
+
+/* 탐사 내용 영역 */
+#apply_content {background:#fff; margin-top:8px;}
+#apply_content .post_title {padding-top:8px;}
+
+/* 선발 결과 영역 */
+.pick_result_group {background:#28a841; margin-top:8px; padding:30px 20px 24px; color:#fff; text-align:center;}
+.pick_yes_tit {vertical-align:middle;}
+.pick_yes_tit .ico_cele01 {display:block; width:66px; height:66px; background:url(//img.dongascience.com/kids2016/mobile/images/common/mo_ico_celebration.png); background-size:66px 66px; margin:0 auto;}
+.pick_yes_tit p {display:block; font-size:22px; font-weight:bold; line-height:1.4; margin-top:15px;}
+.pick_yes_desc {line-height:1.4; margin-top:15px; word-break:keep-all;}
+.pick_no {font-size:20px; line-height:1.6; font-weight:bold; padding:20px 0; word-break:keep-all;}
+
+/* 대기 접수 영역 */
+.pick_wait_group {background:#2c8fc2; margin-top:8px; padding:30px 20px 24px; color:#fff; text-align:center;}
+.wait_desc {font-size:20px; line-height:1.6; font-weight:bold; padding:20px 0; word-break:keep-all;}

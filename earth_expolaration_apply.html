@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <title>시민과학콘</title>
+    <!--스타일 공통-->
+    <link rel="stylesheet" href="./common/css/common.css">
+
+    <!--js 공통-->
+    <script type="text/javascript" src="./common/js/jquery.min.js"></script>
+    <script type="text/javascript" src="./common/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="./common/js/jquery.ui.touch-punch.min.js"></script>
+    <script type="text/javascript" src="https://kit.fontawesome.com/a9123cc962.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./common/js/swiper.min.js"></script>
+    <script type="text/javascript" src="./common/js/common.js"></script>
+
+
+    <!--탐사신청 페이지-->
+    <link rel="stylesheet" href="./common/css/apply.css">
+
+</head>
+<body>
+    <div id="wrap">
+        <div id="content" class="sub_m">
+            <header id="header" class="sub_header">
+                <a href="" class="btn_back"><span class="blind">뒤로가기</span></a>
+                <h1 class="tit"><span class="blind">지구사랑탐사대</span> 탐사신청</h1>
+            </header>
+            <div id="container" class="sub_m">
+                <div class="sub_wrap pt0">
+                    <div class="sub_inner">
+                        <form id="selform" class="list_top_sec ty_select">
+                            <div class="select_box">
+
+                                <select id="dcd1" name="dcd1" class="select_ty1 ty_big">
+                                    <option value="" selected="selected">선택</option>
+                                    <option value="1">지역</option>
+                                    <option value="2">주제</option>
+                                </select>
+                            </div>
+                            <div class="select_box">
+                                <select id="dcd2" name="dcd2" class="select_ty1 ty_big" onchange="this.form.submit()">
+                                    <option value="" selected="selected">선택</option>
+                                </select>
+                            </div>
+                        </form>
+                        <div class="apply_content">
+
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0" summary="지구사랑탐사대 탐사일정을 보고 신청할 수 있다." class="apply_list" id="list">
+                                <colgroup>
+                                    <col width="15%">
+                                    <col width="24%">
+                                    <col width="*">
+                                    <col width="10%">
+                                </colgroup>
+                                <tbody><tr>
+                                    <th scope="col" class="day">탐사일</th>
+                                    <th scope="col" class="region">지역</th>
+                                    <th scope="col" class="thema">주제</th>
+                                    <th scope="col" class="apply">신청</th>
+                                </tr>
+                                                    <tr>
+                                        <td class="day">22.07.23</td>
+                                        <td class="region">대전시 </td>
+                                        <td class="thema">민물고기</td>
+                                        <!--<td class="lnum anum">
+                                                  마감
+                                </td>-->
+                                        <!--
+                                <td class="anum">
+                                <td class="anum end">
+                                </td>-->
+                                        <td class="apply">
+
+                                                                            <input type="button" value="마감" class="btn_end" onclick="javascript:location.href='/explore/ask/247'">
+                                                                    </td>
+                                    </tr>
+                                                    <tr>
+                                        <td class="day">22.07.30</td>
+                                        <td class="region">서울시 노원구</td>
+                                        <td class="thema">거미(시민과학풀씨)</td>
+                                        <!--<td class="lnum anum">
+                                                  마감
+                                </td>-->
+                                        <!--
+                                <td class="anum">
+                                <td class="anum end">
+                                </td>-->
+                                        <td class="apply">
+
+                                                                            <input type="button" value="마감" class="btn_end" onclick="javascript:location.href='/explore/ask/248'">
+                                                                    </td>
+                                    </tr>
+                                            </tbody></table>
+                                        <script>
+                                //더보기 페이징
+                                function ajax_more_html(pnum) {
+                                    $('.link_more > a').hide();
+                                    $('#loading').show();
+
+                                    $.ajax({
+                                        type: 'get',
+                                        url: '/explore/ajaxlist/index/?page=' + pnum,
+                                        success: function (data) {
+                                            if (data !== "ERROR") {
+                                                $("#loading").hide();
+                                                $('.link_more').remove();
+                                                $("#list").append(data);
+                                                resize_thum();
+                                            }
+                                        },
+                                        error: function (xhr, textStatus, errorThrown) {
+                                            alert('다시 시도해주세요');
+                                            location.reload();
+                                        }
+                                    });
+                                    $("#loading").hide();
+                                }
+                            </script>
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
