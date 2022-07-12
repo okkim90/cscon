@@ -74,4 +74,49 @@
 
         }
     }
+    .data_weather {
+        margin-top: 10px;
+        display: flex;
+        border-top: 1px solid #e1e1e1;
+        border-bottom: 1px solid #e1e1e1;
+        font-size: 13px;
+        line-height: 1.43;
+        text-align: center;
+        &_item {
+            flex: 1;
+            padding: 10px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            flex-flow: column;
+
+            &.ty_strong {
+                flex: 1.3;
+                .txt {
+                    font-size: 14px;
+                    font-weight: 500;
+                }
+            }
+            .tit {
+                color: #666;
+            }
+            .txt {
+                color: #424242;
+            }
+
+            &:last-child::after {
+                display: none;
+            }
+            &::after {
+                content: '';
+                position: absolute;
+                width: 1px;
+
+                background-color: #e1e1e1;
+                right: 0;
+                top: 10px;
+                bottom: 10px;
+            }
+        }
+    }
 }

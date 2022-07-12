@@ -40,30 +40,32 @@ $(function(){
         }
     });
 
-
-    var mv = new Swiper('.mv',{
-        speed:600,
-        slidesPerView:3,
-        loop:true,
-        autoplay: {
-            delay: 4500,
-            disableOnInteraction:false
-        },
-        navigation: {
-            nextEl: '.mv_next',
-            prevEl: '.mv_prev'
-        },
-        pagination: {
-            clickable:true,
-            el: '.mv_pagination'
-        },
-        breakpoints: {
-            1024: {
-                slidesPerView:1
+    if($('.mv').length > 0){
+        var mv = new Swiper('.mv',{
+            speed:600,
+            slidesPerView:3,
+            loop:true,
+            autoplay: {
+                delay: 4500,
+                disableOnInteraction:false
+            },
+            navigation: {
+                nextEl: '.mv_next',
+                prevEl: '.mv_prev'
+            },
+            pagination: {
+                clickable:true,
+                el: '.mv_pagination'
+            },
+            breakpoints: {
+                1024: {
+                    slidesPerView:1
+                }
             }
-        }
 
-    });
+        });
+
+    }
 
 
 
