@@ -1,0 +1,258 @@
+.earth_join {
+    &_tit {
+        font-size: 20px;
+        line-height: 1.5;
+        text-align: center;
+    }
+}
+.form {
+    &_wrap {
+        margin-top: 40px;
+        padding: 30px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        &.bg_brown {
+            border-color: #8c7974;
+            background-color: #8c7974;
+            color: #fff;
+        }
+        @media (max-width:600px) {
+           padding: 20px 15px;
+        }
+    }
+    &_tbl {
+        width: 100%;
+        table-layout: fixed;
+        th, td {
+            height: 60px;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #dcdcdc;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+    }
+    &_tit {
+        font-size: 16px;
+        line-height: 1.4;
+        color: #000;
+    }
+    &_tip {
+        font-size: 13px;
+        line-height: 1.5;
+        color: red;
+        font-weight: normal;
+        &.ty2 {
+            color: #646464;
+        }
+        @at-root .form_tit ~ & {
+            margin-top: 4px;
+        }
+    }
+    &_txt {
+        //max-width: 400px;
+        &:read-only {
+            background-color: #fafafa;
+            font-weight: 500;
+        }
+    }
+    // &_select {
+    //     max-width: 400px;
+    // }
+
+    &_cont {
+        &_inner {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -10px;
+            margin-top: -20px;
+        }
+        &.team_admin {
+            padding: 10px;
+            background-color: #f4f4f4;
+        }
+        &.added {
+            border-top: 1px dashed #ccc;
+            margin-top: 40px;
+            padding-top: 20px;
+        }
+        @media (max-width:767px) {
+            margin: 0;
+        }
+    }
+    &_item {
+        margin-top: 20px;
+        width: 50%;
+        padding: 0 10px;
+        box-sizing: border-box;
+
+        &.w100p {
+            width: 100%;
+        }
+
+        @media (max-width:767px) {
+            width: 100%;
+            padding: 0;
+        }
+        &_tit {
+            display: block;
+            font-size: 15px;
+            line-height: 1.4;
+            font-weight: 500;
+            &.ty_require {
+                &::after {
+                    content:'*';
+                    color:red;
+                }
+            }
+        }
+
+        &_cont {
+            font-size: 14px;
+            margin-top: 5px;
+            line-height: 1.5;
+            font-weight: 500;
+        }
+        .subscribe_list {
+            font-size: 14px;
+            line-height: 1.5;
+            color: $c_key;
+        }
+        .mb10 {
+            margin-bottom: 10px;
+        }
+
+        .check_wrap {
+            .list_exp {
+                font-size: 0;
+                border-top: 1px dashed #dcdcdc;
+                margin-top: 15px;
+                padding-top: 5px;
+                &.disabled {
+                    opacity: 0.6;
+                    touch-action: none;
+                }
+                &_inner {
+                    margin-right: -8px;
+                }
+            }
+            .check_item {
+                cursor: pointer;
+                display: inline-block;
+                margin-top: 8px;
+                margin-right: 8px;
+                vertical-align: top;
+                padding: 8px;
+                border-radius: 4px;
+                border: 1px solid #dcdcdc;
+                user-select: none;
+                font-size: 13px;
+                letter-spacing: -0.3px;
+                input[type="checkbox"]{
+                    margin-right: 2px;
+                }
+            }
+        }
+        .form_box {
+            &.has_btn {
+                display: flex;
+                .form_btn {
+                    margin-left: 5px;
+                }
+            }
+        }
+
+    }
+    &_address {
+        margin-top: 10px;
+        &_num {
+            display: flex;
+            align-items: center;
+            max-width: 300px;
+            .dash {
+                padding: 0 4px;
+
+            }
+            .form_btn {
+                margin-left: 5px;
+            }
+        }
+        &_ad1, &_ad2 {
+            margin-top: 8px;
+        }
+    }
+    &_btns {
+        font-size: 0;
+        margin-right: -5px;
+        .form_btn {
+            margin-right: 5px;
+        }
+    }
+    &_btn {
+        display: inline-block;
+        vertical-align: top;
+        height: 40px;
+        padding: 0 10px;
+        border-radius: 4px;
+        background-color: #f4f4f4;
+        border: 1px solid #ccc;
+        color: #000;
+        white-space: nowrap;
+        font-size: 13px;
+        line-height: 38px;
+        box-sizing: border-box;
+        min-width: 60px;
+        flex-shrink: 0;
+        font-weight: 500;
+        &.ty_orange {
+            background-color: map-get($colors, orange );
+            border-color: map-get($colors, orange );
+            color: #fff;
+        }
+        &.ty_green {
+            background-color: map-get($colors, green);
+            border-color: map-get($colors, green);
+            color: #fff;
+        }
+    }
+    &_info_list {
+        li {
+            position: relative;
+            font-size: 14px;
+            line-height: 1.5;
+            padding-left: 16px;
+            & + li {
+                margin-top: 5px;
+            }
+            &::before {
+                content:'※';
+                left: 0;
+                top: 0;
+                position: absolute;
+            }
+        }
+    }
+    &_top_btn {
+        position: relative;
+        .btn_add_form {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+    }
+    &_radio {
+        display: inline-block;
+        vertical-align: top;
+        cursor: pointer;
+        user-select: none;
+        line-height: 40px;
+
+        & + & {
+            margin-left: 10px;
+        }
+    }
+}
+
+
+
+

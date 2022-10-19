@@ -98,10 +98,307 @@
                             <h2 class="earth_join_tit">지구사랑탐사대 10기 지원서</h2>
                             <div class="form_wrap">
                                 <h3 class="form_tit">대표자 정보</h3>
-                                <p class="form_tip fc_red">*표시는 필수 입력사항입니다.</p>
-                                <div class="form_sec">
-                                    <label for="" class="form_tit"></label>
-                                    <input type="text" class="form_txt input_ty1">
+                                <p class="form_tip">*표시는 필수 입력사항입니다.</p>
+                                <div class="form_cont">
+                                    <div class="form_cont_inner">
+                                        <div class="form_item">
+                                            <label for="" class="form_item_tit ty_require">이름 </label>
+                                            <div class="form_item_cont">
+                                                <input type="text" value="조유경" class="form_txt input_ty1" readonly>
+                                            </div>
+                                        </div>
+                                        <div class="form_item">
+                                            <label for="" class="form_item_tit ty_require">나이 </label>
+                                            <div class="form_item_cont"><input type="tel" class="form_txt input_ty1"></div>
+                                        </div>
+                                        <div class="form_item">
+                                            <label for="" class="form_item_tit ty_require">학교 </label>
+                                            <div class="form_item_cont"><input type="text" class="form_txt input_ty1"></div>
+                                        </div>
+                                        <div class="form_item">
+                                            <label for="" class="form_item_tit ty_require">학년 </label>
+                                            <div class="form_item_cont">
+                                                <select name="" id="" class="form_select select_ty1 ty_big">
+                                                    <option value="" selected>학년을 선택해주세요</option>
+                                                    <option value="">1학년</option>
+                                                    <option value="">2학년</option>
+                                                    <option value="">3학년</option>
+                                                    <option value="">4학년</option>
+                                                    <option value="">5학년</option>
+                                                    <option value="">6학년</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form_item">
+                                            <label for="" class="form_item_tit ty_require">연락처 </label>
+                                            <div class="form_item_cont"><input type="tel" class="form_txt input_ty1"></div>
+                                        </div>
+                                        <div class="form_item">
+                                            <label for="" class="form_item_tit ty_require">이메일 </label>
+                                            <div class="form_item_cont">
+                                                <input type="email" value="testtest@gmail.com" class="form_txt input_ty1" readonly>
+                                            </div>
+                                        </div>
+                                        <div class="form_item w100p">
+                                            <label for="" class="form_item_tit ty_require">주소 </label>
+                                            <div class="form_item_cont">
+                                                <p class="form_tip">※ 이벤트 참여 시 선물 수령할 주소를 정확히 입력해 주세요.</p>
+                                                <div class="form_address">
+                                                    <div class="form_address_num">
+                                                        <input type="tel" class="form_txt input_ty1">
+                                                        <span class="dash">-</span>
+                                                        <input type="tel" class="form_txt input_ty1">
+                                                        <button class="form_btn">우편번호 찾기</button>
+                                                    </div>
+                                                    <div class="form_address_ad1">
+                                                        <input type="text" class="form_txt input_ty1">
+                                                    </div>
+                                                    <div class="form_address_ad2">
+                                                        <input type="text" class="form_txt input_ty1">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- 구독 인증 X-->
+                                        <div class="form_item w100p">
+                                            <label for="" class="form_item_tit ty_require">2022 정기구독 여부 </label>
+                                            <div class="form_item_cont">
+                                                <div class="form_item_txt mb10">
+                                                    <p class="form_tip ty2">2022년 현재 정기구독하고 계신 경우, <br> 정기구독 회원인증 완료 후 지구사랑탐사대 신청 페이지를 다시 완성해주세요.</p>
+                                                    <p class="form_tip">※ 이미 로그인 한 ID로 정기구독을 인증 하셨다면 다시 인증받지 않으셔도 됩니다.</p>
+                                                </div>
+                                                <div class="form_btns">
+                                                    <a href="" class="form_btn">정기구독 혜택 보기</a>
+                                                    <a href="" class="form_btn ty_green">정기구독 인증 하기</a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- 구독 인증 O -->
+                                        <div class="form_item w100p">
+                                            <label for="" class="form_item_tit ty_require">2022 정기구독 여부 </label>
+                                            <div class="form_item_cont">
+                                                <div class="form_item_txt mb10">
+                                                    <ul class="subscribe_list">
+                                                        <li>어린이과학동아 구독중</li>
+                                                        <li>어린이수학동아 구독중</li>
+                                                        <li>~~~~~~~ 구독중</li>
+                                                        <li>~~~~~~~ 구독중</li>
+                                                        <li>~~~~~~~ 구독중</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="form_btns">
+                                                    <a href="" class="form_btn">정기구독 혜택 보기</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form_item w100p">
+                                            <label for="" class="form_item_tit ty_require">지사탐 활동 경험</label>
+                                            <div class="form_item_cont">
+                                                <div class="check_wrap">
+                                                    <div class="no_exp">
+                                                        <label class="check_item">
+                                                            <input type="checkbox" onclick="check_exp(this)"> 해당없음
+                                                        </label>
+                                                        <script>
+                                                            function check_exp(target){
+                                                                if($(target).is(':checked')){
+                                                                    $('.list_exp')
+                                                                    .addClass('disabled')
+                                                                    .find('input')
+                                                                    //.prop('checked', false)
+                                                                    .prop('disabled', true)
+
+                                                                }else{
+                                                                    $('.list_exp').removeClass('disabled')
+                                                                    .find('input')
+                                                                    .prop('disabled', false)
+                                                                }
+                                                            }
+                                                        </script>
+                                                    </div>
+                                                    <div class="list_exp">
+                                                        <div class="list_exp_inner">
+                                                            <label class="check_item">
+                                                                <input type="checkbox"> 지사탐 9기 활동
+                                                            </label>
+                                                            <label class="check_item">
+                                                                <input type="checkbox"> 지사탐 8기 활동
+                                                            </label>
+                                                            <label class="check_item">
+                                                                <input type="checkbox"> 지사탐 7기 활동
+                                                            </label>
+                                                            <label class="check_item">
+                                                                <input type="checkbox"> 지사탐 6기 활동
+                                                            </label>
+                                                            <label class="check_item">
+                                                                <input type="checkbox"> 지사탐 5기 활동
+                                                            </label>
+                                                            <label class="check_item">
+                                                                <input type="checkbox"> 지사탐 4기 활동
+                                                            </label>
+                                                            <label class="check_item">
+                                                                <input type="checkbox"> 지사탐 3기 활동
+                                                            </label>
+                                                            <label class="check_item">
+                                                                <input type="checkbox"> 지사탐 2기 활동
+                                                            </label>
+                                                            <label class="check_item">
+                                                                <input type="checkbox"> 지사탐 1기 활동
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form_wrap">
+                                <h3 class="form_tit">보호자 정보</h3>
+                                <p class="form_tip">*표시는 필수 입력사항입니다.</p>
+                                <div class="form_cont">
+                                    <div class="form_cont_inner">
+                                        <div class="form_item">
+                                            <label for="" class="form_item_tit ty_require">이름 </label>
+                                            <div class="form_item_cont">
+                                                <input type="text" value="조유경" class="form_txt input_ty1">
+                                            </div>
+                                        </div>
+                                        <div class="form_item">
+                                            <label for="" class="form_item_tit ty_require">관계 </label>
+                                            <div class="form_item_cont">
+                                                <select name="" id="" class="form_select select_ty1 ty_big">
+                                                    <option value="" selected disabled>선택하기</option>
+                                                    <option value="">엄마</option>
+                                                    <option value="">아빠</option>
+                                                    <option value="">조부모</option>
+                                                    <option value="">기타</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form_item">
+                                            <label for="" class="form_item_tit ty_require">연락처 </label>
+                                            <div class="form_item_cont"><input type="tel" class="form_txt input_ty1"></div>
+                                        </div>
+                                        <div class="form_item">
+                                            <label for="" class="form_item_tit ty_require">이메일 </label>
+                                            <div class="form_item_cont">
+                                                <div class="form_box has_btn">
+                                                    <input type="email" value="testtest@gmail.com" class="form_txt input_ty1">
+                                                    <button type="button" class="form_btn">확인</button>
+                                                    <!-- 확인 상태 일때 -->
+                                                    <button type="button" class="form_btn ty_orange">수정</button>
+                                                    <!--// 확인 상태 일때 -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="form_wrap bg_brown">
+                                <ul class="form_info_list">
+                                    <li><strong>가족 단위</strong>로 신청해 주세요. 친구 또는 친척과 한 팀으로 활동할 수 없으니 각각 다른 팀으로 지원해주세요.</li>
+                                    <li>비정기구독자도 지구사랑탐사대를 신청할 수 있습니다.</li>
+                                </ul>
+                            </div>
+                            <div class="form_wrap">
+                                <h3 class="form_tit">팀원 정보</h3>
+                                <p class="form_tip">*표시는 필수 입력사항입니다.</p>
+                                <div class="form_top_btn">
+                                    <button type="button" class="btn_add_form form_btn">팀원 추가</button>
+                                </div>
+                                <div class="form_cont team_admin">
+                                    <div class="form_cont_inner">
+                                        <div class="form_item">
+                                            <label for="" class="form_item_tit ty_require">이름 </label>
+                                            <div class="form_item_cont">
+                                                <input type="text" value="조유경" class="form_txt input_ty1">
+                                            </div>
+                                        </div>
+                                        <div class="form_item">
+                                            <label for="" class="form_item_tit ty_require">나이 </label>
+                                            <div class="form_item_cont">
+                                                <input type="tel" value="" class="form_txt input_ty1">
+                                            </div>
+                                        </div>
+                                        <div class="form_item">
+                                            <label for="" class="form_item_tit ty_require">성별 </label>
+                                            <div class="form_item_cont">
+                                                <label class="form_radio"><input type="radio" name="sex"> 남자</label>
+                                                <label class="form_radio"><input type="radio" name="sex"> 여자</label>
+                                            </div>
+                                        </div>
+                                        <div class="form_item">
+                                            <label for="" class="form_item_tit ty_require">관계 </label>
+                                            <div class="form_item_cont">
+                                                <select name="" id="" class="form_select select_ty1 ty_big">
+                                                    <option value="" selected disabled>선택하기</option>
+                                                    <option value="">엄마</option>
+                                                    <option value="">아빠</option>
+                                                    <option value="">조부모</option>
+                                                    <option value="">기타</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form_item">
+                                            <label for="" class="form_item_tit ty_require">전화번호 </label>
+                                            <div class="form_item_cont"><input type="tel" class="form_txt input_ty1"></div>
+                                        </div>
+                                        <div class="form_item">
+                                            <label for="" class="form_item_tit ty_require">이메일 </label>
+                                            <div class="form_item_cont">
+                                                <input type="email" value="" class="form_txt input_ty1">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form_cont team_added">
+                                    <div class="form_cont_inner">
+                                        <div class="form_item">
+                                            <label for="" class="form_item_tit ty_require">이름 </label>
+                                            <div class="form_item_cont">
+                                                <input type="text" value="조유경" class="form_txt input_ty1">
+                                            </div>
+                                        </div>
+                                        <div class="form_item">
+                                            <label for="" class="form_item_tit ty_require">나이 </label>
+                                            <div class="form_item_cont">
+                                                <input type="tel" value="" class="form_txt input_ty1">
+                                            </div>
+                                        </div>
+                                        <div class="form_item">
+                                            <label for="" class="form_item_tit ty_require">성별 </label>
+                                            <div class="form_item_cont">
+                                                <label class="form_radio"><input type="radio" name="sex"> 남자</label>
+                                                <label class="form_radio"><input type="radio" name="sex"> 여자</label>
+                                            </div>
+                                        </div>
+                                        <div class="form_item">
+                                            <label for="" class="form_item_tit ty_require">관계 </label>
+                                            <div class="form_item_cont">
+                                                <select name="" id="" class="form_select select_ty1 ty_big">
+                                                    <option value="" selected disabled>선택하기</option>
+                                                    <option value="">엄마</option>
+                                                    <option value="">아빠</option>
+                                                    <option value="">조부모</option>
+                                                    <option value="">기타</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form_item">
+                                            <label for="" class="form_item_tit ty_require">전화번호 </label>
+                                            <div class="form_item_cont"><input type="tel" class="form_txt input_ty1"></div>
+                                        </div>
+                                        <div class="form_item">
+                                            <label for="" class="form_item_tit ty_require">이메일 </label>
+                                            <div class="form_item_cont">
+                                                <input type="email" value="" class="form_txt input_ty1">
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
 
                             </div>
