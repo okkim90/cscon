@@ -403,7 +403,7 @@
                                     </div>
                                 </div>
                                 <div class="form_cont team_added">
-                                    <button type="button" class="del_form"><span class="blind">팀원 삭제</span></button>
+                                    <button type="button" class="del_form" onclick="del_form(this);"><span class="blind">팀원 삭제</span></button>
                                     <div class="form_cont_inner">
                                         <div class="form_item">
                                             <label for="" class="form_item_tit ty_require">이름 </label>
@@ -448,6 +448,11 @@
                                         </div>
                                     </div>
                                 </div>
+                                <script>
+                                    function del_form(target){
+                                        $(target).parents('.form_cont').remove();
+                                    }
+                                </script>
                             </div>
                             <div class="form_wrap">
                                 <h3 class="form_tit">팀 정보</h3>
