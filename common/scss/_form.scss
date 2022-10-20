@@ -7,7 +7,10 @@
 }
 .form {
     &_wrap {
-        margin-top: 40px;
+        margin-top: 30px;
+        & ~ & {
+            margin-top: 40px;
+        }
         padding: 30px;
         border: 1px solid #ccc;
         border-radius: 10px;
@@ -15,6 +18,11 @@
             border-color: #8c7974;
             background-color: #8c7974;
             color: #fff;
+        }
+        &.bg_green {
+            border-color: #f1faf5;
+            background-color: #f1faf5;
+            //color: #fff;
         }
         @media (max-width:600px) {
            padding: 20px 15px;
@@ -33,7 +41,7 @@
         }
     }
     &_tit {
-        font-size: 16px;
+        font-size: 18px;
         line-height: 1.4;
         color: #000;
     }
@@ -61,24 +69,48 @@
     // }
 
     &_cont {
+        margin-top: 20px;
+        position: relative;
         &_inner {
             display: flex;
             flex-wrap: wrap;
             margin: 0 -10px;
             margin-top: -20px;
+            @media (max-width:767px) {
+                margin-left: 0;
+                margin-right: 0;
+            }
         }
-        &.team_admin {
-            padding: 10px;
-            background-color: #f4f4f4;
+        &.team_admin, &.team_added  {
+            padding: 20px;
+            background-color: #f1faf5 ;
+            border-radius: 10px;
+            @media (max-width:767px) {
+               padding: 20px 15px;
+            }
+        }
+        &.team_added {
+            margin-top: 30px;
         }
         &.added {
             border-top: 1px dashed #ccc;
             margin-top: 40px;
             padding-top: 20px;
         }
-        @media (max-width:767px) {
-            margin: 0;
+        .del_form {
+            position: absolute;
+            right: -5px;
+            top: -5px;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: map-get($colors , orange);
+            background-image: url(../../images/ico/ico_del.svg);
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 70%;
         }
+
     }
     &_item {
         margin-top: 20px;
@@ -96,7 +128,7 @@
         }
         &_tit {
             display: block;
-            font-size: 15px;
+            font-size: 14px;
             line-height: 1.4;
             font-weight: 500;
             &.ty_require {
@@ -111,7 +143,7 @@
             font-size: 14px;
             margin-top: 5px;
             line-height: 1.5;
-            font-weight: 500;
+            //font-weight: 500;
         }
         .subscribe_list {
             font-size: 14px;
@@ -204,6 +236,13 @@
         min-width: 60px;
         flex-shrink: 0;
         font-weight: 500;
+        &.ty_big {
+            height: 46px;
+            padding: 0 15px;
+            border-radius: 6px;
+            line-height: 44px;
+            font-size: 15px;
+        }
         &.ty_orange {
             background-color: map-get($colors, orange );
             border-color: map-get($colors, orange );
@@ -250,6 +289,27 @@
         & + & {
             margin-left: 10px;
         }
+    }
+    &_msg {
+        font-size: 13px;
+        line-height: 1.4;
+        margin-top: 4px;
+    }
+    &_agree {
+        margin-top: 20px;
+        display: inline-block;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: 500;
+        user-select: none;
+        &.sc_check {
+            .custom_check {
+                width: 1.2em;
+                height: 1.2em;
+                background-color: #fff;
+            }
+        }
+
     }
 }
 
